@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title><%= @page_title || 'Miniemporium' %></title>
+  <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+  <div id="header">
+    <h1 id="logo">BuyFilm</h1>
+    <h2 id="slogan">Film on Rails</h2>
+   
+  </div>
+
+  <div id="menu">
+    <ul>
+      <li><a href="/admin/author">Films</a>&nbsp;|&nbsp;</li>
+      <li><a href="/admin/publisher">Directors</a>&nbsp;|&nbsp;</li>
+      <li><a href="/admin/book">Producers</a>&nbsp;|&nbsp;</li>
+      <li><a href="/admin/order">Orders</a>&nbsp;|&nbsp;</li>
+      <li><a href="/">Catalog</a>&nbsp;|&nbsp;</li>
+      <li><a href="/about">About</a>&nbsp;</li>
+    </ul>
+  </div>
+
+  <div id="content">
+    <h1><%= @page_title if @page_title %></h1>
+    <% if flash[:notice] %>
+      <div id="notice"><%= flash[:notice] %></div>
+    <% end %>
+    <%= yield %>
+  </div>
+
+  <% if @cart %>
+    <div id="shopping_cart"><%= render :partial => 'cart/cart' %></div>
+  <% end %>
+
+  <div id="footer">
+    &copy; 2015-2018 BuyFilms
+  </div>
+</body>
+</html>
