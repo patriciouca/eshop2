@@ -18,3 +18,311 @@ Processing by AboutController#index as HTML
   Rendered about/index.html.erb within layouts/application (2.6ms)
 Completed 200 OK in 474ms (Views: 473.7ms | ActiveRecord: 0.0ms)
   [1m[35m (0.3ms)[0m  ROLLBACK
+  [1m[36m (33.5ms)[0m  [1mDROP DATABASE IF EXISTS `eshop2_test`[0m
+  [1m[35m (0.5ms)[0m  CREATE DATABASE `eshop2_test` DEFAULT CHARACTER SET `utf8` COLLATE `utf8_unicode_ci`
+  [1m[36m (237.7ms)[0m  [1mCREATE TABLE `producers` (`id` int(11) auto_increment PRIMARY KEY, `name` varchar(255) NOT NULL, `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB[0m
+  [1m[35m (274.5ms)[0m  CREATE TABLE `schema_migrations` (`version` varchar(255) NOT NULL) ENGINE=InnoDB
+  [1m[36m (499.8ms)[0m  [1mCREATE UNIQUE INDEX `unique_schema_migrations`  ON `schema_migrations` (`version`) [0m
+  [1m[35m (0.4ms)[0m  SELECT version FROM `schema_migrations`
+  [1m[36m (43.8ms)[0m  [1mINSERT INTO `schema_migrations` (version) VALUES ('20180402095924')[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+  [1m[35m (0.5ms)[0m  SELECT @@FOREIGN_KEY_CHECKS
+  [1m[36m (0.2ms)[0m  [1mSET FOREIGN_KEY_CHECKS = 0[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mFixture Delete (0.4ms)[0m  [1mDELETE FROM `producers`[0m
+  [1m[35mFixture Insert (0.5ms)[0m  INSERT INTO `producers` (`id`, `name`, `created_at`, `updated_at`) VALUES (1, 'Apress', '2018-04-02 11:58:38', '2018-04-02 11:58:38')
+  [1m[36mFixture Insert (0.4ms)[0m  [1mINSERT INTO `producers` (`id`, `name`, `created_at`, `updated_at`) VALUES (2, 'Emporium', '2018-04-02 11:58:38', '2018-04-02 11:58:38')[0m
+  [1m[35m (82.9ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mSET FOREIGN_KEY_CHECKS = 1[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+-------------------------------
+AboutControllerTest: test_index
+-------------------------------
+Processing by AboutController#index as HTML
+  Rendered about/index.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 770ms (Views: 769.6ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.4ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+------------------------------------------
+Admin::ProducerControllerTest: test_update
+------------------------------------------
+Processing by Admin::ProducerController#update as HTML
+  Parameters: {"id"=>"1", "publisher"=>{"name"=>"Apress.com"}}
+  [1m[36mProducer Load (0.7ms)[0m  [1mSELECT  `producers`.* FROM `producers` WHERE `producers`.`id` = 1 LIMIT 1[0m
+Completed 400 Bad Request in 21ms (ActiveRecord: 0.7ms)
+  [1m[35m (0.3ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+-----------------------------------------
+Admin::ProducerControllerTest: test_index
+-----------------------------------------
+Processing by Admin::ProducerController#index as HTML
+  [1m[35mProducer Load (0.7ms)[0m  SELECT `producers`.* FROM `producers`
+  Rendered admin/producer/_producer.html.erb (5.4ms)
+  Rendered admin/producer/index.html.erb within layouts/application (15.1ms)
+Completed 200 OK in 27ms (Views: 25.5ms | ActiveRecord: 0.7ms)
+  [1m[36m (0.3ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+------------------------------------------
+Admin::ProducerControllerTest: test_create
+------------------------------------------
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+-------------------------------------------
+Admin::ProducerControllerTest: test_destroy
+-------------------------------------------
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+----------------------------------------
+Admin::ProducerControllerTest: test_edit
+----------------------------------------
+Processing by Admin::ProducerController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mProducer Load (0.9ms)[0m  [1mSELECT  `producers`.* FROM `producers` WHERE `producers`.`id` = 1 LIMIT 1[0m
+  Rendered admin/producer/_form.html.erb (18.5ms)
+  Rendered admin/producer/edit.html.erb within layouts/application (22.9ms)
+Completed 200 OK in 29ms (Views: 27.1ms | ActiveRecord: 0.9ms)
+  [1m[35m (0.3ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+---------------------------------------
+Admin::ProducerControllerTest: test_new
+---------------------------------------
+Processing by Admin::ProducerController#new as HTML
+  Rendered admin/producer/_form.html.erb (0.5ms)
+  Rendered admin/producer/new.html.erb within layouts/application (3.1ms)
+Completed 200 OK in 8ms (Views: 7.4ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.3ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+----------------------------------------
+Admin::ProducerControllerTest: test_show
+----------------------------------------
+Processing by Admin::ProducerController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mProducer Load (0.6ms)[0m  SELECT  `producers`.* FROM `producers` WHERE `producers`.`id` = 1 LIMIT 1
+  Rendered admin/producer/show.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 8ms (Views: 6.3ms | ActiveRecord: 0.6ms)
+  [1m[36m (0.3ms)[0m  [1mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.9ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+  [1m[35m (0.5ms)[0m  SELECT @@FOREIGN_KEY_CHECKS
+  [1m[36m (0.3ms)[0m  [1mSET FOREIGN_KEY_CHECKS = 0[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mFixture Delete (0.5ms)[0m  [1mDELETE FROM `producers`[0m
+  [1m[35mFixture Insert (0.7ms)[0m  INSERT INTO `producers` (`created_at`, `updated_at`, `id`) VALUES ('2018-04-02 11:59:46', '2018-04-02 11:59:46', 980190962)
+  [1m[36m (97.7ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.4ms)[0m  SET FOREIGN_KEY_CHECKS = 1
+  [1m[36m (0.9ms)[0m  [1mSELECT @@FOREIGN_KEY_CHECKS[0m
+  [1m[35m (0.3ms)[0m  SET FOREIGN_KEY_CHECKS = 0
+  [1m[36m (0.4ms)[0m  [1mBEGIN[0m
+  [1m[35mFixture Delete (0.5ms)[0m  DELETE FROM `producers`
+  [1m[36mFixture Insert (0.8ms)[0m  [1mINSERT INTO `producers` (`created_at`, `updated_at`, `id`) VALUES ('2018-04-02 11:59:46', '2018-04-02 11:59:46', 980190962)[0m
+  [1m[35m (41.2ms)[0m  ROLLBACK
+  [1m[36m (0.4ms)[0m  [1mSET FOREIGN_KEY_CHECKS = 1[0m
+  [1m[35m (0.4ms)[0m  SELECT @@FOREIGN_KEY_CHECKS
+  [1m[36m (0.3ms)[0m  [1mSET FOREIGN_KEY_CHECKS = 0[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36mFixture Delete (0.5ms)[0m  [1mDELETE FROM `producers`[0m
+  [1m[35mFixture Insert (0.6ms)[0m  INSERT INTO `producers` (`created_at`, `updated_at`, `id`) VALUES ('2018-04-02 11:59:46', '2018-04-02 11:59:46', 980190962)
+  [1m[36m (33.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  SET FOREIGN_KEY_CHECKS = 1
+  [1m[36m (0.4ms)[0m  [1mSELECT @@FOREIGN_KEY_CHECKS[0m
+  [1m[35m (0.2ms)[0m  SET FOREIGN_KEY_CHECKS = 0
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mFixture Delete (0.5ms)[0m  DELETE FROM `producers`
+  [1m[36mFixture Insert (0.7ms)[0m  [1mINSERT INTO `producers` (`created_at`, `updated_at`, `id`) VALUES ('2018-04-02 11:59:46', '2018-04-02 11:59:46', 980190962)[0m
+  [1m[35m (35.7ms)[0m  ROLLBACK
+  [1m[36m (0.3ms)[0m  [1mSET FOREIGN_KEY_CHECKS = 1[0m
+  [1m[35m (0.3ms)[0m  SELECT @@FOREIGN_KEY_CHECKS
+  [1m[36m (0.2ms)[0m  [1mSET FOREIGN_KEY_CHECKS = 0[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36mFixture Delete (0.5ms)[0m  [1mDELETE FROM `producers`[0m
+  [1m[35mFixture Insert (0.9ms)[0m  INSERT INTO `producers` (`created_at`, `updated_at`, `id`) VALUES ('2018-04-02 11:59:47', '2018-04-02 11:59:47', 980190962)
+  [1m[36m (34.8ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  SET FOREIGN_KEY_CHECKS = 1
+  [1m[36m (0.3ms)[0m  [1mSELECT @@FOREIGN_KEY_CHECKS[0m
+  [1m[35m (0.3ms)[0m  SET FOREIGN_KEY_CHECKS = 0
+  [1m[36m (0.4ms)[0m  [1mBEGIN[0m
+  [1m[35mFixture Delete (0.6ms)[0m  DELETE FROM `producers`
+  [1m[36mFixture Insert (0.9ms)[0m  [1mINSERT INTO `producers` (`created_at`, `updated_at`, `id`) VALUES ('2018-04-02 11:59:47', '2018-04-02 11:59:47', 980190962)[0m
+  [1m[35m (34.7ms)[0m  ROLLBACK
+  [1m[36m (0.4ms)[0m  [1mSET FOREIGN_KEY_CHECKS = 1[0m
+  [1m[35m (0.4ms)[0m  SELECT @@FOREIGN_KEY_CHECKS
+  [1m[36m (0.3ms)[0m  [1mSET FOREIGN_KEY_CHECKS = 0[0m
+  [1m[35m (0.4ms)[0m  BEGIN
+  [1m[36mFixture Delete (0.6ms)[0m  [1mDELETE FROM `producers`[0m
+  [1m[35mFixture Insert (0.8ms)[0m  INSERT INTO `producers` (`created_at`, `updated_at`, `id`) VALUES ('2018-04-02 11:59:47', '2018-04-02 11:59:47', 980190962)
+  [1m[36m (33.6ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.4ms)[0m  SET FOREIGN_KEY_CHECKS = 1
+  [1m[36m (0.4ms)[0m  [1mSELECT @@FOREIGN_KEY_CHECKS[0m
+  [1m[35m (0.3ms)[0m  SET FOREIGN_KEY_CHECKS = 0
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35mFixture Delete (0.5ms)[0m  DELETE FROM `producers`
+  [1m[36mFixture Insert (0.9ms)[0m  [1mINSERT INTO `producers` (`created_at`, `updated_at`, `id`) VALUES ('2018-04-02 11:59:47', '2018-04-02 11:59:47', 980190962)[0m
+  [1m[35m (34.5ms)[0m  ROLLBACK
+  [1m[36m (0.4ms)[0m  [1mSET FOREIGN_KEY_CHECKS = 1[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+  [1m[35m (0.4ms)[0m  SELECT @@FOREIGN_KEY_CHECKS
+  [1m[36m (0.2ms)[0m  [1mSET FOREIGN_KEY_CHECKS = 0[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36mFixture Delete (0.5ms)[0m  [1mDELETE FROM `producers`[0m
+  [1m[35mFixture Insert (0.7ms)[0m  INSERT INTO `producers` (`created_at`, `updated_at`, `id`) VALUES ('2018-04-02 12:01:40', '2018-04-02 12:01:40', 980190962)
+  [1m[36m (132.8ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  SET FOREIGN_KEY_CHECKS = 1
+  [1m[36m (0.4ms)[0m  [1mSELECT @@FOREIGN_KEY_CHECKS[0m
+  [1m[35m (0.2ms)[0m  SET FOREIGN_KEY_CHECKS = 0
+  [1m[36m (0.4ms)[0m  [1mBEGIN[0m
+  [1m[35mFixture Delete (0.7ms)[0m  DELETE FROM `producers`
+  [1m[36mFixture Insert (0.7ms)[0m  [1mINSERT INTO `producers` (`created_at`, `updated_at`, `id`) VALUES ('2018-04-02 12:01:40', '2018-04-02 12:01:40', 980190962)[0m
+  [1m[35m (45.2ms)[0m  ROLLBACK
+  [1m[36m (0.4ms)[0m  [1mSET FOREIGN_KEY_CHECKS = 1[0m
+  [1m[35m (0.4ms)[0m  SELECT @@FOREIGN_KEY_CHECKS
+  [1m[36m (0.5ms)[0m  [1mSET FOREIGN_KEY_CHECKS = 0[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36mFixture Delete (0.6ms)[0m  [1mDELETE FROM `producers`[0m
+  [1m[35mFixture Insert (0.9ms)[0m  INSERT INTO `producers` (`created_at`, `updated_at`, `id`) VALUES ('2018-04-02 12:01:40', '2018-04-02 12:01:40', 980190962)
+  [1m[36m (44.4ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.4ms)[0m  SET FOREIGN_KEY_CHECKS = 1
+  [1m[36m (0.3ms)[0m  [1mSELECT @@FOREIGN_KEY_CHECKS[0m
+  [1m[35m (0.3ms)[0m  SET FOREIGN_KEY_CHECKS = 0
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35mFixture Delete (0.5ms)[0m  DELETE FROM `producers`
+  [1m[36mFixture Insert (0.6ms)[0m  [1mINSERT INTO `producers` (`created_at`, `updated_at`, `id`) VALUES ('2018-04-02 12:01:40', '2018-04-02 12:01:40', 980190962)[0m
+  [1m[35m (45.5ms)[0m  ROLLBACK
+  [1m[36m (0.3ms)[0m  [1mSET FOREIGN_KEY_CHECKS = 1[0m
+  [1m[35m (0.4ms)[0m  SELECT @@FOREIGN_KEY_CHECKS
+  [1m[36m (0.3ms)[0m  [1mSET FOREIGN_KEY_CHECKS = 0[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36mFixture Delete (0.7ms)[0m  [1mDELETE FROM `producers`[0m
+  [1m[35mFixture Insert (0.9ms)[0m  INSERT INTO `producers` (`created_at`, `updated_at`, `id`) VALUES ('2018-04-02 12:01:40', '2018-04-02 12:01:40', 980190962)
+  [1m[36m (44.4ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  SET FOREIGN_KEY_CHECKS = 1
+  [1m[36m (0.4ms)[0m  [1mSELECT @@FOREIGN_KEY_CHECKS[0m
+  [1m[35m (0.3ms)[0m  SET FOREIGN_KEY_CHECKS = 0
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35mFixture Delete (0.7ms)[0m  DELETE FROM `producers`
+  [1m[36mFixture Insert (0.9ms)[0m  [1mINSERT INTO `producers` (`created_at`, `updated_at`, `id`) VALUES ('2018-04-02 12:01:40', '2018-04-02 12:01:40', 980190962)[0m
+  [1m[35m (44.2ms)[0m  ROLLBACK
+  [1m[36m (0.4ms)[0m  [1mSET FOREIGN_KEY_CHECKS = 1[0m
+  [1m[35m (0.4ms)[0m  SELECT @@FOREIGN_KEY_CHECKS
+  [1m[36m (0.2ms)[0m  [1mSET FOREIGN_KEY_CHECKS = 0[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36mFixture Delete (0.8ms)[0m  [1mDELETE FROM `producers`[0m
+  [1m[35mFixture Insert (0.9ms)[0m  INSERT INTO `producers` (`created_at`, `updated_at`, `id`) VALUES ('2018-04-02 12:01:41', '2018-04-02 12:01:41', 980190962)
+  [1m[36m (33.7ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.4ms)[0m  SET FOREIGN_KEY_CHECKS = 1
+  [1m[36m (0.3ms)[0m  [1mSELECT @@FOREIGN_KEY_CHECKS[0m
+  [1m[35m (0.2ms)[0m  SET FOREIGN_KEY_CHECKS = 0
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35mFixture Delete (0.5ms)[0m  DELETE FROM `producers`
+  [1m[36mFixture Insert (0.8ms)[0m  [1mINSERT INTO `producers` (`created_at`, `updated_at`, `id`) VALUES ('2018-04-02 12:01:41', '2018-04-02 12:01:41', 980190962)[0m
+  [1m[35m (33.1ms)[0m  ROLLBACK
+  [1m[36m (0.4ms)[0m  [1mSET FOREIGN_KEY_CHECKS = 1[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+  [1m[35m (0.4ms)[0m  SELECT @@FOREIGN_KEY_CHECKS
+  [1m[36m (0.2ms)[0m  [1mSET FOREIGN_KEY_CHECKS = 0[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36mFixture Delete (0.5ms)[0m  [1mDELETE FROM `producers`[0m
+  [1m[35mFixture Insert (0.5ms)[0m  INSERT INTO `producers` (`id`, `name`, `created_at`, `updated_at`) VALUES (1, 'Apress', '2018-04-02 12:03:32', '2018-04-02 12:03:32')
+  [1m[36mFixture Insert (0.3ms)[0m  [1mINSERT INTO `producers` (`id`, `name`, `created_at`, `updated_at`) VALUES (2, 'Emporium', '2018-04-02 12:03:32', '2018-04-02 12:03:32')[0m
+  [1m[35m (90.6ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mSET FOREIGN_KEY_CHECKS = 1[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+-------------------------------
+AboutControllerTest: test_index
+-------------------------------
+Processing by AboutController#index as HTML
+  Rendered about/index.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 534ms (Views: 533.2ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.3ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+------------------------------------------
+Admin::ProducerControllerTest: test_create
+------------------------------------------
+  [1m[36m (0.6ms)[0m  [1mSELECT COUNT(*) FROM `producers`[0m
+Processing by Admin::ProducerController#create as HTML
+  Parameters: {"producer"=>{"name"=>"The Monopoly Publishing Company"}}
+  [1m[35m (0.3ms)[0m  SAVEPOINT active_record_1
+  [1m[36mProducer Exists (0.6ms)[0m  [1mSELECT  1 AS one FROM `producers` WHERE `producers`.`name` = BINARY 'The Monopoly Publishing Company' LIMIT 1[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO `producers` (`name`, `created_at`, `updated_at`) VALUES ('The Monopoly Publishing Company', '2018-04-02 12:03:33', '2018-04-02 12:03:33')
+  [1m[36m (0.2ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://test.host/admin/producer
+Completed 302 Found in 36ms (ActiveRecord: 1.7ms)
+  [1m[35m (0.5ms)[0m  SELECT COUNT(*) FROM `producers`
+  [1m[36m (45.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+----------------------------------------
+Admin::ProducerControllerTest: test_edit
+----------------------------------------
+Processing by Admin::ProducerController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mProducer Load (0.7ms)[0m  [1mSELECT  `producers`.* FROM `producers` WHERE `producers`.`id` = 1 LIMIT 1[0m
+  Rendered admin/producer/_form.html.erb (14.2ms)
+  Rendered admin/producer/edit.html.erb within layouts/application (24.4ms)
+Completed 200 OK in 53ms (Views: 38.2ms | ActiveRecord: 0.7ms)
+  [1m[35m (0.4ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+-------------------------------------------
+Admin::ProducerControllerTest: test_destroy
+-------------------------------------------
+  [1m[35m (0.5ms)[0m  SELECT COUNT(*) FROM `producers`
+Processing by Admin::ProducerController#destroy as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mProducer Load (0.5ms)[0m  [1mSELECT  `producers`.* FROM `producers` WHERE `producers`.`id` = 1 LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.5ms)[0m  [1mDELETE FROM `producers` WHERE `producers`.`id` = 1[0m
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://test.host/admin/producer
+Completed 302 Found in 5ms (ActiveRecord: 1.4ms)
+Processing by Admin::ProducerController#index as HTML
+  [1m[36mProducer Load (0.5ms)[0m  [1mSELECT `producers`.* FROM `producers`[0m
+  Rendered admin/producer/_producer.html.erb (3.0ms)
+  Rendered admin/producer/index.html.erb within layouts/application (7.1ms)
+Completed 200 OK in 12ms (Views: 10.9ms | ActiveRecord: 0.5ms)
+  [1m[35m (0.6ms)[0m  SELECT COUNT(*) FROM `producers`
+  [1m[36m (50.5ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+-----------------------------------------
+Admin::ProducerControllerTest: test_index
+-----------------------------------------
+Processing by Admin::ProducerController#index as HTML
+  [1m[36mProducer Load (0.8ms)[0m  [1mSELECT `producers`.* FROM `producers`[0m
+  Rendered admin/producer/_producer.html.erb (3.5ms)
+  Rendered admin/producer/index.html.erb within layouts/application (6.8ms)
+Completed 200 OK in 11ms (Views: 9.4ms | ActiveRecord: 0.8ms)
+  [1m[35m (0.5ms)[0m  SELECT COUNT(*) FROM `producers`
+  [1m[36mProducer Load (0.5ms)[0m  [1mSELECT  `producers`.* FROM `producers`  ORDER BY `producers`.`id` ASC LIMIT 1000[0m
+  [1m[35m (0.4ms)[0m  ROLLBACK
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+------------------------------------------
+Admin::ProducerControllerTest: test_update
+------------------------------------------
+Processing by Admin::ProducerController#update as HTML
+  Parameters: {"id"=>"1", "producer"=>{"name"=>"Apress.com"}}
+  [1m[35mProducer Load (0.6ms)[0m  SELECT  `producers`.* FROM `producers` WHERE `producers`.`id` = 1 LIMIT 1
+  [1m[36m (0.3ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mProducer Exists (0.8ms)[0m  SELECT  1 AS one FROM `producers` WHERE (`producers`.`name` = BINARY 'Apress.com' AND `producers`.`id` != 1) LIMIT 1
+  [1m[36mSQL (0.9ms)[0m  [1mUPDATE `producers` SET `name` = 'Apress.com', `updated_at` = '2018-04-02 12:03:33' WHERE `producers`.`id` = 1[0m
+  [1m[35m (0.2ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://test.host/admin/producer/show/1
+Completed 302 Found in 13ms (ActiveRecord: 2.7ms)
+  [1m[36mProducer Load (0.6ms)[0m  [1mSELECT  `producers`.* FROM `producers` WHERE `producers`.`id` = 1 LIMIT 1[0m
+  [1m[35m (44.3ms)[0m  ROLLBACK
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+---------------------------------------
+Admin::ProducerControllerTest: test_new
+---------------------------------------
+Processing by Admin::ProducerController#new as HTML
+  Rendered admin/producer/_form.html.erb (0.5ms)
+  Rendered admin/producer/new.html.erb within layouts/application (3.2ms)
+Completed 200 OK in 8ms (Views: 7.7ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+----------------------------------------
+Admin::ProducerControllerTest: test_show
+----------------------------------------
+Processing by Admin::ProducerController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mProducer Load (0.6ms)[0m  SELECT  `producers`.* FROM `producers` WHERE `producers`.`id` = 1 LIMIT 1
+  Rendered admin/producer/show.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 8ms (Views: 5.8ms | ActiveRecord: 0.6ms)
+  [1m[36mProducer Exists (0.8ms)[0m  [1mSELECT  1 AS one FROM `producers` WHERE (`producers`.`name` = BINARY 'Apress' AND `producers`.`id` != 1) LIMIT 1[0m
+  [1m[35mProducer Load (0.6ms)[0m  SELECT  `producers`.* FROM `producers` WHERE `producers`.`id` = 1 LIMIT 1
+  [1m[36m (0.4ms)[0m  [1mROLLBACK[0m

@@ -3044,3 +3044,228 @@ Started GET "/assets/admin/producer.self-877aef30ae1b040ab8a3aba4e3e309a11d7f261
 
 
 Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 127.0.0.1 at 2018-04-02 13:10:43 +0200
+
+
+Started GET "/admin/producer" for 127.0.0.1 at 2018-04-02 13:20:19 +0200
+Processing by Admin::ProducerController#index as HTML
+  [1m[36mProducer Load (0.6ms)[0m  [1mSELECT `producers`.* FROM `producers`[0m
+  Rendered admin/producer/_producer.html.erb (5.8ms)
+  Rendered admin/producer/index.html.erb within layouts/application (20.8ms)
+Completed 200 OK in 79ms (Views: 69.6ms | ActiveRecord: 2.6ms)
+
+
+Started GET "/assets/about.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2018-04-02 13:20:19 +0200
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 127.0.0.1 at 2018-04-02 13:20:19 +0200
+
+
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for 127.0.0.1 at 2018-04-02 13:20:19 +0200
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for 127.0.0.1 at 2018-04-02 13:20:19 +0200
+
+
+Started GET "/assets/style.self-28c50fed0fbf40c4e00e2c6a9dc7872cb7466e25803d031cd7fc5cb4ba105fd8.css?body=1" for 127.0.0.1 at 2018-04-02 13:20:20 +0200
+
+
+Started GET "/assets/turbolinks.self-2db6ec539b9190f75e1d477b305df53d12904d5cafdd47c7ffd91ba25cbec128.js?body=1" for 127.0.0.1 at 2018-04-02 13:20:20 +0200
+
+
+Started GET "/assets/admin/producer.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2018-04-02 13:20:20 +0200
+
+
+Started GET "/assets/about.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2018-04-02 13:20:20 +0200
+
+
+Started GET "/assets/admin/producer.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2018-04-02 13:20:20 +0200
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 127.0.0.1 at 2018-04-02 13:20:20 +0200
+
+
+Started GET "/admin/producer" for 127.0.0.1 at 2018-04-02 13:20:56 +0200
+Processing by Admin::ProducerController#index as HTML
+  [1m[35mProducer Load (0.7ms)[0m  SELECT `producers`.* FROM `producers`
+  Rendered admin/producer/_producer.html.erb (5.0ms)
+  Rendered admin/producer/index.html.erb within layouts/application (9.2ms)
+Completed 200 OK in 56ms (Views: 53.7ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/assets/about.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2018-04-02 13:20:56 +0200
+
+
+Started GET "/assets/admin/producer.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2018-04-02 13:20:56 +0200
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for 127.0.0.1 at 2018-04-02 13:20:56 +0200
+
+
+Started GET "/assets/style.self-28c50fed0fbf40c4e00e2c6a9dc7872cb7466e25803d031cd7fc5cb4ba105fd8.css?body=1" for 127.0.0.1 at 2018-04-02 13:20:56 +0200
+
+
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for 127.0.0.1 at 2018-04-02 13:20:56 +0200
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 127.0.0.1 at 2018-04-02 13:20:56 +0200
+
+
+Started GET "/assets/turbolinks.self-2db6ec539b9190f75e1d477b305df53d12904d5cafdd47c7ffd91ba25cbec128.js?body=1" for 127.0.0.1 at 2018-04-02 13:20:56 +0200
+
+
+Started GET "/assets/about.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2018-04-02 13:20:56 +0200
+
+
+Started GET "/assets/admin/producer.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2018-04-02 13:20:56 +0200
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 127.0.0.1 at 2018-04-02 13:20:56 +0200
+
+
+Started GET "/admin/producer/show/1" for 127.0.0.1 at 2018-04-02 13:30:23 +0200
+Processing by Admin::ProducerController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mProducer Load (1.0ms)[0m  [1mSELECT  `producers`.* FROM `producers` WHERE `producers`.`id` = 1 LIMIT 1[0m
+  Rendered admin/producer/show.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 58ms (Views: 52.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/admin/producer/edit?id=1" for 127.0.0.1 at 2018-04-02 13:30:27 +0200
+Processing by Admin::ProducerController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mProducer Load (0.8ms)[0m  SELECT  `producers`.* FROM `producers` WHERE `producers`.`id` = 1 LIMIT 1
+  Rendered admin/producer/_form.html.erb (0.9ms)
+  Rendered admin/producer/edit.html.erb within layouts/application (6.1ms)
+Completed 200 OK in 58ms (Views: 54.9ms | ActiveRecord: 0.8ms)
+
+
+Started POST "/admin/producer/update?id=1" for 127.0.0.1 at 2018-04-02 13:30:31 +0200
+Processing by Admin::ProducerController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"OKacPtooACT/ao5mH0aCZfspjQxV9gPgH1kTgJWeJRcnnkoDqwNx5pdkZJvhdckANfHxlb/HQVAgqJsSsQWzPg==", "producer"=>{"name"=>"Warner Broso"}, "commit"=>"Actualizar Productor", "id"=>"1"}
+  [1m[36mProducer Load (0.7ms)[0m  [1mSELECT  `producers`.* FROM `producers` WHERE `producers`.`id` = 1 LIMIT 1[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36mProducer Exists (1.0ms)[0m  [1mSELECT  1 AS one FROM `producers` WHERE (`producers`.`name` = BINARY 'Warner Broso' AND `producers`.`id` != 1) LIMIT 1[0m
+  [1m[35mSQL (0.9ms)[0m  UPDATE `producers` SET `name` = 'Warner Broso', `updated_at` = '2018-04-02 11:30:31' WHERE `producers`.`id` = 1
+  [1m[36m (75.7ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/admin/producer/show/1
+Completed 302 Found in 96ms (ActiveRecord: 78.6ms)
+
+
+Started GET "/admin/producer/show/1" for 127.0.0.1 at 2018-04-02 13:30:31 +0200
+Processing by Admin::ProducerController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mProducer Load (0.6ms)[0m  SELECT  `producers`.* FROM `producers` WHERE `producers`.`id` = 1 LIMIT 1
+  Rendered admin/producer/show.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 48ms (Views: 45.8ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/admin/producer/edit?id=1" for 127.0.0.1 at 2018-04-02 13:30:32 +0200
+Processing by Admin::ProducerController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mProducer Load (0.8ms)[0m  [1mSELECT  `producers`.* FROM `producers` WHERE `producers`.`id` = 1 LIMIT 1[0m
+  Rendered admin/producer/_form.html.erb (0.6ms)
+  Rendered admin/producer/edit.html.erb within layouts/application (6.0ms)
+Completed 200 OK in 59ms (Views: 55.8ms | ActiveRecord: 0.8ms)
+
+
+Started POST "/admin/producer/update?id=1" for 127.0.0.1 at 2018-04-02 13:30:37 +0200
+Processing by Admin::ProducerController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"XOMgBzzep1VRSvoUIWXZadS8P/4ZBHA5M0N2mZxZ8ulD2/Y6TfXWlzlEEOnfVpIMGmRDZ/M1MokMsv4LuMJkwA==", "producer"=>{"name"=>"Warner Bros"}, "commit"=>"Actualizar Productor", "id"=>"1"}
+  [1m[35mProducer Load (0.8ms)[0m  SELECT  `producers`.* FROM `producers` WHERE `producers`.`id` = 1 LIMIT 1
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35mProducer Exists (0.9ms)[0m  SELECT  1 AS one FROM `producers` WHERE (`producers`.`name` = BINARY 'Warner Bros' AND `producers`.`id` != 1) LIMIT 1
+  [1m[36mSQL (0.9ms)[0m  [1mUPDATE `producers` SET `name` = 'Warner Bros', `updated_at` = '2018-04-02 11:30:37' WHERE `producers`.`id` = 1[0m
+  [1m[35m (82.0ms)[0m  COMMIT
+Redirected to http://localhost:3000/admin/producer/show/1
+Completed 302 Found in 97ms (ActiveRecord: 84.8ms)
+
+
+Started GET "/admin/producer/show/1" for 127.0.0.1 at 2018-04-02 13:30:37 +0200
+Processing by Admin::ProducerController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mProducer Load (0.8ms)[0m  [1mSELECT  `producers`.* FROM `producers` WHERE `producers`.`id` = 1 LIMIT 1[0m
+  Rendered admin/producer/show.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 50ms (Views: 46.5ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/admin/producer" for 127.0.0.1 at 2018-04-02 13:30:40 +0200
+Processing by Admin::ProducerController#index as HTML
+  [1m[35mProducer Load (0.7ms)[0m  SELECT `producers`.* FROM `producers`
+  Rendered admin/producer/_producer.html.erb (6.4ms)
+  Rendered admin/producer/index.html.erb within layouts/application (11.1ms)
+Completed 200 OK in 61ms (Views: 59.0ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/admin/producer/new" for 127.0.0.1 at 2018-04-02 13:30:45 +0200
+Processing by Admin::ProducerController#new as HTML
+  Rendered admin/producer/_form.html.erb (0.7ms)
+  Rendered admin/producer/new.html.erb within layouts/application (4.9ms)
+Completed 200 OK in 56ms (Views: 54.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/admin/producer/create" for 127.0.0.1 at 2018-04-02 13:30:53 +0200
+Processing by Admin::ProducerController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"8ShpgFJjj2QKpbI4ybp6vRqlCdbnBti8ZQmn61MTkgHuEL+9I0j+pmKrWMU3iTHY1H11Tw03mgxa+C95d4gEKA==", "producer"=>{"name"=>"Vivayo!!!"}, "commit"=>"Create publisher"}
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35mProducer Exists (0.6ms)[0m  SELECT  1 AS one FROM `producers` WHERE `producers`.`name` = BINARY 'Vivayo!!!' LIMIT 1
+  [1m[36mSQL (0.7ms)[0m  [1mINSERT INTO `producers` (`name`, `created_at`, `updated_at`) VALUES ('Vivayo!!!', '2018-04-02 11:30:53', '2018-04-02 11:30:53')[0m
+  [1m[35m (51.4ms)[0m  COMMIT
+Redirected to http://localhost:3000/admin/producer
+Completed 302 Found in 62ms (ActiveRecord: 52.9ms)
+
+
+Started GET "/admin/producer" for 127.0.0.1 at 2018-04-02 13:30:53 +0200
+Processing by Admin::ProducerController#index as HTML
+  [1m[36mProducer Load (0.6ms)[0m  [1mSELECT `producers`.* FROM `producers`[0m
+  Rendered admin/producer/_producer.html.erb (5.8ms)
+  Rendered admin/producer/index.html.erb within layouts/application (10.0ms)
+Completed 200 OK in 53ms (Views: 51.5ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/admin/producer/destroy?id=4" for 127.0.0.1 at 2018-04-02 13:30:57 +0200
+Processing by Admin::ProducerController#destroy as HTML
+  Parameters: {"authenticity_token"=>"fFKxDzlKVQngBYBfdmPv8Zd334DXL2SfkB6hUesV2ztjamcySGEky4gLaqKIUKSUWa+jGT0eJi+v7ynDz45NEg==", "id"=>"4"}
+  [1m[35mProducer Load (0.8ms)[0m  SELECT  `producers`.* FROM `producers` WHERE `producers`.`id` = 4 LIMIT 1
+  [1m[36m (0.7ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.7ms)[0m  DELETE FROM `producers` WHERE `producers`.`id` = 4
+  [1m[36m (144.9ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/admin/producer
+Completed 302 Found in 154ms (ActiveRecord: 147.1ms)
+
+
+Started GET "/admin/producer" for 127.0.0.1 at 2018-04-02 13:30:57 +0200
+Processing by Admin::ProducerController#index as HTML
+  [1m[35mProducer Load (0.7ms)[0m  SELECT `producers`.* FROM `producers`
+  Rendered admin/producer/_producer.html.erb (5.2ms)
+  Rendered admin/producer/index.html.erb within layouts/application (9.8ms)
+Completed 200 OK in 64ms (Views: 61.9ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/admin/producer/new" for 127.0.0.1 at 2018-04-02 13:32:23 +0200
+Processing by Admin::ProducerController#new as HTML
+  Rendered admin/producer/_form.html.erb (2.3ms)
+  Rendered admin/producer/new.html.erb within layouts/application (6.6ms)
+Completed 200 OK in 58ms (Views: 56.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/admin/producer" for 127.0.0.1 at 2018-04-02 13:32:25 +0200
+Processing by Admin::ProducerController#index as HTML
+  [1m[36mProducer Load (0.9ms)[0m  [1mSELECT `producers`.* FROM `producers`[0m
+  Rendered admin/producer/_producer.html.erb (6.3ms)
+  Rendered admin/producer/index.html.erb within layouts/application (13.1ms)
+Completed 200 OK in 75ms (Views: 72.8ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/admin/producer/new" for 127.0.0.1 at 2018-04-02 13:32:41 +0200
+Processing by Admin::ProducerController#new as HTML
+  Rendered admin/producer/_form.html.erb (0.7ms)
+  Rendered admin/producer/new.html.erb within layouts/application (6.8ms)
+Completed 200 OK in 71ms (Views: 69.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/admin/producer" for 127.0.0.1 at 2018-04-02 13:32:43 +0200
+Processing by Admin::ProducerController#index as HTML
+  [1m[35mProducer Load (1.2ms)[0m  SELECT `producers`.* FROM `producers`
+  Rendered admin/producer/_producer.html.erb (6.1ms)
+  Rendered admin/producer/index.html.erb within layouts/application (12.1ms)
+Completed 200 OK in 71ms (Views: 68.8ms | ActiveRecord: 1.2ms)

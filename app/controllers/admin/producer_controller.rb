@@ -10,14 +10,14 @@ class Admin::ProducerController < ApplicationController
       flash[:notice] = "Producer #{@producer.name} was succesfully created."
       redirect_to :action => 'index'
     else
-      @page_title = 'Create new producer'
+      @page_title = 'Crear nuevo productor'
       render :action => 'new'
     end
   end
 
   def edit
     @producer = Producer.find(params[:id])
-    @page_title = 'Edit producer'
+    @page_title = 'Editar productoras'
   end
 
   def update
@@ -26,7 +26,7 @@ class Admin::ProducerController < ApplicationController
        flash[:notice] = "Producer #{@producer.name} was succesfully updated."
        redirect_to :action => 'show', :id => @producer
     else
-       @page_title = 'Edit producer'
+       @page_title = 'Editar productor'
        render :action => 'edit'
     end
   end
@@ -45,7 +45,7 @@ class Admin::ProducerController < ApplicationController
 
   def index
     @producers = Producer.all
-    @page_title = 'Listing producers'
+    @page_title = 'Listar productoras'
   end
 
   private
