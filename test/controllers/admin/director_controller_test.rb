@@ -10,8 +10,7 @@ class Admin::DirectorControllerTest < ActionController::TestCase
       assert_select 'h1', 'Create new director'
       assert_select "form[action=\"/admin/director/create\"]"
     end
-    # assert_tag 'h1', :content => 'Create new director'
-    # assert_tag 'form', :attributes => { :action => '/admin/director/create' }
+    
   end
 
   test "create" do
@@ -22,7 +21,7 @@ class Admin::DirectorControllerTest < ActionController::TestCase
       assert_response :redirect
       assert_redirected_to :action => 'index'
     end
-    assert_equal 'Director Joel Spolsky was succesfully created.', flash[:notice]
+    assert_equal 'Director Joel Spolsky fue creado correctamente.', flash[:notice]
   end
 
   test "failing_create" do
@@ -31,7 +30,7 @@ class Admin::DirectorControllerTest < ActionController::TestCase
       assert_response :success
       assert_template 'admin/director/new'
       assert_select "div[class=\"field_with_errors\"]"
-      # assert_tag :tag => 'div', :attributes => {:class => 'field_with_errors'}
+      
     end
   end
 
@@ -42,13 +41,11 @@ class Admin::DirectorControllerTest < ActionController::TestCase
       assert_select '[name=?]', 'director[first_name]'
       assert_select '[value=?]', 'Joel'
     end
-    # assert_tag :tag => 'input', :attributes => { :name => 'director[first_name]', :value => 'Joel' }
     assert_select 'input' do
       assert_select '[type=?]', 'text'
       assert_select '[name=?]', 'director[last_name]'
       assert_select '[value=?]', 'Spolsky'
     end
-    # assert_tag :tag => 'input', :attributes => { :name => 'director[last_name]', :value => 'Spolsky' }
   end
 
   test "update" do
@@ -61,14 +58,12 @@ class Admin::DirectorControllerTest < ActionController::TestCase
   test "test_destroy" do
     assert_difference(Director, :count, -1) do
       post :destroy, :id => 1
-      assert_equal flash[:notice], 'Succesfully deleted director Joel Spolsky.'
+      assert_equal flash[:notice], 'Fue eliminado correctamente el director Joel Spolsky.'
       assert_response :redirect
       assert_redirected_to :action => 'index'
       get :index
       assert_response :success
-      assert_select 'div#notice', 'Succesfully deleted director Joel Spolsky.'
-      # assert_tag :tag => 'div', :attributes => {:id => 'notice'},
-      #   :content => 'Succesfully deleted director Joel Spolsky.'
+      assert_select 'div#notice', 'Fue eliminado correctamente el director Joel Spolsky.'
     end
   end
 
@@ -80,7 +75,6 @@ class Admin::DirectorControllerTest < ActionController::TestCase
     assert_select 'div#content' do
       assert_select 'h1', Director.find(1).name
     end
-    # assert_tag "h1", :content => Director.find(1).name
   end
 
   test "index" do
@@ -89,10 +83,8 @@ class Admin::DirectorControllerTest < ActionController::TestCase
     assert_select 'table' do
       assert_select 'tr', Director.count + 1
     end
-    # assert_tag :tag => 'table', :children => { :count => Director.count + 1, :only => {:tag => 'tr'} }
     Director.find_each do |a|
       assert_select 'td', a.name
-      # assert_tag :tag => 'td', :content => a.name
     end
   end
 end

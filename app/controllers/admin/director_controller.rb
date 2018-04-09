@@ -7,7 +7,7 @@ def new
   def create
     @director = Director.new(director_params)
     if @director.save
-      flash[:notice] = "Director #{@director.name} was succesfully created."
+      flash[:notice] = "Director #{@director.name} fue creado correctamente."
       redirect_to :action => 'index'
     else
       @page_title = 'Create new director'
@@ -34,7 +34,7 @@ def new
   def destroy
     @director = Director.find(params[:id])
     @director.destroy
-    flash[:notice] = "Succesfully deleted director #{@director.name}."
+    flash[:notice] = "Fue eliminado correctamente el director #{@director.name}."
     redirect_to :action => 'index'
   end
 
