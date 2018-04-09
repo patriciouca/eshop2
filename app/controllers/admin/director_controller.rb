@@ -1,7 +1,7 @@
 class Admin::DirectorController < ApplicationController
 def new
     @director = Director.new
-    @page_title = 'Create new director'
+    @page_title = 'Crear nuevo director'
   end
 
   def create
