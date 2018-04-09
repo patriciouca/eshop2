@@ -10,23 +10,23 @@ def new
       flash[:notice] = "Director #{@director.name} fue creado correctamente."
       redirect_to :action => 'index'
     else
-      @page_title = 'Create new director'
+      @page_title = 'Crear nuevo director'
       render :action => 'new'
     end
   end
 
   def edit
     @director = Director.find(params[:id])
-    @page_title = 'Edit director'
+    @page_title = 'Editar director'
   end
 
   def update
     @director = Director.find(params[:id])
     if @director.update_attributes(director_params)
-      flash[:notice] = "Director #{@director.name} was succesfully updated."
+      flash[:notice] = "Director #{@director.name} fue editado con exito."
       redirect_to :action => 'show', :id => @director
     else
-      @page_title = 'Edit director'
+      @page_title = 'Editar director'
       render :action => 'edit'
     end
   end
@@ -45,7 +45,7 @@ def new
 
   def index
     @directors = Director.all
-    @page_title = 'Listing directors'
+    @page_title = 'Listar directores'
   end
 
   private
