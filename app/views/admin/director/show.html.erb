@@ -1,0 +1,9 @@
+<dl>
+  <dt>Nombre</dt>
+  <dd><%= @director.first_name %></dd>
+  <dt>Apellidos</dt>
+  <dd><%= @director.last_name %></dd>
+</dl>
+
+<%= link_to 'Editar', :action => 'edit', :id => @director %> |
+<%= link_to 'Volver', :action => 'index' %>

@@ -1,0 +1,7 @@
+<%= form_tag :action => 'update', :id => @director do %>
+  <%= render :partial => 'form' %>
+  <%= submit_tag 'Editar director' %>
+<% end %>
+
+<%= link_to 'Mostrar', :action => 'show', :id => @director %> |
+<%= link_to 'Volver', :action => 'index' %>

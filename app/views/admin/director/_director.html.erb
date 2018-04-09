@@ -1,0 +1,8 @@
+<tr>
+  <td><%= link_to director.name, :action => 'show', :id => director %></td>
+  <td><%= link_to 'Editar', :action => 'edit', :id => director %></td>
+  <td>
+    <%= button_to 'Borrar', { :action => 'destroy', :id => director },
+        data: { confirm: "Seguro que quiere eliminar al director #{director.name}?" } %>   
+  </td>
+</tr>

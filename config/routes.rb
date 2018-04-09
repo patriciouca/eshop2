@@ -1,8 +1,10 @@
 Rails.application.routes.draw do
 
+
   root to: 'about#index'
   get 'about' => 'about#index'
   get 'admin/producer' => 'admin/producer#index'
+  get 'admin/director' => 'admin/director#index'
  
   get 'about/index'
 
@@ -14,6 +16,16 @@ Rails.application.routes.draw do
   get 'admin/producer/show'
   get 'admin/producer/show/:id' => 'admin/producer#show'
   get 'admin/producer/index'
+
+
+  get 'admin/director/new'
+  post 'admin/director/create'
+  get 'admin/director/edit'
+  post 'admin/director/update'
+  post 'admin/director/destroy'
+  get 'admin/director/show'
+  get 'admin/director/show/:id' => 'admin/producer#show'
+  get 'admin/director/index'
 
 
   # The priority is based upon order of creation: first created -> highest priority.

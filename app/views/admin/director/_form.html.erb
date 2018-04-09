@@ -1,0 +1,20 @@
+<% if @director.errors.any? %>
+  <div id="errorExplanation">
+  <h2><%= pluralize(@director.errors.count, "error") %> prohibited this director from being saved:</h2>
+    <ul>
+      <% @director.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+    </ul>
+  </div>
+<% end %>
+
+<div class="field">
+  <p><label for="director_first_name">Nombre</label><br/>
+  <%= text_field 'director', 'first_name' %></p>
+</div>
+
+<div class="field">
+  <p><label for="director_last_name">Apellidos</label><br/>
+  <%= text_field 'director', 'last_name' %></p>
+</div>
