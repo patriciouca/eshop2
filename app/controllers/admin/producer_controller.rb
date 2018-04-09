@@ -1,13 +1,13 @@
 class Admin::ProducerController < ApplicationController
   def new
     @producer = Producer.new
-    @page_title = 'Create new producer'
+    @page_title = 'Crear nuevo productor'
   end
 
   def create
     @producer = Producer.new(producer_params)
     if @producer.save
-      flash[:notice] = "Producer #{@producer.name} was succesfully created."
+      flash[:notice] = "El productor #{@producer.name} ha sido actualizado con éxito."
       redirect_to :action => 'index'
     else
       @page_title = 'Crear nuevo productor'
@@ -17,16 +17,16 @@ class Admin::ProducerController < ApplicationController
 
   def edit
     @producer = Producer.find(params[:id])
-    @page_title = 'Editar productoras'
+    @page_title = 'Editar productor'
   end
 
   def update
     @producer = Producer.find(params[:id])
     if @producer.update_attributes(producer_params)
-       flash[:notice] = "Producer #{@producer.name} was succesfully updated."
+       flash[:notice] = "El productor #{@producer.name} ha sido actualizado con exito."
        redirect_to :action => 'show', :id => @producer
     else
-       @page_title = 'Editar productor'
+       @page_title = 'Editar Productor'
        render :action => 'edit'
     end
   end
@@ -34,7 +34,7 @@ class Admin::ProducerController < ApplicationController
   def destroy
     @producer = Producer.find(params[:id])
     @producer.destroy
-    flash[:notice] = "Succesfully deleted producer #{@producer.name}."
+    flash[:notice] = "Productor eliminado con exito #{@producer.name}."
     redirect_to :action => 'index'
   end
 
@@ -45,7 +45,7 @@ class Admin::ProducerController < ApplicationController
 
   def index
     @producers = Producer.all
-    @page_title = 'Listar productoras'
+    @page_title = 'Lista Productores'
   end
 
   private
