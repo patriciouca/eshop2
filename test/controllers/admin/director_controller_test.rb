@@ -7,7 +7,7 @@ class Admin::DirectorControllerTest < ActionController::TestCase
     get :new
     assert_template 'admin/director/new'
     assert_select 'div#content' do
-      assert_select 'h1', 'Create new director'
+      assert_select 'h1', 'Crear nuevo director'
       assert_select "form[action=\"/admin/director/create\"]"
     end
     
@@ -20,8 +20,8 @@ class Admin::DirectorControllerTest < ActionController::TestCase
       post :create, :director => {:first_name => 'Joel', :last_name => 'Spolsky'}
       assert_response :redirect
       assert_redirected_to :action => 'index'
+      assert_equal 'Director Joel Spolsky fue creado correctamente.', flash[:notice]
     end
-    assert_equal 'Director Joel Spolsky fue creado correctamente.', flash[:notice]
   end
 
   test "failing_create" do
@@ -49,10 +49,11 @@ class Admin::DirectorControllerTest < ActionController::TestCase
   end
 
   test "update" do
-    post :update, :id => 1, :director => { :first_name => 'Joseph', :last_name => 'Spolsky' }
+    post :update, :id => 1, :director => { :first_name => 'Joseph', :last_name => 'Smith' }
     assert_response :redirect
     assert_redirected_to :action => 'show', :id => 1
     assert_equal 'Joseph', Director.find(1).first_name
+    assert_equal 'Smith', Director.find(1).last_name
   end
 
   test "test_destroy" do
