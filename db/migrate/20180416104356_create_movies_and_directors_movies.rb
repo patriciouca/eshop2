@@ -5,9 +5,9 @@ class CreateMoviesAndDirectorsMovies < ActiveRecord::Migration
       t.string :title, :limit => 255, :null => false
       t.integer :producer_id, :null => false
       t.datetime :produced_at
-      t.string :sn, :limit => 13, :unique => true
+      t.string :serial_number, :limit => 5, :unique => true
       t.text :blurb
-      t.integer :duration
+      t.integer :length
       t.float :price
       t.timestamps
   end

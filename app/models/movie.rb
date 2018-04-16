@@ -15,16 +15,16 @@ class Movie < ActiveRecord::Base
   validates_presence_of :produced_at
   validates_numericality_of :duration, :only_integer => true
   validates_numericality_of :price
-  validates_length_of :sn, :in => 1..13
-  validates_format_of :sn, :with => /[0-9\-xX]{13}/
-  validates_uniqueness_of :sn
+  validates_length_of :serial_number, :in => 1..13
+  validates_format_of :serial_number, :with => /[0-9\-xX]{13}/
+  validates_uniqueness_of :serial_number
 
   def director_names
     self.directors.map{|director| director.name}.join(", ")
   end
 
-  def self.latest(num)
-    all.order("movies.id desc").includes(:directors, :producer).limit(num)
-  end
+  #def self.latest(num)
+  #  all.order("movies.id desc").includes(:directors, :producer).limit(num)
+  #end
 end
 

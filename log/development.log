@@ -4329,3 +4329,578 @@ Processing by Admin::DirectorController#new as HTML
   Rendered admin/director/_form.html.erb (1.1ms)
   Rendered admin/director/new.html.erb within layouts/application (5.7ms)
 Completed 200 OK in 64ms (Views: 62.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-04-16 12:02:42 +0200
+  [1m[36mActiveRecord::SchemaMigration Load (5.9ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Processing by AboutController#index as HTML
+  Rendered about/index.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 991ms (Views: 952.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/about.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2018-04-16 12:02:43 +0200
+
+
+Started GET "/assets/admin/director.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2018-04-16 12:02:43 +0200
+
+
+Started GET "/assets/admin/producer.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2018-04-16 12:02:43 +0200
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 127.0.0.1 at 2018-04-16 12:02:43 +0200
+
+
+Started GET "/admin/producer" for 127.0.0.1 at 2018-04-16 12:02:47 +0200
+Processing by Admin::ProducerController#index as HTML
+  [1m[35mProducer Load (27.7ms)[0m  SELECT `producers`.* FROM `producers`
+  Rendered admin/producer/_producer.html.erb (7.5ms)
+  Rendered admin/producer/index.html.erb within layouts/application (61.5ms)
+Completed 200 OK in 123ms (Views: 84.4ms | ActiveRecord: 30.8ms)
+
+
+Started GET "/admin/producer/new" for 127.0.0.1 at 2018-04-16 12:02:49 +0200
+Processing by Admin::ProducerController#new as HTML
+  Rendered admin/producer/_form.html.erb (22.7ms)
+  Rendered admin/producer/new.html.erb within layouts/application (28.2ms)
+Completed 200 OK in 75ms (Views: 73.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/admin/producer/create" for 127.0.0.1 at 2018-04-16 12:03:17 +0200
+Processing by Admin::ProducerController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"bN9fmB67qnNCP2r5Qw6ltmqTeoOZ4p+1uQ6IkG+9NKxAAVyylTmFnkGA50zRGmXzaLn2Vn0c/JwQDwVQfViELA==", "producer"=>{"name"=>"Fox Entertainment Group‎"}, "commit"=>"Crear Productor"}
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35mProducer Exists (0.7ms)[0m  SELECT  1 AS one FROM `producers` WHERE `producers`.`name` = BINARY 'Fox Entertainment Group‎' LIMIT 1
+  [1m[36mSQL (2.5ms)[0m  [1mINSERT INTO `producers` (`name`, `created_at`, `updated_at`) VALUES ('Fox Entertainment Group‎', '2018-04-16 10:03:17', '2018-04-16 10:03:17')[0m
+  [1m[35m (0.4ms)[0m  ROLLBACK
+Completed 500 Internal Server Error in 62ms (ActiveRecord: 4.0ms)
+
+ActiveRecord::StatementInvalid (Mysql2::Error: Incorrect string value: '\xE2\x80\x8E' for column 'name' at row 1: INSERT INTO `producers` (`name`, `created_at`, `updated_at`) VALUES ('Fox Entertainment Group‎', '2018-04-16 10:03:17', '2018-04-16 10:03:17')):
+  app/controllers/admin/producer_controller.rb:9:in `create'
+
+
+  Rendered /home/patricio/.rvm/gems/ruby-2.2.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (35.9ms)
+  Rendered /home/patricio/.rvm/gems/ruby-2.2.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (16.9ms)
+  Rendered /home/patricio/.rvm/gems/ruby-2.2.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (4.6ms)
+  Rendered /home/patricio/.rvm/gems/ruby-2.2.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (112.2ms)
+  Rendered /home/patricio/.rvm/gems/ruby-2.2.4/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (1.7ms)
+  Rendered /home/patricio/.rvm/gems/ruby-2.2.4/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (3.0ms)
+  Rendered /home/patricio/.rvm/gems/ruby-2.2.4/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (1.9ms)
+  Rendered /home/patricio/.rvm/gems/ruby-2.2.4/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.8ms)
+  Rendered /home/patricio/.rvm/gems/ruby-2.2.4/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (76.2ms)
+  Rendered /home/patricio/.rvm/gems/ruby-2.2.4/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.6ms)
+  Rendered /home/patricio/.rvm/gems/ruby-2.2.4/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (1.2ms)
+  Rendered /home/patricio/.rvm/gems/ruby-2.2.4/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (140.3ms)
+
+
+Started POST "/admin/producer/create" for 127.0.0.1 at 2018-04-16 12:03:42 +0200
+Processing by Admin::ProducerController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"bN9fmB67qnNCP2r5Qw6ltmqTeoOZ4p+1uQ6IkG+9NKxAAVyylTmFnkGA50zRGmXzaLn2Vn0c/JwQDwVQfViELA==", "producer"=>{"name"=>"Fox Entertainment Group"}, "commit"=>"Crear Productor"}
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35mProducer Exists (0.7ms)[0m  SELECT  1 AS one FROM `producers` WHERE `producers`.`name` = BINARY 'Fox Entertainment Group' LIMIT 1
+  [1m[36mSQL (0.6ms)[0m  [1mINSERT INTO `producers` (`name`, `created_at`, `updated_at`) VALUES ('Fox Entertainment Group', '2018-04-16 10:03:42', '2018-04-16 10:03:42')[0m
+  [1m[35m (93.0ms)[0m  COMMIT
+Redirected to http://localhost:3000/admin/producer
+Completed 302 Found in 107ms (ActiveRecord: 94.7ms)
+
+
+Started GET "/admin/producer" for 127.0.0.1 at 2018-04-16 12:03:42 +0200
+Processing by Admin::ProducerController#index as HTML
+  [1m[36mProducer Load (0.6ms)[0m  [1mSELECT `producers`.* FROM `producers`[0m
+  Rendered admin/producer/_producer.html.erb (9.8ms)
+  Rendered admin/producer/index.html.erb within layouts/application (13.5ms)
+Completed 200 OK in 81ms (Views: 78.3ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/admin/producer/show/4" for 127.0.0.1 at 2018-04-16 12:06:09 +0200
+Processing by Admin::ProducerController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[35mProducer Load (0.9ms)[0m  SELECT  `producers`.* FROM `producers` WHERE `producers`.`id` = 4 LIMIT 1
+  Rendered admin/producer/show.html.erb within layouts/application (3.1ms)
+Completed 200 OK in 73ms (Views: 55.0ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/admin/producer" for 127.0.0.1 at 2018-04-16 12:06:11 +0200
+Processing by Admin::ProducerController#index as HTML
+  [1m[36mProducer Load (1.0ms)[0m  [1mSELECT `producers`.* FROM `producers`[0m
+  Rendered admin/producer/_producer.html.erb (8.2ms)
+  Rendered admin/producer/index.html.erb within layouts/application (13.9ms)
+Completed 200 OK in 79ms (Views: 76.7ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/admin/producer/new" for 127.0.0.1 at 2018-04-16 12:06:12 +0200
+Processing by Admin::ProducerController#new as HTML
+  Rendered admin/producer/_form.html.erb (0.6ms)
+  Rendered admin/producer/new.html.erb within layouts/application (4.8ms)
+Completed 200 OK in 64ms (Views: 62.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/admin/producer/create" for 127.0.0.1 at 2018-04-16 12:06:27 +0200
+Processing by Admin::ProducerController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"FUPzdx8Tv95t9UKhX9MPmMN3WHJGtns93hd7ZHbFjhU5nfBdlJGQM25KzxTNx8/dwV3Up6JIGBR3FvakZCA+lQ==", "producer"=>{"name"=>"Lions Gate"}, "commit"=>"Crear Productor"}
+  [1m[35m (0.4ms)[0m  BEGIN
+  [1m[36mProducer Exists (0.8ms)[0m  [1mSELECT  1 AS one FROM `producers` WHERE `producers`.`name` = BINARY 'Lions Gate' LIMIT 1[0m
+  [1m[35mSQL (0.7ms)[0m  INSERT INTO `producers` (`name`, `created_at`, `updated_at`) VALUES ('Lions Gate', '2018-04-16 10:06:27', '2018-04-16 10:06:27')
+  [1m[36m (142.5ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/admin/producer
+Completed 302 Found in 156ms (ActiveRecord: 144.4ms)
+
+
+Started GET "/admin/producer" for 127.0.0.1 at 2018-04-16 12:06:27 +0200
+Processing by Admin::ProducerController#index as HTML
+  [1m[35mProducer Load (0.6ms)[0m  SELECT `producers`.* FROM `producers`
+  Rendered admin/producer/_producer.html.erb (7.1ms)
+  Rendered admin/producer/index.html.erb within layouts/application (11.6ms)
+Completed 200 OK in 60ms (Views: 57.9ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/admin/director" for 127.0.0.1 at 2018-04-16 12:06:31 +0200
+Processing by Admin::DirectorController#index as HTML
+  [1m[36mDirector Load (43.2ms)[0m  [1mSELECT `directors`.* FROM `directors`[0m
+  Rendered admin/director/_director.html.erb (5.7ms)
+  Rendered admin/director/index.html.erb within layouts/application (67.6ms)
+Completed 200 OK in 128ms (Views: 75.2ms | ActiveRecord: 45.4ms)
+
+
+Started GET "/admin/director/new" for 127.0.0.1 at 2018-04-16 12:06:33 +0200
+Processing by Admin::DirectorController#new as HTML
+  Rendered admin/director/_form.html.erb (2.6ms)
+  Rendered admin/director/new.html.erb within layouts/application (8.4ms)
+Completed 200 OK in 62ms (Views: 60.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/admin/director/create" for 127.0.0.1 at 2018-04-16 12:06:39 +0200
+Processing by Admin::DirectorController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"vaXMZ0k6ZeTFkmlJ083GqUJS7nIhVXgHcM5R04elNXWRe89NwrhKCcYt5PxB2QbsQHhip8WrGy7Zz9wTlUCF9Q==", "director"=>{"first_name"=>"Daniel", "last_name"=>"Mejias"}, "commit"=>"Crear director"}
+  [1m[35m (0.4ms)[0m  BEGIN
+  [1m[36mSQL (0.7ms)[0m  [1mINSERT INTO `directors` (`first_name`, `last_name`, `created_at`, `updated_at`) VALUES ('Daniel', 'Mejias', '2018-04-16 10:06:39', '2018-04-16 10:06:39')[0m
+  [1m[35m (85.8ms)[0m  COMMIT
+Redirected to http://localhost:3000/admin/director
+Completed 302 Found in 96ms (ActiveRecord: 86.9ms)
+
+
+Started GET "/admin/director" for 127.0.0.1 at 2018-04-16 12:06:39 +0200
+Processing by Admin::DirectorController#index as HTML
+  [1m[36mDirector Load (0.6ms)[0m  [1mSELECT `directors`.* FROM `directors`[0m
+  Rendered admin/director/_director.html.erb (5.8ms)
+  Rendered admin/director/index.html.erb within layouts/application (9.9ms)
+Completed 200 OK in 61ms (Views: 59.0ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/admin/director/new" for 127.0.0.1 at 2018-04-16 12:06:46 +0200
+Processing by Admin::DirectorController#new as HTML
+  Rendered admin/director/_form.html.erb (0.9ms)
+  Rendered admin/director/new.html.erb within layouts/application (4.6ms)
+Completed 200 OK in 58ms (Views: 57.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/admin/director/create" for 127.0.0.1 at 2018-04-16 12:07:12 +0200
+Processing by Admin::DirectorController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"g1C953nQdSbgostSldQbut8Iv2XUXD/v1FREWg4gTXKvjr7N8lJay+MdRucHwNv/3SIzsDCiXMZ9VcmaHMX98g==", "director"=>{"first_name"=>"Jose maria", "last_name"=>"Rodriguez"}, "commit"=>"Crear director"}
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36mSQL (0.7ms)[0m  [1mINSERT INTO `directors` (`first_name`, `last_name`, `created_at`, `updated_at`) VALUES ('Jose maria', 'Rodriguez', '2018-04-16 10:07:12', '2018-04-16 10:07:12')[0m
+  [1m[35m (133.5ms)[0m  COMMIT
+Redirected to http://localhost:3000/admin/director
+Completed 302 Found in 142ms (ActiveRecord: 134.5ms)
+
+
+Started GET "/admin/director" for 127.0.0.1 at 2018-04-16 12:07:12 +0200
+Processing by Admin::DirectorController#index as HTML
+  [1m[36mDirector Load (0.5ms)[0m  [1mSELECT `directors`.* FROM `directors`[0m
+  Rendered admin/director/_director.html.erb (6.7ms)
+  Rendered admin/director/index.html.erb within layouts/application (10.5ms)
+Completed 200 OK in 61ms (Views: 58.9ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/admin/producer" for 127.0.0.1 at 2018-04-16 12:08:01 +0200
+Processing by Admin::ProducerController#index as HTML
+  [1m[35mProducer Load (1.0ms)[0m  SELECT `producers`.* FROM `producers`
+  Rendered admin/producer/_producer.html.erb (11.5ms)
+  Rendered admin/producer/index.html.erb within layouts/application (17.6ms)
+Completed 200 OK in 71ms (Views: 68.8ms | ActiveRecord: 1.0ms)
+  [1m[36mActiveRecord::SchemaMigration Load (0.8ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Migrating to CreateMoviesAndDirectorsMovies (20180416104356)
+DEPRECATION WARNING: `#timestamps` was called without specifying an option for `null`. In Rails 5, this behavior will change to `null: false`. You should manually specify `null: true` to prevent the behavior of your existing migrations from changing. (called from block in up at /home/patricio/Escritorio/INE/eshop2/db/migrate/20180416104356_create_movies_and_directors_movies.rb:12)
+  [1m[35m (274.7ms)[0m  CREATE TABLE `movies` (`id` int(11) auto_increment PRIMARY KEY, `title` varchar(255) NOT NULL, `producer_id` int(11) NOT NULL, `produced_at` datetime, `sn` varchar(13), `blurb` text, `duration` int(11), `price` float, `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB
+DEPRECATION WARNING: `#timestamps` was called without specifying an option for `null`. In Rails 5, this behavior will change to `null: false`. You should manually specify `null: true` to prevent the behavior of your existing migrations from changing. (called from block in up at /home/patricio/Escritorio/INE/eshop2/db/migrate/20180416104356_create_movies_and_directors_movies.rb:17)
+  [1m[36m (276.7ms)[0m  [1mCREATE TABLE `directors_movies` (`id` int(11) auto_increment PRIMARY KEY, `director_id` int(11) NOT NULL, `movie_id` int(11) NOT NULL, `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [1m[35m (761.5ms)[0m  ALTER TABLE directors_movies ADD CONSTRAINT fk_directors_movies_directors
+              FOREIGN KEY (director_id) REFERENCES directors(id) ON DELETE CASCADE
+  [1m[36m (782.3ms)[0m  [1mALTER TABLE directors_movies ADD CONSTRAINT fk_directors_movies_movies
+              FOREIGN KEY (movie_id) REFERENCES movies(id) ON DELETE CASCADE[0m
+  [1m[35m (761.9ms)[0m  ALTER TABLE movies ADD CONSTRAINT fk_movies_producers
+              FOREIGN KEY (producer_id) REFERENCES producers(id) ON DELETE CASCADE
+  [1m[36m (0.4ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  INSERT INTO `schema_migrations` (`version`) VALUES ('20180416104356')
+  [1m[36m (40.3ms)[0m  [1mCOMMIT[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.6ms)[0m  SELECT `schema_migrations`.* FROM `schema_migrations`
+  [1m[36m (0.9ms)[0m  [1mSELECT fk.referenced_table_name as 'to_table'
+      ,fk.referenced_column_name as 'primary_key'
+      ,fk.column_name as 'column'
+      ,fk.constraint_name as 'name'
+FROM information_schema.key_column_usage fk
+WHERE fk.referenced_column_name is not null
+  AND fk.table_schema = 'eshop2_development'
+  AND fk.table_name = 'directors'
+[0m
+  [1m[35m (0.6ms)[0m  SHOW CREATE TABLE `directors`
+  [1m[36m (0.9ms)[0m  [1mSELECT fk.referenced_table_name as 'to_table'
+      ,fk.referenced_column_name as 'primary_key'
+      ,fk.column_name as 'column'
+      ,fk.constraint_name as 'name'
+FROM information_schema.key_column_usage fk
+WHERE fk.referenced_column_name is not null
+  AND fk.table_schema = 'eshop2_development'
+  AND fk.table_name = 'directors_movies'
+[0m
+  [1m[35m (0.5ms)[0m  SHOW CREATE TABLE `directors_movies`
+  [1m[36m (0.8ms)[0m  [1mSELECT fk.referenced_table_name as 'to_table'
+      ,fk.referenced_column_name as 'primary_key'
+      ,fk.column_name as 'column'
+      ,fk.constraint_name as 'name'
+FROM information_schema.key_column_usage fk
+WHERE fk.referenced_column_name is not null
+  AND fk.table_schema = 'eshop2_development'
+  AND fk.table_name = 'movies'
+[0m
+  [1m[35m (0.4ms)[0m  SHOW CREATE TABLE `movies`
+  [1m[36m (0.6ms)[0m  [1mSELECT fk.referenced_table_name as 'to_table'
+      ,fk.referenced_column_name as 'primary_key'
+      ,fk.column_name as 'column'
+      ,fk.constraint_name as 'name'
+FROM information_schema.key_column_usage fk
+WHERE fk.referenced_column_name is not null
+  AND fk.table_schema = 'eshop2_development'
+  AND fk.table_name = 'producers'
+[0m
+  [1m[35m (0.2ms)[0m  SHOW CREATE TABLE `producers`
+  [1m[36m (274.8ms)[0m  [1mCREATE TABLE `schema_migrations` (`version` varchar(255) NOT NULL) ENGINE=InnoDB[0m
+  [1m[35m (568.7ms)[0m  CREATE UNIQUE INDEX `unique_schema_migrations`  ON `schema_migrations` (`version`) 
+  [1m[36mActiveRecord::SchemaMigration Load (0.7ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Migrating to CreateProducers (20180402095924)
+  [1m[35m (230.7ms)[0m  CREATE TABLE `producers` (`id` int(11) auto_increment PRIMARY KEY, `name` varchar(255) NOT NULL, `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.7ms)[0m  INSERT INTO `schema_migrations` (`version`) VALUES ('20180402095924')
+  [1m[36m (42.6ms)[0m  [1mCOMMIT[0m
+Migrating to CreateDirectors (20180409101101)
+  [1m[35m (255.5ms)[0m  CREATE TABLE `directors` (`id` int(11) auto_increment PRIMARY KEY, `first_name` varchar(255), `last_name` varchar(255), `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO `schema_migrations` (`version`) VALUES ('20180409101101')
+  [1m[36m (40.7ms)[0m  [1mCOMMIT[0m
+Migrating to CreateMoviesAndDirectorsMovies (20180416104356)
+DEPRECATION WARNING: `#timestamps` was called without specifying an option for `null`. In Rails 5, this behavior will change to `null: false`. You should manually specify `null: true` to prevent the behavior of your existing migrations from changing. (called from block in up at /home/patricio/Escritorio/INE/eshop2/db/migrate/20180416104356_create_movies_and_directors_movies.rb:12)
+  [1m[35m (276.4ms)[0m  CREATE TABLE `movies` (`id` int(11) auto_increment PRIMARY KEY, `title` varchar(255) NOT NULL, `producer_id` int(11) NOT NULL, `produced_at` datetime, `serial_number` varchar(5), `blurb` text, `length` int(11), `price` float, `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB
+DEPRECATION WARNING: `#timestamps` was called without specifying an option for `null`. In Rails 5, this behavior will change to `null: false`. You should manually specify `null: true` to prevent the behavior of your existing migrations from changing. (called from block in up at /home/patricio/Escritorio/INE/eshop2/db/migrate/20180416104356_create_movies_and_directors_movies.rb:17)
+  [1m[36m (277.5ms)[0m  [1mCREATE TABLE `directors_movies` (`id` int(11) auto_increment PRIMARY KEY, `director_id` int(11) NOT NULL, `movie_id` int(11) NOT NULL, `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [1m[35m (606.2ms)[0m  ALTER TABLE directors_movies ADD CONSTRAINT fk_directors_movies_directors
+              FOREIGN KEY (director_id) REFERENCES directors(id) ON DELETE CASCADE
+  [1m[36m (793.4ms)[0m  [1mALTER TABLE directors_movies ADD CONSTRAINT fk_directors_movies_movies
+              FOREIGN KEY (movie_id) REFERENCES movies(id) ON DELETE CASCADE[0m
+  [1m[35m (606.4ms)[0m  ALTER TABLE movies ADD CONSTRAINT fk_movies_producers
+              FOREIGN KEY (producer_id) REFERENCES producers(id) ON DELETE CASCADE
+  [1m[36m (0.4ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.7ms)[0m  INSERT INTO `schema_migrations` (`version`) VALUES ('20180416104356')
+  [1m[36m (39.7ms)[0m  [1mCOMMIT[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.4ms)[0m  SELECT `schema_migrations`.* FROM `schema_migrations`
+  [1m[36m (0.8ms)[0m  [1mSELECT fk.referenced_table_name as 'to_table'
+      ,fk.referenced_column_name as 'primary_key'
+      ,fk.column_name as 'column'
+      ,fk.constraint_name as 'name'
+FROM information_schema.key_column_usage fk
+WHERE fk.referenced_column_name is not null
+  AND fk.table_schema = 'eshop2_development'
+  AND fk.table_name = 'directors'
+[0m
+  [1m[35m (0.4ms)[0m  SHOW CREATE TABLE `directors`
+  [1m[36m (0.6ms)[0m  [1mSELECT fk.referenced_table_name as 'to_table'
+      ,fk.referenced_column_name as 'primary_key'
+      ,fk.column_name as 'column'
+      ,fk.constraint_name as 'name'
+FROM information_schema.key_column_usage fk
+WHERE fk.referenced_column_name is not null
+  AND fk.table_schema = 'eshop2_development'
+  AND fk.table_name = 'directors_movies'
+[0m
+  [1m[35m (0.4ms)[0m  SHOW CREATE TABLE `directors_movies`
+  [1m[36m (0.6ms)[0m  [1mSELECT fk.referenced_table_name as 'to_table'
+      ,fk.referenced_column_name as 'primary_key'
+      ,fk.column_name as 'column'
+      ,fk.constraint_name as 'name'
+FROM information_schema.key_column_usage fk
+WHERE fk.referenced_column_name is not null
+  AND fk.table_schema = 'eshop2_development'
+  AND fk.table_name = 'movies'
+[0m
+  [1m[35m (0.4ms)[0m  SHOW CREATE TABLE `movies`
+  [1m[36m (0.6ms)[0m  [1mSELECT fk.referenced_table_name as 'to_table'
+      ,fk.referenced_column_name as 'primary_key'
+      ,fk.column_name as 'column'
+      ,fk.constraint_name as 'name'
+FROM information_schema.key_column_usage fk
+WHERE fk.referenced_column_name is not null
+  AND fk.table_schema = 'eshop2_development'
+  AND fk.table_name = 'producers'
+[0m
+  [1m[35m (0.5ms)[0m  SHOW CREATE TABLE `producers`
+
+
+Started GET "/admin/producer" for 127.0.0.1 at 2018-04-16 13:36:44 +0200
+  [1m[36mActiveRecord::SchemaMigration Load (0.7ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Processing by Admin::ProducerController#index as HTML
+  [1m[35mProducer Load (0.7ms)[0m  SELECT `producers`.* FROM `producers`
+  Rendered admin/producer/_producer.html.erb (0.0ms)
+  Rendered admin/producer/index.html.erb within layouts/application (16.5ms)
+Completed 200 OK in 1103ms (Views: 1051.7ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/assets/movie.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2018-04-16 13:36:46 +0200
+
+
+Started GET "/assets/movie.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2018-04-16 13:36:46 +0200
+
+
+Started GET "/assets/admin/director.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2018-04-16 13:36:46 +0200
+
+
+Started GET "/assets/style.self-28c50fed0fbf40c4e00e2c6a9dc7872cb7466e25803d031cd7fc5cb4ba105fd8.css?body=1" for 127.0.0.1 at 2018-04-16 13:36:46 +0200
+
+
+Started GET "/assets/about.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2018-04-16 13:36:46 +0200
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 127.0.0.1 at 2018-04-16 13:36:46 +0200
+
+
+Started GET "/assets/admin/producer.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2018-04-16 13:36:46 +0200
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for 127.0.0.1 at 2018-04-16 13:36:46 +0200
+
+
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for 127.0.0.1 at 2018-04-16 13:36:46 +0200
+
+
+Started GET "/assets/turbolinks.self-2db6ec539b9190f75e1d477b305df53d12904d5cafdd47c7ffd91ba25cbec128.js?body=1" for 127.0.0.1 at 2018-04-16 13:36:46 +0200
+
+
+Started GET "/assets/about.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2018-04-16 13:36:46 +0200
+
+
+Started GET "/assets/admin/director.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2018-04-16 13:36:46 +0200
+
+
+Started GET "/assets/admin/producer.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2018-04-16 13:36:46 +0200
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 127.0.0.1 at 2018-04-16 13:36:46 +0200
+
+
+Started GET "/admin/producer/new" for 127.0.0.1 at 2018-04-16 13:36:48 +0200
+Processing by Admin::ProducerController#new as HTML
+  Rendered admin/producer/_form.html.erb (22.6ms)
+  Rendered admin/producer/new.html.erb within layouts/application (28.7ms)
+Completed 200 OK in 105ms (Views: 91.5ms | ActiveRecord: 2.4ms)
+
+
+Started POST "/admin/producer/create" for 127.0.0.1 at 2018-04-16 13:36:55 +0200
+Processing by Admin::ProducerController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"b/0eSo0REGNSxRSx3MFfRHT6BLemp+X2DvI4WBF+7QdDIx1gBpM/jlF6mQRO1Z8BdtCIYkJZht+n87WYA5tdhw==", "producer"=>{"name"=>"Pixar"}, "commit"=>"Crear Productor"}
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35mProducer Exists (0.7ms)[0m  SELECT  1 AS one FROM `producers` WHERE `producers`.`name` = BINARY 'Pixar' LIMIT 1
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO `producers` (`name`, `created_at`, `updated_at`) VALUES ('Pixar', '2018-04-16 11:36:56', '2018-04-16 11:36:56')[0m
+  [1m[35m (47.5ms)[0m  COMMIT
+Redirected to http://localhost:3000/admin/producer
+Completed 302 Found in 85ms (ActiveRecord: 49.0ms)
+
+
+Started GET "/admin/producer" for 127.0.0.1 at 2018-04-16 13:36:56 +0200
+Processing by Admin::ProducerController#index as HTML
+  [1m[36mProducer Load (0.6ms)[0m  [1mSELECT `producers`.* FROM `producers`[0m
+  Rendered admin/producer/_producer.html.erb (4.8ms)
+  Rendered admin/producer/index.html.erb within layouts/application (9.2ms)
+Completed 200 OK in 70ms (Views: 67.5ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/admin/producer/new" for 127.0.0.1 at 2018-04-16 13:36:57 +0200
+Processing by Admin::ProducerController#new as HTML
+  Rendered admin/producer/_form.html.erb (0.7ms)
+  Rendered admin/producer/new.html.erb within layouts/application (4.7ms)
+Completed 200 OK in 69ms (Views: 68.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/admin/producer/create" for 127.0.0.1 at 2018-04-16 13:37:00 +0200
+Processing by Admin::ProducerController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"BGLGzlN5x7VFaxNXYVGNDtYKF+Lb+ff85aTdNP0e9+EovMXk2PvoWEbUnuLzRU1L1CCbNz8HlNVMpVD07/tHYQ==", "producer"=>{"name"=>"Fox Entertainment Group"}, "commit"=>"Crear Productor"}
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36mProducer Exists (0.9ms)[0m  [1mSELECT  1 AS one FROM `producers` WHERE `producers`.`name` = BINARY 'Fox Entertainment Group' LIMIT 1[0m
+  [1m[35mSQL (1.4ms)[0m  INSERT INTO `producers` (`name`, `created_at`, `updated_at`) VALUES ('Fox Entertainment Group', '2018-04-16 11:37:00', '2018-04-16 11:37:00')
+  [1m[36m (166.3ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/admin/producer
+Completed 302 Found in 179ms (ActiveRecord: 168.9ms)
+
+
+Started GET "/admin/producer" for 127.0.0.1 at 2018-04-16 13:37:00 +0200
+Processing by Admin::ProducerController#index as HTML
+  [1m[35mProducer Load (1.1ms)[0m  SELECT `producers`.* FROM `producers`
+  Rendered admin/producer/_producer.html.erb (5.4ms)
+  Rendered admin/producer/index.html.erb within layouts/application (10.6ms)
+Completed 200 OK in 71ms (Views: 68.6ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/admin/producer/new" for 127.0.0.1 at 2018-04-16 13:37:02 +0200
+Processing by Admin::ProducerController#new as HTML
+  Rendered admin/producer/_form.html.erb (0.6ms)
+  Rendered admin/producer/new.html.erb within layouts/application (4.6ms)
+Completed 200 OK in 67ms (Views: 65.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/admin/producer/create" for 127.0.0.1 at 2018-04-16 13:37:05 +0200
+Processing by Admin::ProducerController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"K7qrUFpctWT5+ySxaKDqBEf6GxeSVYjesmv0shRJauoHZKh60d6aifpEqQT6tCpBRdCXwnar6/cbanlyBqzaag==", "producer"=>{"name"=>"Lions Gate"}, "commit"=>"Crear Productor"}
+  [1m[36m (0.4ms)[0m  [1mBEGIN[0m
+  [1m[35mProducer Exists (0.8ms)[0m  SELECT  1 AS one FROM `producers` WHERE `producers`.`name` = BINARY 'Lions Gate' LIMIT 1
+  [1m[36mSQL (0.6ms)[0m  [1mINSERT INTO `producers` (`name`, `created_at`, `updated_at`) VALUES ('Lions Gate', '2018-04-16 11:37:05', '2018-04-16 11:37:05')[0m
+  [1m[35m (36.0ms)[0m  COMMIT
+Redirected to http://localhost:3000/admin/producer
+Completed 302 Found in 49ms (ActiveRecord: 37.7ms)
+
+
+Started GET "/admin/producer" for 127.0.0.1 at 2018-04-16 13:37:05 +0200
+Processing by Admin::ProducerController#index as HTML
+  [1m[36mProducer Load (0.8ms)[0m  [1mSELECT `producers`.* FROM `producers`[0m
+  Rendered admin/producer/_producer.html.erb (6.5ms)
+  Rendered admin/producer/index.html.erb within layouts/application (11.3ms)
+Completed 200 OK in 66ms (Views: 63.8ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/admin/producer/new" for 127.0.0.1 at 2018-04-16 13:37:06 +0200
+Processing by Admin::ProducerController#new as HTML
+  Rendered admin/producer/_form.html.erb (0.5ms)
+  Rendered admin/producer/new.html.erb within layouts/application (4.4ms)
+Completed 200 OK in 86ms (Views: 85.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/admin/producer/create" for 127.0.0.1 at 2018-04-16 13:37:21 +0200
+Processing by Admin::ProducerController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"SZDlBmq0cyGeKfZ/IFbSsOaFUiMOCCBCDjUv3N/RHMNlTuYs4TZczJ2We8qyQhL15K/e9ur2Q2unNKIczTSsQw==", "producer"=>{"name"=>"Warner Bros"}, "commit"=>"Crear Productor"}
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36mProducer Exists (1.0ms)[0m  [1mSELECT  1 AS one FROM `producers` WHERE `producers`.`name` = BINARY 'Warner Bros' LIMIT 1[0m
+  [1m[35mSQL (0.6ms)[0m  INSERT INTO `producers` (`name`, `created_at`, `updated_at`) VALUES ('Warner Bros', '2018-04-16 11:37:21', '2018-04-16 11:37:21')
+  [1m[36m (109.3ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/admin/producer
+Completed 302 Found in 122ms (ActiveRecord: 111.2ms)
+
+
+Started GET "/admin/producer" for 127.0.0.1 at 2018-04-16 13:37:21 +0200
+Processing by Admin::ProducerController#index as HTML
+  [1m[35mProducer Load (0.8ms)[0m  SELECT `producers`.* FROM `producers`
+  Rendered admin/producer/_producer.html.erb (9.4ms)
+  Rendered admin/producer/index.html.erb within layouts/application (14.4ms)
+Completed 200 OK in 78ms (Views: 76.4ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/admin/director" for 127.0.0.1 at 2018-04-16 13:37:25 +0200
+Processing by Admin::DirectorController#index as HTML
+  [1m[36mDirector Load (0.7ms)[0m  [1mSELECT `directors`.* FROM `directors`[0m
+  Rendered admin/director/_director.html.erb (0.0ms)
+  Rendered admin/director/index.html.erb within layouts/application (8.4ms)
+Completed 200 OK in 108ms (Views: 73.6ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/admin/director/new" for 127.0.0.1 at 2018-04-16 13:37:26 +0200
+Processing by Admin::DirectorController#new as HTML
+  Rendered admin/director/_form.html.erb (3.0ms)
+  Rendered admin/director/new.html.erb within layouts/application (8.5ms)
+Completed 200 OK in 88ms (Views: 74.9ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/admin/director/create" for 127.0.0.1 at 2018-04-16 13:37:29 +0200
+Processing by Admin::DirectorController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Ev6sfW9xI2VR/IX8ID66DfGZF2A0fJhQO6wGWnlpRIk+IK9X5PMMiFJDCEmyKnpI87ObtdCC+3mSrYuaa4z0CQ==", "director"=>{"first_name"=>"Pablo", "last_name"=>"Garcia Sanchez"}, "commit"=>"Crear director"}
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36mSQL (0.9ms)[0m  [1mINSERT INTO `directors` (`first_name`, `last_name`, `created_at`, `updated_at`) VALUES ('Pablo', 'Garcia Sanchez', '2018-04-16 11:37:29', '2018-04-16 11:37:29')[0m
+  [1m[35m (87.3ms)[0m  COMMIT
+Redirected to http://localhost:3000/admin/director
+Completed 302 Found in 98ms (ActiveRecord: 88.5ms)
+
+
+Started GET "/admin/director" for 127.0.0.1 at 2018-04-16 13:37:29 +0200
+Processing by Admin::DirectorController#index as HTML
+  [1m[36mDirector Load (0.6ms)[0m  [1mSELECT `directors`.* FROM `directors`[0m
+  Rendered admin/director/_director.html.erb (4.9ms)
+  Rendered admin/director/index.html.erb within layouts/application (9.9ms)
+Completed 200 OK in 77ms (Views: 75.0ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/admin/director/new" for 127.0.0.1 at 2018-04-16 13:37:30 +0200
+Processing by Admin::DirectorController#new as HTML
+  Rendered admin/director/_form.html.erb (0.9ms)
+  Rendered admin/director/new.html.erb within layouts/application (5.5ms)
+Completed 200 OK in 79ms (Views: 78.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/admin/director/create" for 127.0.0.1 at 2018-04-16 13:37:36 +0200
+Processing by Admin::DirectorController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"X1iC7BFwHrGA4r8M2uevXDSds/85DkkkQ/SYBYxL1VJzhoHGmvIxXINdMrlI828ZNrc/Kt3wKg3q9RXFnq5l0g==", "director"=>{"first_name"=>"Daniel", "last_name"=>"Mejias"}, "commit"=>"Crear director"}
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36mSQL (0.7ms)[0m  [1mINSERT INTO `directors` (`first_name`, `last_name`, `created_at`, `updated_at`) VALUES ('Daniel', 'Mejias', '2018-04-16 11:37:36', '2018-04-16 11:37:36')[0m
+  [1m[35m (138.8ms)[0m  COMMIT
+Redirected to http://localhost:3000/admin/director
+Completed 302 Found in 148ms (ActiveRecord: 139.8ms)
+
+
+Started GET "/admin/director" for 127.0.0.1 at 2018-04-16 13:37:36 +0200
+Processing by Admin::DirectorController#index as HTML
+  [1m[36mDirector Load (1.4ms)[0m  [1mSELECT `directors`.* FROM `directors`[0m
+  Rendered admin/director/_director.html.erb (3.9ms)
+  Rendered admin/director/index.html.erb within layouts/application (10.3ms)
+Completed 200 OK in 72ms (Views: 69.3ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/admin/director/new" for 127.0.0.1 at 2018-04-16 13:37:37 +0200
+Processing by Admin::DirectorController#new as HTML
+  Rendered admin/director/_form.html.erb (0.9ms)
+  Rendered admin/director/new.html.erb within layouts/application (4.4ms)
+Completed 200 OK in 63ms (Views: 62.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/admin/director/create" for 127.0.0.1 at 2018-04-16 13:37:47 +0200
+Processing by Admin::DirectorController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"H2FtSmWCKS2Bq3WWKykXUQ+l6N9sUSse2C0hTpgR3egzv25g7gAGwIIU+CO5PdcUDY9kCoivSDdxLKyOivRtaA==", "director"=>{"first_name"=>"Jose maria", "last_name"=>"Rodriguez"}, "commit"=>"Crear director"}
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36mSQL (0.8ms)[0m  [1mINSERT INTO `directors` (`first_name`, `last_name`, `created_at`, `updated_at`) VALUES ('Jose maria', 'Rodriguez', '2018-04-16 11:37:47', '2018-04-16 11:37:47')[0m
+  [1m[35m (92.0ms)[0m  COMMIT
+Redirected to http://localhost:3000/admin/director
+Completed 302 Found in 102ms (ActiveRecord: 93.1ms)
+
+
+Started GET "/admin/director" for 127.0.0.1 at 2018-04-16 13:37:47 +0200
+Processing by Admin::DirectorController#index as HTML
+  [1m[36mDirector Load (0.6ms)[0m  [1mSELECT `directors`.* FROM `directors`[0m
+  Rendered admin/director/_director.html.erb (7.2ms)
+  Rendered admin/director/index.html.erb within layouts/application (11.5ms)
+Completed 200 OK in 68ms (Views: 66.2ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/admin/director/new" for 127.0.0.1 at 2018-04-16 13:37:49 +0200
+Processing by Admin::DirectorController#new as HTML
+  Rendered admin/director/_form.html.erb (0.7ms)
+  Rendered admin/director/new.html.erb within layouts/application (3.6ms)
+Completed 200 OK in 83ms (Views: 81.7ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/admin/director/create" for 127.0.0.1 at 2018-04-16 13:38:01 +0200
+Processing by Admin::DirectorController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Y50aQX2KOQVvYK2YDfDlvg9HrwuIF6CnYs93KQuSCh9PQxlr9ggW6GzfIC2f5CX7DW0j3mzpw47LzvrpGXe6nw==", "director"=>{"first_name"=>"Alberto", "last_name"=>"Perez Diaz"}, "commit"=>"Crear director"}
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO `directors` (`first_name`, `last_name`, `created_at`, `updated_at`) VALUES ('Alberto', 'Perez Diaz', '2018-04-16 11:38:01', '2018-04-16 11:38:01')[0m
+  [1m[35m (131.8ms)[0m  COMMIT
+Redirected to http://localhost:3000/admin/director
+Completed 302 Found in 140ms (ActiveRecord: 132.6ms)
+
+
+Started GET "/admin/director" for 127.0.0.1 at 2018-04-16 13:38:01 +0200
+Processing by Admin::DirectorController#index as HTML
+  [1m[36mDirector Load (0.8ms)[0m  [1mSELECT `directors`.* FROM `directors`[0m
+  Rendered admin/director/_director.html.erb (10.1ms)
+  Rendered admin/director/index.html.erb within layouts/application (14.9ms)
+Completed 200 OK in 90ms (Views: 87.8ms | ActiveRecord: 0.8ms)
