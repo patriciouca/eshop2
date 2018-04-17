@@ -3,7 +3,7 @@ require File.dirname(__FILE__) + '/../test_helper'
 class MovieTest < ActiveSupport::TestCase
   fixtures :directors, :producers, :movies, :directors_movies
 
-  test "failing_create" do
+   test "failing_create" do
     movie = Movie.new
     assert_equal false, movie.save
     assert_equal 8, movie.errors.count
@@ -18,17 +18,18 @@ class MovieTest < ActiveSupport::TestCase
   end
 
   test "create" do
+    #Producer.create(name=>'hola')
     movie = Movie.new(
       :title => 'Ruby on Rails',
       :directors => Director.all,
       :producer_id => Producer.find(1).id,
       :produced_at => Time.now,
-      :serial_number => '123-123-123-1',
+      :serial_number => '52616',
       :blurb => 'A great movie',
       :length => 375,
       :price => 45.5
     )
-  assert movie.save
+    assert movie.save
   end
 
   test "has_many_and_belongs_to_mapping" do
