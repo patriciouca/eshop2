@@ -14,7 +14,7 @@
   <dt>Price</dt>
   <dd><%= @movie.price %></dd>
   <dt>Page count</dt>
-  <dd><%= @movie.page_count %></dd>
+  <dd><%= @movie.length %></dd>
   <dt>Cover image</dt>
   <% if @movie.cover_image.exists? then %>
     <dd><%= image_tag @movie.cover_image.url %></dd>
