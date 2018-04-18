@@ -1,54 +1,22 @@
 Rails.application.routes.draw do
 
 
-  namespace :admin do
-  get 'movie/new'
-  end
-
-  namespace :admin do
-  get 'movie/create'
-  end
-
-  namespace :admin do
-  get 'movie/edit'
-  end
-
-  namespace :admin do
-  get 'movie/update'
-  end
-
-  namespace :admin do
-  get 'movie/destroy'
-  end
-
-  namespace :admin do
-  get 'movie/show'
-  end
-
-  namespace :admin do
-  get 'movie/index'
-  end
-
-  get 'movie/new'
-
-  get 'movie/create'
-
-  get 'movie/edit'
-
-  get 'movie/update'
-
-  get 'movie/destroy'
-
-  get 'movie/show'
-
-  get 'movie/index'
-
   root to: 'about#index'
   get 'about' => 'about#index'
   get 'admin/producer' => 'admin/producer#index'
   get 'admin/director' => 'admin/director#index'
+  get 'admin/movie' => 'admin/movie#index'
  
   get 'about/index'
+
+  get 'admin/movie/new'
+  post 'admin/movie/create'
+  get 'admin/movie/edit'
+  post 'admin/movie/update'
+  post 'admin/movie/destroy'
+  get 'admin/movie/show'
+  get 'admin/movie/show/:id' => 'admin/movie#show'
+  get 'admin/movie/index'
 
   get 'admin/producer/new'
   post 'admin/producer/create'

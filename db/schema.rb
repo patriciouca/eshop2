@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180416104356) do
+ActiveRecord::Schema.define(version: 20180630150644) do
 
   create_table "directors", force: :cascade do |t|
     t.string   "first_name", limit: 255
@@ -31,15 +31,19 @@ ActiveRecord::Schema.define(version: 20180416104356) do
   add_index "directors_movies", ["movie_id"], name: "fk_directors_movies_movies", using: :btree
 
   create_table "movies", force: :cascade do |t|
-    t.string   "title",         limit: 255,   null: false
-    t.integer  "producer_id",   limit: 4,     null: false
+    t.string   "title",                    limit: 255,   null: false
+    t.integer  "producer_id",              limit: 4,     null: false
     t.datetime "produced_at"
-    t.string   "serial_number", limit: 5
-    t.text     "blurb",         limit: 65535
-    t.integer  "length",        limit: 4
-    t.float    "price",         limit: 24
+    t.string   "serial_number",            limit: 5
+    t.text     "blurb",                    limit: 65535
+    t.integer  "length",                   limit: 4
+    t.float    "price",                    limit: 24
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "cover_image_file_name",    limit: 255
+    t.string   "cover_image_content_type", limit: 255
+    t.integer  "cover_image_file_size",    limit: 4
+    t.datetime "cover_image_updated_at"
   end
 
   add_index "movies", ["producer_id"], name: "fk_movies_producers", using: :btree

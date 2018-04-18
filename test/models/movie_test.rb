@@ -3,13 +3,13 @@ require File.dirname(__FILE__) + '/../test_helper'
 class MovieTest < ActiveSupport::TestCase
   fixtures :directors, :producers, :movies, :directors_movies
 
-   test "failing_create" do
+  test "failing_create" do
     movie = Movie.new
     assert_equal false, movie.save
-    assert_equal 8, movie.errors.count
+    assert_equal 7, movie.errors.count
     assert movie.errors[:title]
     assert movie.errors[:producer]
-    assert movie.errors[:directors]
+    assert movie.errors[:authors]
     assert movie.errors[:produced_at]
     assert movie.errors[:serial_number]
     assert movie.errors[:blurb]
@@ -24,7 +24,7 @@ class MovieTest < ActiveSupport::TestCase
       :directors => Director.all,
       :producer_id => Producer.find(1).id,
       :produced_at => Time.now,
-      :serial_number => '52616',
+      :serial_number => "12425",
       :blurb => 'A great movie',
       :length => 375,
       :price => 45.5
@@ -41,7 +41,7 @@ class MovieTest < ActiveSupport::TestCase
                    Director.find_by_first_name_and_last_name('Jeremy', 'Keith')],
       :producer_id => apress.id,
       :produced_at => Time.now,
-      :serial_number => '123-123-123-x',
+      :serial_number => '12134',
       :blurb => 'E-Commerce on Rails',
       :length => 400,
       :price => 55.5
@@ -60,7 +60,7 @@ class MovieTest < ActiveSupport::TestCase
                    Director.find_by_first_name_and_last_name('Jeremy', 'Keith')],
       :producer_id => Producer.find_by_name("Apress").id,
       :produced_at => Time.now,
-      :serial_number => '123-123-123-x',
+      :serial_number => '65321',
       :blurb => 'E-Commerce on Rails',
       :length => 400,
       :price => 55.5

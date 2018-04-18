@@ -1,2 +1,6 @@
-<h1>Admin::Movie#new</h1>
-<p>Find me in app/views/admin/movie/new.html.erb</p>
+<%= form_tag "/admin/movie/create?id=#{@movie.id}", :multipart => true do %>
+  <%= render :partial => 'form' %>   
+  <%= submit_tag 'Create movie' %>
+<% end %>
+
+<%= link_to 'Back', :action => 'index' %>
