@@ -4,13 +4,13 @@
   <title><%= @page_title || 'Miniemporium' %></title>
   <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
-  <%= csrf_meta_tags %>
+
 </head>
 <body>
   <div id="header">
     <h1 id="logo">BuyFilm</h1>
     <h2 id="slogan">Films on Rails</h2>
-   
+
   </div>
 
   <div id="menu">
@@ -18,9 +18,9 @@
       <li><a href="/admin/movie">Peliculas</a>&nbsp;|&nbsp;</li>
       <li><a href="/admin/director">Directores</a>&nbsp;|&nbsp;</li>
       <li><a href="/admin/producer">Productores</a>&nbsp;|&nbsp;</li>
-      <li><a href="/admin/order">Orders</a>&nbsp;|&nbsp;</li>
-      <li><a href="/">Catalog</a>&nbsp;|&nbsp;</li>
-      <li><a href="/about">About</a>&nbsp;</li>
+      <li><a href="/admin/order">Pedidos</a>&nbsp;|&nbsp;</li>
+      <li><a href="/">Catálogo</a>&nbsp;|&nbsp;</li>
+      <li><a href="/about">Acerca de</a>&nbsp;</li>
     </ul>
   </div>
 
