@@ -1,8 +1,9 @@
 source 'http://rubygems.org'
-
 gem 'RedCloth', '4.2.9'
 
 gem 'paperclip', '4.3.2'
+
+gem 'authlogic', '3.4.6'
 
 gem 'will_paginate', '3.0.7'
 
