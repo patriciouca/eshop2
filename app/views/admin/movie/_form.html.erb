@@ -1,6 +1,6 @@
 <% if @movie.errors.any? %>
   <div id="errorExplanation">
-  <h2><%= pluralize(@movie.errors.count, "error") %> prohibited this movie from being saved:</h2>
+  <h2><%= pluralize(@movie.errors.count, "error") %> prohibido que esta película se guarde:</h2>
     <ul>
       <% @movie.errors.full_messages.each do |msg| %>
         <li><%= msg %></li>
@@ -10,23 +10,23 @@
 <% end %>
 
 <div class="field">
-  <p><label for="movie_title">Title</label><br/>
+  <p><label for="movie_title">Titulo</label><br/>
   <%= text_field 'movie', 'title' %></p>
 </div>
 
 <div class="field">
-  <p><label for="movie_producer">Producer</label><br/>
+  <p><label for="movie_producer">Productor</label><br/>
   <%= collection_select :movie, :producer_id, @producers, :id, :name %></p>
 </div>
-  
+
 <div class="field">
-  <p><label for="movie[director_ids][]">Directors</label><br/>
-  <%= select_tag 'movie[director_ids][]', options_from_collection_for_select(@directors, :id, :name, 
+  <p><label for="movie[director_ids][]">Directores</label><br/>
+  <%= select_tag 'movie[director_ids][]', options_from_collection_for_select(@directors, :id, :name,
       @movie.directors.collect{|director| director.id}), { :multiple => true, :size => 5 } %></p>
 </div>
 
 <div class="field"><p>
-  <label for="movie_produced_at">Producido at</label><br/>
+  <label for="movie_produced_at">Producido el</label><br/>
   <%= datetime_select 'movie', 'produced_at' %></p>
 </div>
 
@@ -36,17 +36,17 @@
 </div>
 
 <div class="field">
-  <p><label for="movie_blurb">Blurb</label><br/>
+  <p><label for="movie_blurb">Descripcion</label><br/>
   <%= text_area 'movie', 'blurb' %></p>
 </div>
 
 <div class="field">
-  <p><label for="movie_price">Price</label><br/>
+  <p><label for="movie_price">Precio</label><br/>
   <%= text_field 'movie', 'price' %></p>
 </div>
 
 <div class="field">
-  <p><label for="movie_length">DUracion</label><br/>
+  <p><label for="movie_length">Duracion</label><br/>
   <%= text_field 'movie', 'length' %></p>
 </div>
 
@@ -54,8 +54,8 @@
   <% if @movie.cover_image.exists? then %>
     <dd><%= image_tag @movie.cover_image.url %></dd>
   <% else %>
-    <p> There is no cover image attached. Please upload one. </p>
+    <p> No se ha adjuntado imagen de portada. Por favor, suba una imagen. </p>
   <% end %>
-  <p><label for="movie_cover_image">Cover image</label><br/>
+  <p><label for="movie_cover_image">Imagen de portada</label><br/>
   <%= file_field 'movie', :cover_image %></p>
 </div>

@@ -1,8 +1,7 @@
 <table>
   <tr>
-    <th><a href="?sort_by=producer_id">Publisher</a></th>
-    <th><a href="?sort_by=title">Title</a></th>
-    <th>Tags</th>
+    <th><a href="?sort_by=producer_id">Productor</a></th>
+    <th><a href="?sort_by=title">Titulo</a></th>
     <th><a href="?sort_by=serial_number">Numero de serie</a></th>
     <th colspan="3"></th>
   </tr>
@@ -16,7 +15,7 @@
     <td><%= link_to 'Show', :action => 'show', :id => movie %></td>
     <td><%= link_to 'Edit', :action => 'edit', :id => movie  %></td>
     <td><%= button_to 'Delete', { :action => 'destroy', :id => movie },
-                      data: { confirm: "Are you sure you want to delete movie #{movie.title}?" } %></td>
+                      data: { confirm: "¿Está seguro de que desea eliminar la película #{movie.title}?" } %></td>
   </tr>
 <% end %>
 
@@ -24,6 +23,6 @@
 </table>
 <br/>
 <%= will_paginate @movies, :page_links => false, :link_separator => ' | ',
-                          :previous_label => 'Previous page', :next_label => 'Next page' %>
-                          
-<p><%= link_to 'Add a new movie', :action => 'new' %></p>
+                          :previous_label => 'Página anterior', :next_label => 'Página siguiente' %>
+
+<p><%= link_to 'Añadir pelicula', :action => 'new' %></p>

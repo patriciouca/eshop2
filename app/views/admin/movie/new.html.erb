@@ -1,6 +1,6 @@
 <%= form_tag "/admin/movie/create?id=#{@movie.id}", :multipart => true do %>
   <%= render :partial => 'form' %>   
-  <%= submit_tag 'Create movie' %>
+  <%= submit_tag 'Crear Pelicula' %>
 <% end %>
 
-<%= link_to 'Back', :action => 'index' %>
+<%= link_to 'Volver', :action => 'index' %>
