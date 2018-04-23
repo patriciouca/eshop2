@@ -1,5 +1,5 @@
 <dl>
-  <dt>Title</dt>
+  <dt>Título</dt>
   <dd><%= @movie.title %></dd>
   <dt>Productor</dt>
   <dd><%= @movie.producer.name %></dd>
@@ -7,7 +7,7 @@
   <dd><%= @movie.produced_at.strftime("%d/%m/%Y at %I:%M%p") %></dd>
   <dt>Director</dt>
   <dd><%= @movie.director_names %></dd>
-  <dt>ISBN</dt>
+  <dt>Número de Serie</dt>
   <dd><%= @movie.serial_number %></dd>
   <dt>Descripcion</dt>
   <%= RedCloth.new(@movie.blurb).to_html.html_safe if @movie.blurb %>

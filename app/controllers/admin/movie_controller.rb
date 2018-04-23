@@ -1,18 +1,19 @@
+ #encoding: utf-8
 class Admin::MovieController < ApplicationController
 def new
     load_data
     @movie = Movie.new
-    @page_title = 'Crear pelicula'
+    @page_title = 'Crear película'
   end
 
   def create
     @movie = Movie.new(movie_params)
     if @movie.save
-      flash[:notice] = "Pelicula #{@movie.title} fue creada correctamente."
+      flash[:notice] = "Película #{@movie.title} fue creada correctamente."
       redirect_to :action => 'index'
     else
       load_data
-      @page_title = 'Crear pelicula'
+      @page_title = 'Crear película'
       render :action => 'new'
     end
   end
@@ -20,17 +21,17 @@ def new
     def edit
     load_data
     @movie = Movie.find(params[:id])
-    @page_title = 'Edit movie'
+    @page_title = 'Editar película'
   end
 
   def update
     @movie = Movie.find(params[:id])
     if @movie.update_attributes(movie_params)
-      flash[:notice] = "Movie #{@movie.title} was succesfully updated."
+      flash[:notice] = "Película #{@movie.title} fue actualizada correctamente."
       redirect_to :action => 'show', :id => @movie
     else
       load_data
-      @page_title = 'Edit movie'
+      @page_title = 'Editar película'
       render :action => 'edit'
     end
   end
@@ -38,7 +39,7 @@ def new
   def destroy
     @movie = Movie.find(params[:id])
     @movie.destroy
-    flash[:notice] = "Succesfully deleted movie #{@movie.title}."
+    flash[:notice] = "Fue borrada la película #{@movie.title}."
     redirect_to :action => 'index'
   end
 
@@ -50,7 +51,7 @@ def new
   def index
     sort_by = params[:sort_by]
     @movies = Movie.order(sort_by).paginate(:page => params[:page], :per_page => 5)
-    @page_title = 'Listing movies'
+    @page_title = 'Películas'
   end
 
   private
