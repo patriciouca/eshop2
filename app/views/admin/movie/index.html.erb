@@ -12,9 +12,9 @@
     <td><%= h movie.producer.name %></td>
     <td><%= h movie.title %></td>
     <td><%= h movie.serial_number %></td>
-    <td><%= link_to 'Show', :action => 'show', :id => movie %></td>
-    <td><%= link_to 'Edit', :action => 'edit', :id => movie  %></td>
-    <td><%= button_to 'Delete', { :action => 'destroy', :id => movie },
+    <td><%= link_to 'Mostrar', :action => 'show', :id => movie %></td>
+    <td><%= link_to 'Editar', :action => 'edit', :id => movie  %></td>
+    <td><%= button_to 'Borrar', { :action => 'destroy', :id => movie },
                       data: { confirm: "¿Está seguro de que desea eliminar la película #{movie.title}?" } %></td>
   </tr>
 <% end %>

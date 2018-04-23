@@ -20,7 +20,7 @@
 </div>
 
 <div class="field">
-  <p><label for="movie[director_ids][]">Directores</label><br/>
+  <p><label for="movie[director_ids][]">Director</label><br/>
   <%= select_tag 'movie[director_ids][]', options_from_collection_for_select(@directors, :id, :name,
       @movie.directors.collect{|director| director.id}), { :multiple => true, :size => 5 } %></p>
 </div>
