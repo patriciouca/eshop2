@@ -26,11 +26,11 @@ def new
   def update
     @movie = Movie.find(params[:id])
     if @movie.update_attributes(movie_params)
-      flash[:notice] = "Movie #{@movie.title} was succesfully updated."
+      flash[:notice] = "Movie #{@movie.title} fue actualizada correctamente."
       redirect_to :action => 'show', :id => @movie
     else
       load_data
-      @page_title = 'Edit movie'
+      @page_title = 'Editar pelicula'
       render :action => 'edit'
     end
   end
@@ -38,7 +38,7 @@ def new
   def destroy
     @movie = Movie.find(params[:id])
     @movie.destroy
-    flash[:notice] = "Succesfully deleted movie #{@movie.title}."
+    flash[:notice] = "Fue borrada la pelicula #{@movie.title}."
     redirect_to :action => 'index'
   end
 
@@ -50,7 +50,7 @@ def new
   def index
     sort_by = params[:sort_by]
     @movies = Movie.order(sort_by).paginate(:page => params[:page], :per_page => 5)
-    @page_title = 'Listing movies'
+    @page_title = 'Peliculas'
   end
 
   private
