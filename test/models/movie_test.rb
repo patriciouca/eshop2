@@ -39,7 +39,7 @@ class MovieTest < ActiveSupport::TestCase
       :title => 'Pro Rails E-Commerce 8th Edition',
       :directors => [Director.find_by_first_name_and_last_name('Joel', 'Spolsky'),
                    Director.find_by_first_name_and_last_name('Jeremy', 'Keith')],
-      :producer_id => apress.id,
+      #:producer_id => apress.id,
       :produced_at => Time.now,
       :serial_number => '12134',
       :blurb => 'E-Commerce on Rails',
