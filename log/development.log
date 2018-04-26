@@ -9733,3 +9733,341 @@ Started GET "/about" for 127.0.0.1 at 2018-04-26 12:03:15 +0200
 Processing by AboutController#index as HTML
   Rendered about/index.html.erb within layouts/application (0.2ms)
 Completed 200 OK in 64ms (Views: 62.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-04-26 12:55:02 +0200
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Processing by AboutController#index as HTML
+  Rendered about/index.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 792ms (Views: 773.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/admin/producer.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2018-04-26 12:55:03 +0200
+
+
+Started GET "/admin/movie" for 127.0.0.1 at 2018-04-26 12:55:08 +0200
+Processing by Admin::MovieController#index as HTML
+  [1m[35mMovie Load (0.7ms)[0m  SELECT  `movies`.* FROM `movies` LIMIT 5 OFFSET 0
+  [1m[36m (0.6ms)[0m  [1mSELECT COUNT(*) FROM `movies`[0m
+  [1m[35mProducer Load (0.7ms)[0m  SELECT  `producers`.* FROM `producers` WHERE `producers`.`id` = 1 LIMIT 1
+  [1m[36mProducer Load (0.6ms)[0m  [1mSELECT  `producers`.* FROM `producers` WHERE `producers`.`id` = 6 LIMIT 1[0m
+  [1m[35mProducer Load (0.7ms)[0m  SELECT  `producers`.* FROM `producers` WHERE `producers`.`id` = 7 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `producers`.* FROM `producers` WHERE `producers`.`id` = 6 LIMIT 1[0m  [["id", 6]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  `producers`.* FROM `producers` WHERE `producers`.`id` = 1 LIMIT 1  [["id", 1]]
+  Rendered admin/movie/index.html.erb within layouts/application (100.8ms)
+Completed 200 OK in 250ms (Views: 202.1ms | ActiveRecord: 7.3ms)
+
+
+Started GET "/admin/movie?page=2" for 127.0.0.1 at 2018-04-26 12:55:15 +0200
+Processing by Admin::MovieController#index as HTML
+  Parameters: {"page"=>"2"}
+  [1m[36mMovie Load (2.3ms)[0m  [1mSELECT  `movies`.* FROM `movies` LIMIT 5 OFFSET 5[0m
+  [1m[35mProducer Load (0.8ms)[0m  SELECT  `producers`.* FROM `producers` WHERE `producers`.`id` = 4 LIMIT 1
+  [1m[36mProducer Load (0.8ms)[0m  [1mSELECT  `producers`.* FROM `producers` WHERE `producers`.`id` = 7 LIMIT 1[0m
+  Rendered admin/movie/index.html.erb within layouts/application (27.0ms)
+Completed 200 OK in 122ms (Views: 114.8ms | ActiveRecord: 3.8ms)
+
+
+Started GET "/admin/movie?page=1" for 127.0.0.1 at 2018-04-26 12:55:16 +0200
+Processing by Admin::MovieController#index as HTML
+  Parameters: {"page"=>"1"}
+  [1m[35mMovie Load (0.8ms)[0m  SELECT  `movies`.* FROM `movies` LIMIT 5 OFFSET 0
+  [1m[36m (0.7ms)[0m  [1mSELECT COUNT(*) FROM `movies`[0m
+  [1m[35mProducer Load (0.9ms)[0m  SELECT  `producers`.* FROM `producers` WHERE `producers`.`id` = 1 LIMIT 1
+  [1m[36mProducer Load (0.8ms)[0m  [1mSELECT  `producers`.* FROM `producers` WHERE `producers`.`id` = 6 LIMIT 1[0m
+  [1m[35mProducer Load (0.9ms)[0m  SELECT  `producers`.* FROM `producers` WHERE `producers`.`id` = 7 LIMIT 1
+  [1m[36mCACHE (0.1ms)[0m  [1mSELECT  `producers`.* FROM `producers` WHERE `producers`.`id` = 6 LIMIT 1[0m  [["id", 6]]
+  [1m[35mCACHE (0.1ms)[0m  SELECT  `producers`.* FROM `producers` WHERE `producers`.`id` = 1 LIMIT 1  [["id", 1]]
+  Rendered admin/movie/index.html.erb within layouts/application (51.0ms)
+Completed 200 OK in 135ms (Views: 125.1ms | ActiveRecord: 4.2ms)
+
+
+Started GET "/admin/movie/new" for 127.0.0.1 at 2018-04-26 12:55:45 +0200
+Processing by Admin::MovieController#new as HTML
+  [1m[36mProducer Load (0.7ms)[0m  [1mSELECT `producers`.* FROM `producers`[0m
+  [1m[35mDirector Load (0.7ms)[0m  SELECT `directors`.* FROM `directors`
+  Rendered admin/movie/_form.html.erb (145.9ms)
+  Rendered admin/movie/new.html.erb within layouts/application (155.9ms)
+Completed 200 OK in 232ms (Views: 207.7ms | ActiveRecord: 4.2ms)
+
+
+Started POST "/admin/movie/create?id=" for 127.0.0.1 at 2018-04-26 12:56:03 +0200
+Processing by Admin::MovieController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"BK0VX4IuElpLqQg7YzZat8m2WKzJsjeL05ta6/rcxncOQF8nKtrOubQiB835ygGykrLew59X+jM1L2fszu4VWg==", "movie"=>{"title"=>"dwqdqw", "producer_id"=>"1", "director_ids"=>["1"], "produced_at(1i)"=>"2018", "produced_at(2i)"=>"4", "produced_at(3i)"=>"26", "produced_at(4i)"=>"10", "produced_at(5i)"=>"55", "serial_number"=>"213", "blurb"=>"dew", "price"=>"21", "length"=>"32", "cover_image"=>#<ActionDispatch::Http::UploadedFile:0x000000045f2a18 @tempfile=#<Tempfile:/tmp/RackMultipart20180426-8096-13vyqst.jpg>, @original_filename="saving_private_ryan-585301228-large.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"movie[cover_image]\"; filename=\"saving_private_ryan-585301228-large.jpg\"\r\nContent-Type: image/jpeg\r\n">}, "commit"=>"Crear Pelicula", "id"=>""}
+  [1m[36mDirector Load (0.8ms)[0m  [1mSELECT  `directors`.* FROM `directors` WHERE `directors`.`id` = 1 LIMIT 1[0m
+Command :: file -b --mime '/tmp/050231ff969a74811812ca10b2faa33f20180426-8096-1olem81.jpg'
+  [1m[35m (0.4ms)[0m  BEGIN
+Command :: file -b --mime '/tmp/050231ff969a74811812ca10b2faa33f20180426-8096-dfa58t.jpg'
+  [1m[36mProducer Load (0.7ms)[0m  [1mSELECT  `producers`.* FROM `producers` WHERE `producers`.`id` = 1 LIMIT 1[0m
+  [1m[35mMovie Exists (0.7ms)[0m  SELECT  1 AS one FROM `movies` WHERE `movies`.`serial_number` = BINARY '213' LIMIT 1
+  [1m[36mSQL (0.8ms)[0m  [1mINSERT INTO `movies` (`title`, `producer_id`, `serial_number`, `blurb`, `price`, `length`, `cover_image_file_name`, `cover_image_content_type`, `cover_image_file_size`, `cover_image_updated_at`, `produced_at`, `created_at`, `updated_at`) VALUES ('dwqdqw', 1, '213', 'dew', 21.0, 32, 'saving_private_ryan-585301228-large.jpg', 'image/jpeg', 162625, '2018-04-26 10:56:03', '2018-04-26 10:55:00', '2018-04-26 10:56:03', '2018-04-26 10:56:03')[0m
+  [1m[35mSQL (0.7ms)[0m  INSERT INTO `directors_movies` (`director_id`, `movie_id`, `created_at`, `updated_at`) VALUES (1, 9, '2018-04-26 10:56:03', '2018-04-26 10:56:03')
+  [1m[36m (55.1ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/admin/movie
+Completed 302 Found in 257ms (ActiveRecord: 59.8ms)
+
+
+Started GET "/admin/movie" for 127.0.0.1 at 2018-04-26 12:56:03 +0200
+Processing by Admin::MovieController#index as HTML
+  [1m[35mMovie Load (0.7ms)[0m  SELECT  `movies`.* FROM `movies` LIMIT 5 OFFSET 0
+  [1m[36m (0.5ms)[0m  [1mSELECT COUNT(*) FROM `movies`[0m
+  [1m[35mProducer Load (0.5ms)[0m  SELECT  `producers`.* FROM `producers` WHERE `producers`.`id` = 1 LIMIT 1
+  [1m[36mProducer Load (0.8ms)[0m  [1mSELECT  `producers`.* FROM `producers` WHERE `producers`.`id` = 6 LIMIT 1[0m
+  [1m[35mProducer Load (0.8ms)[0m  SELECT  `producers`.* FROM `producers` WHERE `producers`.`id` = 7 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `producers`.* FROM `producers` WHERE `producers`.`id` = 6 LIMIT 1[0m  [["id", 6]]
+  [1m[35mCACHE (0.1ms)[0m  SELECT  `producers`.* FROM `producers` WHERE `producers`.`id` = 1 LIMIT 1  [["id", 1]]
+  Rendered admin/movie/index.html.erb within layouts/application (44.2ms)
+Completed 200 OK in 149ms (Views: 141.9ms | ActiveRecord: 3.5ms)
+
+
+Started GET "/admin/movie?page=2" for 127.0.0.1 at 2018-04-26 12:56:22 +0200
+Processing by Admin::MovieController#index as HTML
+  Parameters: {"page"=>"2"}
+  [1m[36mMovie Load (1.0ms)[0m  [1mSELECT  `movies`.* FROM `movies` LIMIT 5 OFFSET 5[0m
+  [1m[35mProducer Load (0.8ms)[0m  SELECT  `producers`.* FROM `producers` WHERE `producers`.`id` = 4 LIMIT 1
+  [1m[36mProducer Load (0.8ms)[0m  [1mSELECT  `producers`.* FROM `producers` WHERE `producers`.`id` = 7 LIMIT 1[0m
+  [1m[35mProducer Load (0.8ms)[0m  SELECT  `producers`.* FROM `producers` WHERE `producers`.`id` = 1 LIMIT 1
+  Rendered admin/movie/index.html.erb within layouts/application (30.1ms)
+Completed 200 OK in 105ms (Views: 100.1ms | ActiveRecord: 3.3ms)
+
+
+Started POST "/admin/movie/destroy?id=9" for 127.0.0.1 at 2018-04-26 12:56:26 +0200
+Processing by Admin::MovieController#destroy as HTML
+  Parameters: {"authenticity_token"=>"TjFID3jBoqTrb+lJE+M43EzVB400v+fUaVaXz8+79PRE3AJ30DV+RxTk5r+JH2PZF9GB4mJaKmyP4qrI+4kn2Q==", "id"=>"9"}
+  [1m[36mMovie Load (0.9ms)[0m  [1mSELECT  `movies`.* FROM `movies` WHERE `movies`.`id` = 9 LIMIT 1[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36mSQL (0.9ms)[0m  [1mDELETE FROM `directors_movies` WHERE `directors_movies`.`movie_id` = 9[0m
+  [1m[35mSQL (98.5ms)[0m  DELETE FROM `movies` WHERE `movies`.`id` = 9
+  [1m[36m (43.9ms)[0m  [1mCOMMIT[0m
+[paperclip] deleting /home/patricio/Escritorio/INE/eshop2/public/system/movies/cover_images/000/000/009/original/saving_private_ryan-585301228-large.jpg
+Redirected to http://localhost:3000/admin/movie
+Completed 302 Found in 163ms (ActiveRecord: 144.6ms)
+
+
+Started GET "/admin/movie" for 127.0.0.1 at 2018-04-26 12:56:27 +0200
+Processing by Admin::MovieController#index as HTML
+  [1m[35mMovie Load (1.0ms)[0m  SELECT  `movies`.* FROM `movies` LIMIT 5 OFFSET 0
+  [1m[36m (0.6ms)[0m  [1mSELECT COUNT(*) FROM `movies`[0m
+  [1m[35mProducer Load (0.8ms)[0m  SELECT  `producers`.* FROM `producers` WHERE `producers`.`id` = 1 LIMIT 1
+  [1m[36mProducer Load (0.8ms)[0m  [1mSELECT  `producers`.* FROM `producers` WHERE `producers`.`id` = 6 LIMIT 1[0m
+  [1m[35mProducer Load (1.2ms)[0m  SELECT  `producers`.* FROM `producers` WHERE `producers`.`id` = 7 LIMIT 1
+  [1m[36mCACHE (0.1ms)[0m  [1mSELECT  `producers`.* FROM `producers` WHERE `producers`.`id` = 6 LIMIT 1[0m  [["id", 6]]
+  [1m[35mCACHE (0.1ms)[0m  SELECT  `producers`.* FROM `producers` WHERE `producers`.`id` = 1 LIMIT 1  [["id", 1]]
+  Rendered admin/movie/index.html.erb within layouts/application (33.5ms)
+Completed 200 OK in 116ms (Views: 110.5ms | ActiveRecord: 4.4ms)
+
+
+Started GET "/admin/movie" for 127.0.0.1 at 2018-04-26 13:16:47 +0200
+  [1m[36mActiveRecord::SchemaMigration Load (1.0ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Processing by Admin::MovieController#index as HTML
+  [1m[35mMovie Load (0.9ms)[0m  SELECT  `movies`.* FROM `movies` LIMIT 5 OFFSET 0
+  [1m[36m (0.6ms)[0m  [1mSELECT COUNT(*) FROM `movies`[0m
+  [1m[35mProducer Load (0.7ms)[0m  SELECT  `producers`.* FROM `producers` WHERE `producers`.`id` = 1 LIMIT 1
+  [1m[36mProducer Load (0.8ms)[0m  [1mSELECT  `producers`.* FROM `producers` WHERE `producers`.`id` = 6 LIMIT 1[0m
+  [1m[35mProducer Load (0.8ms)[0m  SELECT  `producers`.* FROM `producers` WHERE `producers`.`id` = 7 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `producers`.* FROM `producers` WHERE `producers`.`id` = 6 LIMIT 1[0m  [["id", 6]]
+  [1m[35mCACHE (0.1ms)[0m  SELECT  `producers`.* FROM `producers` WHERE `producers`.`id` = 1 LIMIT 1  [["id", 1]]
+  Rendered admin/movie/index.html.erb within layouts/application (109.4ms)
+Completed 200 OK in 922ms (Views: 860.8ms | ActiveRecord: 8.7ms)
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for 127.0.0.1 at 2018-04-26 13:16:48 +0200
+
+
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for 127.0.0.1 at 2018-04-26 13:16:48 +0200
+
+
+Started GET "/assets/turbolinks.self-2db6ec539b9190f75e1d477b305df53d12904d5cafdd47c7ffd91ba25cbec128.js?body=1" for 127.0.0.1 at 2018-04-26 13:16:48 +0200
+
+
+Started GET "/assets/admin/director.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2018-04-26 13:16:48 +0200
+
+
+Started GET "/assets/admin/movie.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2018-04-26 13:16:48 +0200
+
+
+Started GET "/assets/about.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2018-04-26 13:16:48 +0200
+
+
+Started GET "/assets/admin/producer.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2018-04-26 13:16:48 +0200
+
+
+Started GET "/assets/movie.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2018-04-26 13:16:48 +0200
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 127.0.0.1 at 2018-04-26 13:16:48 +0200
+
+
+Started GET "/assets/about.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2018-04-26 13:16:48 +0200
+
+
+Started GET "/assets/admin/director.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2018-04-26 13:16:48 +0200
+
+
+Started GET "/assets/admin/movie.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2018-04-26 13:16:48 +0200
+
+
+Started GET "/assets/admin/producer.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2018-04-26 13:16:48 +0200
+
+
+Started GET "/assets/movie.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2018-04-26 13:16:48 +0200
+
+
+Started GET "/assets/style.self-28c50fed0fbf40c4e00e2c6a9dc7872cb7466e25803d031cd7fc5cb4ba105fd8.css?body=1" for 127.0.0.1 at 2018-04-26 13:16:48 +0200
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 127.0.0.1 at 2018-04-26 13:16:48 +0200
+
+
+Started GET "/admin/movie/edit?id=3" for 127.0.0.1 at 2018-04-26 13:16:52 +0200
+Processing by Admin::MovieController#edit as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mMovie Load (0.7ms)[0m  [1mSELECT  `movies`.* FROM `movies` WHERE `movies`.`id` = 3 LIMIT 1[0m
+  [1m[35mProducer Load (0.7ms)[0m  SELECT `producers`.* FROM `producers`
+  [1m[36mDirector Load (1.0ms)[0m  [1mSELECT `directors`.* FROM `directors` INNER JOIN `directors_movies` ON `directors`.`id` = `directors_movies`.`director_id` WHERE `directors_movies`.`movie_id` = 3[0m
+  [1m[35mDirector Load (1.0ms)[0m  SELECT `directors`.* FROM `directors`
+  Rendered admin/movie/_form.html.erb (248.2ms)
+  Rendered admin/movie/edit.html.erb within layouts/application (268.8ms)
+Completed 200 OK in 368ms (Views: 315.2ms | ActiveRecord: 7.0ms)
+
+
+Started POST "/admin/movie/update?id=3" for 127.0.0.1 at 2018-04-26 13:16:58 +0200
+Processing by Admin::MovieController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"jNm6hewH3N1+32RiN6fLvg+Mz9g7C7sljzQ/DJV4vwiGNPD9RPMAPoFUa5StW5C7VIhJt23udp1pgAILoUpsJQ==", "movie"=>{"title"=>"Tiburón", "producer_id"=>"6", "director_ids"=>["2"], "produced_at(1i)"=>"2013", "produced_at(2i)"=>"9", "produced_at(3i)"=>"23", "produced_at(4i)"=>"10", "produced_at(5i)"=>"46", "serial_number"=>"53121", "blurb"=>"p(((. Desde el punto de vista técnico, una película es una palabra de imágenes fotográficas tomadas con una cámara, y reproducidas mediante un proyector cinematográfico", "price"=>"17.0", "length"=>"310"}, "commit"=>"Subir Pelicula", "id"=>"3"}
+  [1m[36mMovie Load (1.9ms)[0m  [1mSELECT  `movies`.* FROM `movies` WHERE `movies`.`id` = 3 LIMIT 1[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36mDirector Load (0.8ms)[0m  [1mSELECT  `directors`.* FROM `directors` WHERE `directors`.`id` = 2 LIMIT 1[0m
+  [1m[35mDirector Load (3.5ms)[0m  SELECT `directors`.* FROM `directors` INNER JOIN `directors_movies` ON `directors`.`id` = `directors_movies`.`director_id` WHERE `directors_movies`.`movie_id` = 3
+  [1m[36mProducer Load (0.9ms)[0m  [1mSELECT  `producers`.* FROM `producers` WHERE `producers`.`id` = 6 LIMIT 1[0m
+  [1m[35mMovie Exists (1.1ms)[0m  SELECT  1 AS one FROM `movies` WHERE (`movies`.`serial_number` = BINARY '53121' AND `movies`.`id` != 3) LIMIT 1
+  [1m[36mSQL (0.9ms)[0m  [1mUPDATE `movies` SET `title` = 'Tiburón', `updated_at` = '2018-04-26 11:16:58' WHERE `movies`.`id` = 3[0m
+  [1m[35m (67.3ms)[0m  COMMIT
+Redirected to http://localhost:3000/admin/movie/show/3
+Completed 302 Found in 122ms (ActiveRecord: 76.7ms)
+
+
+Started GET "/admin/movie/show/3" for 127.0.0.1 at 2018-04-26 13:16:58 +0200
+Processing by Admin::MovieController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mMovie Load (0.8ms)[0m  [1mSELECT  `movies`.* FROM `movies` WHERE `movies`.`id` = 3 LIMIT 1[0m
+  [1m[35mProducer Load (0.9ms)[0m  SELECT  `producers`.* FROM `producers` WHERE `producers`.`id` = 6 LIMIT 1
+  [1m[36mDirector Load (1.0ms)[0m  [1mSELECT `directors`.* FROM `directors` INNER JOIN `directors_movies` ON `directors`.`id` = `directors_movies`.`director_id` WHERE `directors_movies`.`movie_id` = 3[0m
+  Rendered admin/movie/show.html.erb within layouts/application (14.9ms)
+Completed 200 OK in 94ms (Views: 88.2ms | ActiveRecord: 2.7ms)
+
+
+Started GET "/assets/about.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2018-04-26 13:16:59 +0200
+
+
+Started GET "/about" for 127.0.0.1 at 2018-04-26 13:18:02 +0200
+Processing by AboutController#index as HTML
+  Rendered about/index.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 55ms (Views: 53.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/about" for 127.0.0.1 at 2018-04-26 13:18:29 +0200
+Processing by AboutController#index as HTML
+  Rendered about/index.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 55ms (Views: 54.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/about.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2018-04-26 13:18:29 +0200
+
+
+Started GET "/assets/admin/movie.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2018-04-26 13:18:29 +0200
+
+
+Started GET "/assets/movie.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2018-04-26 13:18:29 +0200
+
+
+Started GET "/assets/admin/director.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2018-04-26 13:18:29 +0200
+
+
+Started GET "/assets/admin/producer.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2018-04-26 13:18:29 +0200
+
+
+Started GET "/assets/style.self-28c50fed0fbf40c4e00e2c6a9dc7872cb7466e25803d031cd7fc5cb4ba105fd8.css?body=1" for 127.0.0.1 at 2018-04-26 13:18:29 +0200
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 127.0.0.1 at 2018-04-26 13:18:29 +0200
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for 127.0.0.1 at 2018-04-26 13:18:29 +0200
+
+
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for 127.0.0.1 at 2018-04-26 13:18:29 +0200
+
+
+Started GET "/assets/turbolinks.self-2db6ec539b9190f75e1d477b305df53d12904d5cafdd47c7ffd91ba25cbec128.js?body=1" for 127.0.0.1 at 2018-04-26 13:18:29 +0200
+
+
+Started GET "/assets/about.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2018-04-26 13:18:29 +0200
+
+
+Started GET "/assets/admin/director.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2018-04-26 13:18:29 +0200
+
+
+Started GET "/assets/admin/movie.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2018-04-26 13:18:29 +0200
+
+
+Started GET "/assets/admin/producer.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2018-04-26 13:18:29 +0200
+
+
+Started GET "/assets/movie.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2018-04-26 13:18:29 +0200
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 127.0.0.1 at 2018-04-26 13:18:29 +0200
+
+
+Started GET "/about" for 127.0.0.1 at 2018-04-26 13:19:07 +0200
+Processing by AboutController#index as HTML
+  Rendered about/index.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 58ms (Views: 56.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/about.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2018-04-26 13:19:07 +0200
+
+
+Started GET "/assets/admin/producer.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2018-04-26 13:19:07 +0200
+
+
+Started GET "/assets/movie.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2018-04-26 13:19:07 +0200
+
+
+Started GET "/assets/admin/movie.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2018-04-26 13:19:07 +0200
+
+
+Started GET "/assets/admin/director.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2018-04-26 13:19:07 +0200
+
+
+Started GET "/assets/style.self-28c50fed0fbf40c4e00e2c6a9dc7872cb7466e25803d031cd7fc5cb4ba105fd8.css?body=1" for 127.0.0.1 at 2018-04-26 13:19:07 +0200
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for 127.0.0.1 at 2018-04-26 13:19:07 +0200
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 127.0.0.1 at 2018-04-26 13:19:07 +0200
+
+
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for 127.0.0.1 at 2018-04-26 13:19:07 +0200
+
+
+Started GET "/assets/turbolinks.self-2db6ec539b9190f75e1d477b305df53d12904d5cafdd47c7ffd91ba25cbec128.js?body=1" for 127.0.0.1 at 2018-04-26 13:19:07 +0200
+
+
+Started GET "/assets/about.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2018-04-26 13:19:07 +0200
+
+
+Started GET "/assets/admin/director.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2018-04-26 13:19:07 +0200
+
+
+Started GET "/assets/admin/movie.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2018-04-26 13:19:07 +0200
+
+
+Started GET "/assets/admin/producer.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2018-04-26 13:19:07 +0200
+
+
+Started GET "/assets/movie.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2018-04-26 13:19:07 +0200
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 127.0.0.1 at 2018-04-26 13:19:07 +0200
