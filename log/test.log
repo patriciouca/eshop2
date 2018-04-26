@@ -2628,3 +2628,1121 @@ FOREIGN KEY (`producer_id`)
   [1m[36mFixture Delete (0.5ms)[0m  [1mDELETE FROM `directos_movies`[0m
   [1m[35m (0.2ms)[0m  ROLLBACK
   [1m[36m (0.2ms)[0m  [1mSET FOREIGN_KEY_CHECKS = 1[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+  [1m[35m (0.5ms)[0m  SELECT @@FOREIGN_KEY_CHECKS
+  [1m[36m (0.3ms)[0m  [1mSET FOREIGN_KEY_CHECKS = 0[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36mFixture Delete (123.3ms)[0m  [1mDELETE FROM `movies`[0m
+  [1m[35mFixture Insert (0.9ms)[0m  INSERT INTO `movies` (`id`, `title`, `producer_id`, `serial_number`, `produced_at`, `price`, `created_at`, `updated_at`) VALUES (1, 'Pro Rails E-Commerce', 1, '12345', '2018-04-23', 45.0, '2018-04-23 10:36:26', '2018-04-23 10:36:26')
+  [1m[36mFixture Insert (0.5ms)[0m  [1mINSERT INTO `movies` (`id`, `title`, `producer_id`, `serial_number`, `produced_at`, `price`, `created_at`, `updated_at`) VALUES (2, 'Pro Rails E-Commerce 2nd Edition', 1, '12341', '2018-04-23', 65.0, '2018-04-23 10:36:26', '2018-04-23 10:36:26')[0m
+  [1m[35mFixture Insert (0.5ms)[0m  INSERT INTO `movies` (`id`, `title`, `producer_id`, `serial_number`, `produced_at`, `price`, `created_at`, `updated_at`) VALUES (3, 'Pro Rails E-Commerce 3rd Edition', 1, '12322', '2018-04-23', 85.0, '2018-04-23 10:36:26', '2018-04-23 10:36:26')
+  [1m[36mFixture Insert (1.7ms)[0m  [1mINSERT INTO `movies` (`id`, `title`, `producer_id`, `serial_number`, `produced_at`, `price`, `created_at`, `updated_at`) VALUES (4, 'Pro Rails E-Commerce 4th Edition', 1, '12121', '2018-04-23', 105.0, '2018-04-23 10:36:26', '2018-04-23 10:36:26')[0m
+  [1m[35mFixture Insert (0.5ms)[0m  INSERT INTO `movies` (`id`, `title`, `producer_id`, `serial_number`, `produced_at`, `price`, `created_at`, `updated_at`) VALUES (5, 'Pro Rails E-Commerce 5th Edition', 1, '12127', '2018-04-23', 125.0, '2018-04-23 10:36:26', '2018-04-23 10:36:26')
+  [1m[36mFixture Insert (0.6ms)[0m  [1mINSERT INTO `movies` (`id`, `title`, `producer_id`, `serial_number`, `produced_at`, `price`, `created_at`, `updated_at`) VALUES (6, 'Pro Rails E-Commerce 6th Edition', 1, '12111', '2018-04-23', 145.0, '2018-04-23 10:36:26', '2018-04-23 10:36:26')[0m
+  [1m[35mFixture Insert (0.3ms)[0m  INSERT INTO `movies` (`id`, `title`, `producer_id`, `serial_number`, `produced_at`, `price`, `created_at`, `updated_at`) VALUES (7, 'Pro Rails E-Commerce 7th Edition', 2, '21127', '2018-04-23', 165.0, '2018-04-23 10:36:26', '2018-04-23 10:36:26')
+  [1m[36mFixture Insert (0.5ms)[0m  [1mINSERT INTO `movies` (`id`, `title`, `producer_id`, `serial_number`, `produced_at`, `price`, `created_at`, `updated_at`) VALUES (8, 'Ruby for Dummies', 1, '22127', '2018-04-23', 185.0, '2018-04-23 10:36:26', '2018-04-23 10:36:26')[0m
+  [1m[35mFixture Insert (0.3ms)[0m  INSERT INTO `movies` (`id`, `title`, `producer_id`, `serial_number`, `produced_at`, `price`, `created_at`, `updated_at`) VALUES (9, 'Pride and Prejudice', 2, '11128', '2018-04-23', 40.0, '2018-04-23 10:36:26', '2018-04-23 10:36:26')
+  [1m[36mFixture Insert (0.5ms)[0m  [1mINSERT INTO `movies` (`id`, `title`, `producer_id`, `serial_number`, `produced_at`, `price`, `created_at`, `updated_at`) VALUES (10, 'The Idiot', 2, '11128', '2018-04-23', 40.0, '2018-04-23 10:36:26', '2018-04-23 10:36:26')[0m
+  [1m[35mFixture Delete (0.5ms)[0m  DELETE FROM `producers`
+  [1m[36mFixture Insert (0.5ms)[0m  [1mINSERT INTO `producers` (`id`, `name`, `created_at`, `updated_at`) VALUES (1, 'Apress', '2018-04-23 10:36:26', '2018-04-23 10:36:26')[0m
+  [1m[35mFixture Insert (0.3ms)[0m  INSERT INTO `producers` (`id`, `name`, `created_at`, `updated_at`) VALUES (2, 'Emporium', '2018-04-23 10:36:26', '2018-04-23 10:36:26')
+  [1m[36mFixture Delete (0.5ms)[0m  [1mDELETE FROM `directors`[0m
+  [1m[35mFixture Insert (0.5ms)[0m  INSERT INTO `directors` (`id`, `first_name`, `last_name`, `created_at`, `updated_at`) VALUES (1, 'Joel', 'Spolsky', '2018-04-23 10:36:26', '2018-04-23 10:36:26')
+  [1m[36mFixture Insert (0.3ms)[0m  [1mINSERT INTO `directors` (`id`, `first_name`, `last_name`, `created_at`, `updated_at`) VALUES (2, 'Jeremy', 'Keith', '2018-04-23 10:36:26', '2018-04-23 10:36:26')[0m
+  [1m[35mFixture Insert (0.3ms)[0m  INSERT INTO `directors` (`id`, `first_name`, `last_name`, `created_at`, `updated_at`) VALUES (3, 'Jarkko', 'Laine', '2018-04-23 10:36:26', '2018-04-23 10:36:26')
+  [1m[36mFixture Insert (0.4ms)[0m  [1mINSERT INTO `directors` (`id`, `first_name`, `last_name`, `created_at`, `updated_at`) VALUES (4, 'Christian', 'Hellsten', '2018-04-23 10:36:26', '2018-04-23 10:36:26')[0m
+  [1m[35mFixture Insert (0.2ms)[0m  INSERT INTO `directors` (`id`, `first_name`, `last_name`, `created_at`, `updated_at`) VALUES (5, 'Leo', 'Tolstoy', '2018-04-23 10:36:26', '2018-04-23 10:36:26')
+  [1m[36mFixture Delete (80.9ms)[0m  [1mDELETE FROM `directors_movies`[0m
+  [1m[35mFixture Insert (0.6ms)[0m  INSERT INTO `directors_movies` (`created_at`, `updated_at`, `director_id`, `movie_id`) VALUES ('2018-04-23 12:36:26', '2018-04-23 12:36:26', 1, 1)
+  [1m[36mFixture Insert (0.5ms)[0m  [1mINSERT INTO `directors_movies` (`created_at`, `updated_at`, `director_id`, `movie_id`) VALUES ('2018-04-23 12:36:26', '2018-04-23 12:36:26', 2, 2)[0m
+  [1m[35mFixture Insert (0.5ms)[0m  INSERT INTO `directors_movies` (`created_at`, `updated_at`, `director_id`, `movie_id`) VALUES ('2018-04-23 12:36:26', '2018-04-23 12:36:26', 2, 3)
+  [1m[36mFixture Insert (0.5ms)[0m  [1mINSERT INTO `directors_movies` (`created_at`, `updated_at`, `director_id`, `movie_id`) VALUES ('2018-04-23 12:36:26', '2018-04-23 12:36:26', 2, 4)[0m
+  [1m[35mFixture Insert (0.5ms)[0m  INSERT INTO `directors_movies` (`created_at`, `updated_at`, `director_id`, `movie_id`) VALUES ('2018-04-23 12:36:26', '2018-04-23 12:36:26', 2, 5)
+  [1m[36mFixture Insert (0.4ms)[0m  [1mINSERT INTO `directors_movies` (`created_at`, `updated_at`, `director_id`, `movie_id`) VALUES ('2018-04-23 12:36:26', '2018-04-23 12:36:26', 2, 6)[0m
+  [1m[35mFixture Insert (0.3ms)[0m  INSERT INTO `directors_movies` (`created_at`, `updated_at`, `director_id`, `movie_id`) VALUES ('2018-04-23 12:36:26', '2018-04-23 12:36:26', 2, 7)
+  [1m[36mFixture Insert (0.3ms)[0m  [1mINSERT INTO `directors_movies` (`created_at`, `updated_at`, `director_id`, `movie_id`) VALUES ('2018-04-23 12:36:26', '2018-04-23 12:36:26', 3, 8)[0m
+  [1m[35mFixture Insert (0.3ms)[0m  INSERT INTO `directors_movies` (`created_at`, `updated_at`, `director_id`, `movie_id`) VALUES ('2018-04-23 12:36:26', '2018-04-23 12:36:26', 4, 9)
+  [1m[36mFixture Insert (0.3ms)[0m  [1mINSERT INTO `directors_movies` (`created_at`, `updated_at`, `director_id`, `movie_id`) VALUES ('2018-04-23 12:36:26', '2018-04-23 12:36:26', 5, 10)[0m
+  [1m[35m (42.0ms)[0m  COMMIT
+  [1m[36m (0.4ms)[0m  [1mSET FOREIGN_KEY_CHECKS = 1[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+----------------------------------------
+Admin::DirectorControllerTest: test_edit
+----------------------------------------
+Processing by Admin::DirectorController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mDirector Load (0.6ms)[0m  [1mSELECT  `directors`.* FROM `directors` WHERE `directors`.`id` = 1 LIMIT 1[0m
+  Rendered admin/director/_form.html.erb (19.1ms)
+  Rendered admin/director/edit.html.erb within layouts/application (35.4ms)
+Completed 200 OK in 1070ms (Views: 1040.0ms | ActiveRecord: 0.6ms)
+  [1m[35m (0.3ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+------------------------------------------
+Admin::DirectorControllerTest: test_update
+------------------------------------------
+Processing by Admin::DirectorController#update as HTML
+  Parameters: {"id"=>"1", "director"=>{"first_name"=>"Joseph", "last_name"=>"Smith"}}
+  [1m[35mDirector Load (0.5ms)[0m  SELECT  `directors`.* FROM `directors` WHERE `directors`.`id` = 1 LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.7ms)[0m  UPDATE `directors` SET `first_name` = 'Joseph', `last_name` = 'Smith', `updated_at` = '2018-04-23 10:36:27' WHERE `directors`.`id` = 1
+  [1m[36m (0.2ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://test.host/admin/director/show?id=1
+Completed 302 Found in 11ms (ActiveRecord: 1.6ms)
+  [1m[35mDirector Load (0.6ms)[0m  SELECT  `directors`.* FROM `directors` WHERE `directors`.`id` = 1 LIMIT 1
+  [1m[36mDirector Load (0.3ms)[0m  [1mSELECT  `directors`.* FROM `directors` WHERE `directors`.`id` = 1 LIMIT 1[0m
+  [1m[35m (55.3ms)[0m  ROLLBACK
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+------------------------------------------
+Admin::DirectorControllerTest: test_create
+------------------------------------------
+Processing by Admin::DirectorController#new as HTML
+  Rendered admin/director/_form.html.erb (0.7ms)
+  Rendered admin/director/new.html.erb within layouts/application (4.6ms)
+Completed 200 OK in 12ms (Views: 10.3ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.5ms)[0m  SELECT COUNT(*) FROM `directors`
+Processing by Admin::DirectorController#create as HTML
+  Parameters: {"director"=>{"first_name"=>"Joel", "last_name"=>"Spolsky"}}
+  [1m[36m (0.3ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.6ms)[0m  INSERT INTO `directors` (`first_name`, `last_name`, `created_at`, `updated_at`) VALUES ('Joel', 'Spolsky', '2018-04-23 10:36:27', '2018-04-23 10:36:27')
+  [1m[36m (0.4ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://test.host/admin/director
+Completed 302 Found in 8ms (Views: 10.3ms | ActiveRecord: 1.3ms)
+  [1m[35m (0.5ms)[0m  SELECT COUNT(*) FROM `directors`
+  [1m[36m (192.7ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+-----------------------------------------
+Admin::DirectorControllerTest: test_index
+-----------------------------------------
+Processing by Admin::DirectorController#index as HTML
+  [1m[36mDirector Load (0.6ms)[0m  [1mSELECT `directors`.* FROM `directors`[0m
+  Rendered admin/director/_director.html.erb (9.9ms)
+  Rendered admin/director/index.html.erb within layouts/application (15.5ms)
+Completed 200 OK in 23ms (Views: 21.6ms | ActiveRecord: 0.6ms)
+  [1m[35m (0.6ms)[0m  SELECT COUNT(*) FROM `directors`
+  [1m[36mDirector Load (0.7ms)[0m  [1mSELECT  `directors`.* FROM `directors`  ORDER BY `directors`.`id` ASC LIMIT 1000[0m
+  [1m[35m (0.3ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+----------------------------------------
+Admin::DirectorControllerTest: test_show
+----------------------------------------
+Processing by Admin::DirectorController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mDirector Load (0.6ms)[0m  SELECT  `directors`.* FROM `directors` WHERE `directors`.`id` = 1 LIMIT 1
+  Rendered admin/director/show.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 9ms (Views: 6.9ms | ActiveRecord: 0.6ms)
+  [1m[36mDirector Load (0.6ms)[0m  [1mSELECT  `directors`.* FROM `directors` WHERE `directors`.`id` = 1 LIMIT 1[0m
+  [1m[35m (0.8ms)[0m  ROLLBACK
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+--------------------------------------------------
+Admin::DirectorControllerTest: test_failing_create
+--------------------------------------------------
+  [1m[35m (0.7ms)[0m  SELECT COUNT(*) FROM `directors`
+Processing by Admin::DirectorController#create as HTML
+  Parameters: {"director"=>{"first_name"=>"Joel"}}
+  [1m[36m (0.3ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35m (0.3ms)[0m  ROLLBACK TO SAVEPOINT active_record_1
+  Rendered admin/director/_form.html.erb (5.3ms)
+  Rendered admin/director/new.html.erb within layouts/application (7.5ms)
+Completed 200 OK in 40ms (Views: 10.9ms | ActiveRecord: 0.6ms)
+  [1m[36m (0.5ms)[0m  [1mSELECT COUNT(*) FROM `directors`[0m
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+---------------------------------------
+Admin::DirectorControllerTest: test_new
+---------------------------------------
+Processing by Admin::DirectorController#new as HTML
+  Rendered admin/director/_form.html.erb (0.7ms)
+  Rendered admin/director/new.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 6ms (Views: 5.5ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.3ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+------------------------------------------------
+Admin::DirectorControllerTest: test_test_destroy
+------------------------------------------------
+  [1m[35m (0.6ms)[0m  SELECT COUNT(*) FROM `directors`
+Processing by Admin::DirectorController#destroy as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mDirector Load (0.5ms)[0m  [1mSELECT  `directors`.* FROM `directors` WHERE `directors`.`id` = 1 LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.7ms)[0m  [1mDELETE FROM `directors_movies` WHERE `directors_movies`.`director_id` = 1[0m
+  [1m[35mSQL (0.6ms)[0m  DELETE FROM `directors` WHERE `directors`.`id` = 1
+  [1m[36m (0.3ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://test.host/admin/director
+Completed 302 Found in 58ms (ActiveRecord: 3.7ms)
+Processing by Admin::DirectorController#index as HTML
+  [1m[35mDirector Load (0.5ms)[0m  SELECT `directors`.* FROM `directors`
+  Rendered admin/director/_director.html.erb (13.0ms)
+  Rendered admin/director/index.html.erb within layouts/application (15.8ms)
+Completed 200 OK in 23ms (Views: 21.9ms | ActiveRecord: 0.5ms)
+  [1m[36m (0.7ms)[0m  [1mSELECT COUNT(*) FROM `directors`[0m
+  [1m[35m (60.2ms)[0m  ROLLBACK
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+-------------------------------
+AboutControllerTest: test_index
+-------------------------------
+Processing by AboutController#index as HTML
+  Rendered about/index.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 19ms (Views: 18.9ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.3ms)[0m  ROLLBACK
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+----------------------
+MovieTest: test_create
+----------------------
+  [1m[35mProducer Load (0.6ms)[0m  SELECT  `producers`.* FROM `producers` WHERE `producers`.`id` = 1 LIMIT 1
+  [1m[36mDirector Load (0.6ms)[0m  [1mSELECT `directors`.* FROM `directors`[0m
+  [1m[35m (0.3ms)[0m  SAVEPOINT active_record_1
+  [1m[36mProducer Load (0.6ms)[0m  [1mSELECT  `producers`.* FROM `producers` WHERE `producers`.`id` = 1 LIMIT 1[0m
+  [1m[35mMovie Exists (0.7ms)[0m  SELECT  1 AS one FROM `movies` WHERE `movies`.`serial_number` = BINARY '12425' LIMIT 1
+  [1m[36mSQL (0.6ms)[0m  [1mINSERT INTO `movies` (`title`, `producer_id`, `produced_at`, `serial_number`, `blurb`, `length`, `price`, `created_at`, `updated_at`) VALUES ('Ruby on Rails', 1, '2018-04-23 10:36:28', '12425', 'A great movie', 375, 45.5, '2018-04-23 10:36:28', '2018-04-23 10:36:28')[0m
+  [1m[35mSQL (0.8ms)[0m  INSERT INTO `directors_movies` (`director_id`, `movie_id`, `created_at`, `updated_at`) VALUES (1, 23, '2018-04-23 10:36:28', '2018-04-23 10:36:28')
+  [1m[36mSQL (0.6ms)[0m  [1mINSERT INTO `directors_movies` (`director_id`, `movie_id`, `created_at`, `updated_at`) VALUES (2, 23, '2018-04-23 10:36:28', '2018-04-23 10:36:28')[0m
+  [1m[35mSQL (0.7ms)[0m  INSERT INTO `directors_movies` (`director_id`, `movie_id`, `created_at`, `updated_at`) VALUES (3, 23, '2018-04-23 10:36:28', '2018-04-23 10:36:28')
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO `directors_movies` (`director_id`, `movie_id`, `created_at`, `updated_at`) VALUES (4, 23, '2018-04-23 10:36:28', '2018-04-23 10:36:28')[0m
+  [1m[35mSQL (0.8ms)[0m  INSERT INTO `directors_movies` (`director_id`, `movie_id`, `created_at`, `updated_at`) VALUES (5, 23, '2018-04-23 10:36:28', '2018-04-23 10:36:28')
+  [1m[36m (0.4ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (63.7ms)[0m  ROLLBACK
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+------------------------------
+MovieTest: test_failing_create
+------------------------------
+  [1m[35m (0.5ms)[0m  SAVEPOINT active_record_1
+  [1m[36mMovie Exists (0.6ms)[0m  [1mSELECT  1 AS one FROM `movies` WHERE `movies`.`serial_number` IS NULL LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  ROLLBACK TO SAVEPOINT active_record_1
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+-----------------------------------------------
+MovieTest: test_has_many_and_belongs_to_mapping
+-----------------------------------------------
+  [1m[36mProducer Load (0.6ms)[0m  [1mSELECT  `producers`.* FROM `producers` WHERE `producers`.`name` = 'Apress' LIMIT 1[0m
+  [1m[35m (0.7ms)[0m  SELECT COUNT(*) FROM `movies` WHERE `movies`.`producer_id` = 1
+  [1m[36mDirector Load (0.5ms)[0m  [1mSELECT  `directors`.* FROM `directors` WHERE `directors`.`first_name` = 'Joel' AND `directors`.`last_name` = 'Spolsky' LIMIT 1[0m
+  [1m[35mDirector Load (1.7ms)[0m  SELECT  `directors`.* FROM `directors` WHERE `directors`.`first_name` = 'Jeremy' AND `directors`.`last_name` = 'Keith' LIMIT 1
+  [1m[36m (0.4ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mMovie Exists (0.6ms)[0m  SELECT  1 AS one FROM `movies` WHERE `movies`.`serial_number` = BINARY '12134' LIMIT 1
+  [1m[36mSQL (0.7ms)[0m  [1mINSERT INTO `movies` (`title`, `produced_at`, `serial_number`, `blurb`, `length`, `price`, `producer_id`, `created_at`, `updated_at`) VALUES ('Pro Rails E-Commerce 8th Edition', '2018-04-23 10:36:28', '12134', 'E-Commerce on Rails', 400, 55.5, 1, '2018-04-23 10:36:28', '2018-04-23 10:36:28')[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO `directors_movies` (`director_id`, `movie_id`, `created_at`, `updated_at`) VALUES (1, 24, '2018-04-23 10:36:28', '2018-04-23 10:36:28')
+  [1m[36mSQL (0.7ms)[0m  [1mINSERT INTO `directors_movies` (`director_id`, `movie_id`, `created_at`, `updated_at`) VALUES (2, 24, '2018-04-23 10:36:28', '2018-04-23 10:36:28')[0m
+  [1m[35m (0.4ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36mProducer Load (0.9ms)[0m  [1mSELECT  `producers`.* FROM `producers` WHERE `producers`.`id` = 1 LIMIT 1[0m
+  [1m[35mMovie Load (0.9ms)[0m  SELECT  `movies`.* FROM `movies` WHERE `movies`.`id` = 24 LIMIT 1
+  [1m[36m (0.8ms)[0m  [1mSELECT COUNT(*) FROM `movies` WHERE `movies`.`producer_id` = 1[0m
+  [1m[35mProducer Load (0.6ms)[0m  SELECT  `producers`.* FROM `producers` WHERE `producers`.`id` = 1 LIMIT 1
+  [1m[36m (85.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+--------------------------------------------------------------
+MovieTest: test_has_many_and_belongs_to_many_directors_mapping
+--------------------------------------------------------------
+  [1m[36mDirector Load (0.8ms)[0m  [1mSELECT  `directors`.* FROM `directors` WHERE `directors`.`first_name` = 'Joel' AND `directors`.`last_name` = 'Spolsky' LIMIT 1[0m
+  [1m[35mDirector Load (0.6ms)[0m  SELECT  `directors`.* FROM `directors` WHERE `directors`.`first_name` = 'Jeremy' AND `directors`.`last_name` = 'Keith' LIMIT 1
+  [1m[36mProducer Load (0.7ms)[0m  [1mSELECT  `producers`.* FROM `producers` WHERE `producers`.`name` = 'Apress' LIMIT 1[0m
+  [1m[35m (0.3ms)[0m  SAVEPOINT active_record_1
+  [1m[36mProducer Load (0.6ms)[0m  [1mSELECT  `producers`.* FROM `producers` WHERE `producers`.`id` = 1 LIMIT 1[0m
+  [1m[35mMovie Exists (0.5ms)[0m  SELECT  1 AS one FROM `movies` WHERE `movies`.`serial_number` = BINARY '65321' LIMIT 1
+  [1m[36mSQL (0.9ms)[0m  [1mINSERT INTO `movies` (`title`, `producer_id`, `produced_at`, `serial_number`, `blurb`, `length`, `price`, `created_at`, `updated_at`) VALUES ('Pro Rails E-Commerce 8th Edition', 1, '2018-04-23 10:36:28', '65321', 'E-Commerce on Rails', 400, 55.5, '2018-04-23 10:36:28', '2018-04-23 10:36:28')[0m
+  [1m[35mSQL (0.6ms)[0m  INSERT INTO `directors_movies` (`director_id`, `movie_id`, `created_at`, `updated_at`) VALUES (1, 25, '2018-04-23 10:36:28', '2018-04-23 10:36:28')
+  [1m[36mSQL (0.7ms)[0m  [1mINSERT INTO `directors_movies` (`director_id`, `movie_id`, `created_at`, `updated_at`) VALUES (2, 25, '2018-04-23 10:36:28', '2018-04-23 10:36:28')[0m
+  [1m[35m (0.3ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36mMovie Load (0.6ms)[0m  [1mSELECT  `movies`.* FROM `movies` WHERE `movies`.`id` = 25 LIMIT 1[0m
+  [1m[35m (0.9ms)[0m  SELECT COUNT(*) FROM `directors` INNER JOIN `directors_movies` ON `directors`.`id` = `directors_movies`.`director_id` WHERE `directors_movies`.`movie_id` = 25
+  [1m[36mDirector Load (0.6ms)[0m  [1mSELECT  `directors`.* FROM `directors` WHERE `directors`.`first_name` = 'Joel' AND `directors`.`last_name` = 'Spolsky' LIMIT 1[0m
+  [1m[35m (0.9ms)[0m  SELECT COUNT(*) FROM `movies` INNER JOIN `directors_movies` ON `movies`.`id` = `directors_movies`.`movie_id` WHERE `directors_movies`.`director_id` = 1
+  [1m[36m (37.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+----------------------------
+DirectorTest: test_test_name
+----------------------------
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.7ms)[0m  INSERT INTO `directors` (`first_name`, `last_name`, `created_at`, `updated_at`) VALUES ('Joseph', 'Smith', '2018-04-23 10:36:29', '2018-04-23 10:36:29')
+  [1m[36m (0.2ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (46.1ms)[0m  ROLLBACK
+  [1m[36m (0.4ms)[0m  [1mBEGIN[0m
+----------------------------------------
+MovieControllerTest: test_should_get_new
+----------------------------------------
+  [1m[35m (0.3ms)[0m  ROLLBACK
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+-----------------------------------------
+MovieControllerTest: test_should_get_show
+-----------------------------------------
+  [1m[35m (0.4ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+-------------------------------------------
+MovieControllerTest: test_should_get_create
+-------------------------------------------
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+--------------------------------------------
+MovieControllerTest: test_should_get_destroy
+--------------------------------------------
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+------------------------------------------
+MovieControllerTest: test_should_get_index
+------------------------------------------
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+-----------------------------------------
+MovieControllerTest: test_should_get_edit
+-----------------------------------------
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+-------------------------------------------
+MovieControllerTest: test_should_get_update
+-------------------------------------------
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+----------------------------------------
+Admin::ProducerControllerTest: test_edit
+----------------------------------------
+Processing by Admin::ProducerController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mProducer Load (0.6ms)[0m  SELECT  `producers`.* FROM `producers` WHERE `producers`.`id` = 1 LIMIT 1
+  Rendered admin/producer/_form.html.erb (1.7ms)
+  Rendered admin/producer/edit.html.erb within layouts/application (6.9ms)
+Completed 200 OK in 21ms (Views: 19.1ms | ActiveRecord: 0.6ms)
+  [1m[36m (0.3ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+------------------------------------------
+Admin::ProducerControllerTest: test_create
+------------------------------------------
+  [1m[36m (0.5ms)[0m  [1mSELECT COUNT(*) FROM `producers`[0m
+Processing by Admin::ProducerController#create as HTML
+  Parameters: {"producer"=>{"name"=>"The Monopoly Publishing Company"}}
+  [1m[35m (0.3ms)[0m  SAVEPOINT active_record_1
+  [1m[36mProducer Exists (0.6ms)[0m  [1mSELECT  1 AS one FROM `producers` WHERE `producers`.`name` = BINARY 'The Monopoly Publishing Company' LIMIT 1[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO `producers` (`name`, `created_at`, `updated_at`) VALUES ('The Monopoly Publishing Company', '2018-04-23 10:36:29', '2018-04-23 10:36:29')
+  [1m[36m (0.2ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://test.host/admin/producer
+Completed 302 Found in 10ms (ActiveRecord: 1.5ms)
+  [1m[35m (0.5ms)[0m  SELECT COUNT(*) FROM `producers`
+  [1m[36m (40.7ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+-------------------------------------------
+Admin::ProducerControllerTest: test_destroy
+-------------------------------------------
+  [1m[36m (0.6ms)[0m  [1mSELECT COUNT(*) FROM `producers`[0m
+Processing by Admin::ProducerController#destroy as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mProducer Load (0.7ms)[0m  SELECT  `producers`.* FROM `producers` WHERE `producers`.`id` = 1 LIMIT 1
+  [1m[36m (0.3ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (1.7ms)[0m  DELETE FROM `producers` WHERE `producers`.`id` = 1
+  [1m[36m (0.3ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://test.host/admin/producer
+Completed 302 Found in 8ms (ActiveRecord: 3.0ms)
+Processing by Admin::ProducerController#index as HTML
+  [1m[35mProducer Load (0.6ms)[0m  SELECT `producers`.* FROM `producers`
+  Rendered admin/producer/_producer.html.erb (3.6ms)
+  Rendered admin/producer/index.html.erb within layouts/application (8.5ms)
+Completed 200 OK in 15ms (Views: 13.6ms | ActiveRecord: 0.6ms)
+  [1m[36m (0.5ms)[0m  [1mSELECT COUNT(*) FROM `producers`[0m
+  [1m[35m (107.8ms)[0m  ROLLBACK
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+----------------------------------------
+Admin::ProducerControllerTest: test_show
+----------------------------------------
+Processing by Admin::ProducerController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mProducer Load (0.8ms)[0m  SELECT  `producers`.* FROM `producers` WHERE `producers`.`id` = 1 LIMIT 1
+  Rendered admin/producer/show.html.erb within layouts/application (3.2ms)
+Completed 200 OK in 11ms (Views: 8.4ms | ActiveRecord: 0.8ms)
+  [1m[36mProducer Exists (0.8ms)[0m  [1mSELECT  1 AS one FROM `producers` WHERE (`producers`.`name` = BINARY 'Apress' AND `producers`.`id` != 1) LIMIT 1[0m
+  [1m[35mProducer Load (0.5ms)[0m  SELECT  `producers`.* FROM `producers` WHERE `producers`.`id` = 1 LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+-----------------------------------------
+Admin::ProducerControllerTest: test_index
+-----------------------------------------
+Processing by Admin::ProducerController#index as HTML
+  [1m[36mProducer Load (0.6ms)[0m  [1mSELECT `producers`.* FROM `producers`[0m
+  Rendered admin/producer/_producer.html.erb (3.5ms)
+  Rendered admin/producer/index.html.erb within layouts/application (6.3ms)
+Completed 200 OK in 10ms (Views: 8.7ms | ActiveRecord: 0.6ms)
+  [1m[35m (0.5ms)[0m  SELECT COUNT(*) FROM `producers`
+  [1m[36mProducer Load (0.5ms)[0m  [1mSELECT  `producers`.* FROM `producers`  ORDER BY `producers`.`id` ASC LIMIT 1000[0m
+  [1m[35m (0.3ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+---------------------------------------
+Admin::ProducerControllerTest: test_new
+---------------------------------------
+Processing by Admin::ProducerController#new as HTML
+  Rendered admin/producer/_form.html.erb (0.5ms)
+  Rendered admin/producer/new.html.erb within layouts/application (3.1ms)
+Completed 200 OK in 7ms (Views: 6.9ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.3ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+------------------------------------------
+Admin::ProducerControllerTest: test_update
+------------------------------------------
+Processing by Admin::ProducerController#update as HTML
+  Parameters: {"id"=>"1", "producer"=>{"name"=>"Apress.com"}}
+  [1m[35mProducer Load (0.6ms)[0m  SELECT  `producers`.* FROM `producers` WHERE `producers`.`id` = 1 LIMIT 1
+  [1m[36m (0.3ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mProducer Exists (0.8ms)[0m  SELECT  1 AS one FROM `producers` WHERE (`producers`.`name` = BINARY 'Apress.com' AND `producers`.`id` != 1) LIMIT 1
+  [1m[36mSQL (0.6ms)[0m  [1mUPDATE `producers` SET `name` = 'Apress.com', `updated_at` = '2018-04-23 10:36:29' WHERE `producers`.`id` = 1[0m
+  [1m[35m (0.2ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://test.host/admin/producer/show/1
+Completed 302 Found in 11ms (ActiveRecord: 2.5ms)
+  [1m[36mProducer Load (0.6ms)[0m  [1mSELECT  `producers`.* FROM `producers` WHERE `producers`.`id` = 1 LIMIT 1[0m
+  [1m[35m (45.7ms)[0m  ROLLBACK
+  [1m[36mActiveRecord::SchemaMigration Load (13.2ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+  [1m[35m (0.6ms)[0m  SELECT @@FOREIGN_KEY_CHECKS
+  [1m[36m (0.3ms)[0m  [1mSET FOREIGN_KEY_CHECKS = 0[0m
+  [1m[35m (0.2ms)[0m  SET FOREIGN_KEY_CHECKS = 1
+  [1m[36m (0.2ms)[0m  [1mSELECT @@FOREIGN_KEY_CHECKS[0m
+  [1m[35m (0.1ms)[0m  SET FOREIGN_KEY_CHECKS = 0
+  [1m[36m (0.2ms)[0m  [1mSET FOREIGN_KEY_CHECKS = 1[0m
+  [1m[35m (0.2ms)[0m  SELECT @@FOREIGN_KEY_CHECKS
+  [1m[36m (0.1ms)[0m  [1mSET FOREIGN_KEY_CHECKS = 0[0m
+  [1m[35m (0.3ms)[0m  SET FOREIGN_KEY_CHECKS = 1
+  [1m[36m (0.4ms)[0m  [1mSELECT @@FOREIGN_KEY_CHECKS[0m
+  [1m[35m (0.2ms)[0m  SET FOREIGN_KEY_CHECKS = 0
+  [1m[36m (0.4ms)[0m  [1mSET FOREIGN_KEY_CHECKS = 1[0m
+  [1m[35m (0.3ms)[0m  SELECT @@FOREIGN_KEY_CHECKS
+  [1m[36m (0.2ms)[0m  [1mSET FOREIGN_KEY_CHECKS = 0[0m
+  [1m[35m (0.4ms)[0m  SET FOREIGN_KEY_CHECKS = 1
+  [1m[36m (0.3ms)[0m  [1mSELECT @@FOREIGN_KEY_CHECKS[0m
+  [1m[35m (0.3ms)[0m  SET FOREIGN_KEY_CHECKS = 0
+  [1m[36m (0.3ms)[0m  [1mSET FOREIGN_KEY_CHECKS = 1[0m
+  [1m[35m (0.2ms)[0m  SELECT @@FOREIGN_KEY_CHECKS
+  [1m[36m (0.2ms)[0m  [1mSET FOREIGN_KEY_CHECKS = 0[0m
+  [1m[35m (0.2ms)[0m  SET FOREIGN_KEY_CHECKS = 1
+  [1m[36m (0.2ms)[0m  [1mSELECT @@FOREIGN_KEY_CHECKS[0m
+  [1m[35m (0.1ms)[0m  SET FOREIGN_KEY_CHECKS = 0
+  [1m[36m (0.2ms)[0m  [1mSET FOREIGN_KEY_CHECKS = 1[0m
+  [1m[35m (0.2ms)[0m  SELECT @@FOREIGN_KEY_CHECKS
+  [1m[36m (0.1ms)[0m  [1mSET FOREIGN_KEY_CHECKS = 0[0m
+  [1m[35m (0.2ms)[0m  SET FOREIGN_KEY_CHECKS = 1
+  [1m[36m (0.2ms)[0m  [1mSELECT @@FOREIGN_KEY_CHECKS[0m
+  [1m[35m (0.1ms)[0m  SET FOREIGN_KEY_CHECKS = 0
+  [1m[36m (0.2ms)[0m  [1mSET FOREIGN_KEY_CHECKS = 1[0m
+  [1m[35m (0.2ms)[0m  SELECT @@FOREIGN_KEY_CHECKS
+  [1m[36m (0.1ms)[0m  [1mSET FOREIGN_KEY_CHECKS = 0[0m
+  [1m[35m (0.2ms)[0m  SET FOREIGN_KEY_CHECKS = 1
+  [1m[36m (0.2ms)[0m  [1mSELECT @@FOREIGN_KEY_CHECKS[0m
+  [1m[35m (0.1ms)[0m  SET FOREIGN_KEY_CHECKS = 0
+  [1m[36m (0.2ms)[0m  [1mSET FOREIGN_KEY_CHECKS = 1[0m
+  [1m[35m (0.3ms)[0m  SELECT @@FOREIGN_KEY_CHECKS
+  [1m[36m (0.8ms)[0m  [1mSET FOREIGN_KEY_CHECKS = 0[0m
+  [1m[35m (0.3ms)[0m  SET FOREIGN_KEY_CHECKS = 1
+  [1m[36m (0.3ms)[0m  [1mSELECT @@FOREIGN_KEY_CHECKS[0m
+  [1m[35m (0.2ms)[0m  SET FOREIGN_KEY_CHECKS = 0
+  [1m[36m (0.2ms)[0m  [1mSET FOREIGN_KEY_CHECKS = 1[0m
+  [1m[35m (0.2ms)[0m  SELECT @@FOREIGN_KEY_CHECKS
+  [1m[36m (0.1ms)[0m  [1mSET FOREIGN_KEY_CHECKS = 0[0m
+  [1m[35m (0.2ms)[0m  SET FOREIGN_KEY_CHECKS = 1
+  [1m[36m (0.3ms)[0m  [1mSELECT @@FOREIGN_KEY_CHECKS[0m
+  [1m[35m (0.1ms)[0m  SET FOREIGN_KEY_CHECKS = 0
+  [1m[36m (0.2ms)[0m  [1mSET FOREIGN_KEY_CHECKS = 1[0m
+  [1m[35m (0.3ms)[0m  SELECT @@FOREIGN_KEY_CHECKS
+  [1m[36m (0.1ms)[0m  [1mSET FOREIGN_KEY_CHECKS = 0[0m
+  [1m[35m (0.2ms)[0m  SET FOREIGN_KEY_CHECKS = 1
+  [1m[36m (0.2ms)[0m  [1mSELECT @@FOREIGN_KEY_CHECKS[0m
+  [1m[35m (0.1ms)[0m  SET FOREIGN_KEY_CHECKS = 0
+  [1m[36m (0.2ms)[0m  [1mSET FOREIGN_KEY_CHECKS = 1[0m
+  [1m[35m (0.2ms)[0m  SELECT @@FOREIGN_KEY_CHECKS
+  [1m[36m (0.1ms)[0m  [1mSET FOREIGN_KEY_CHECKS = 0[0m
+  [1m[35m (0.2ms)[0m  SET FOREIGN_KEY_CHECKS = 1
+  [1m[36m (0.2ms)[0m  [1mSELECT @@FOREIGN_KEY_CHECKS[0m
+  [1m[35m (0.1ms)[0m  SET FOREIGN_KEY_CHECKS = 0
+  [1m[36m (0.2ms)[0m  [1mSET FOREIGN_KEY_CHECKS = 1[0m
+  [1m[35m (0.2ms)[0m  SELECT @@FOREIGN_KEY_CHECKS
+  [1m[36m (0.1ms)[0m  [1mSET FOREIGN_KEY_CHECKS = 0[0m
+  [1m[35m (0.2ms)[0m  SET FOREIGN_KEY_CHECKS = 1
+  [1m[36m (0.3ms)[0m  [1mSELECT @@FOREIGN_KEY_CHECKS[0m
+  [1m[35m (0.3ms)[0m  SET FOREIGN_KEY_CHECKS = 0
+  [1m[36m (0.4ms)[0m  [1mSET FOREIGN_KEY_CHECKS = 1[0m
+  [1m[35m (0.4ms)[0m  SELECT @@FOREIGN_KEY_CHECKS
+  [1m[36m (0.3ms)[0m  [1mSET FOREIGN_KEY_CHECKS = 0[0m
+  [1m[35m (0.3ms)[0m  SET FOREIGN_KEY_CHECKS = 1
+  [1m[36m (0.3ms)[0m  [1mSELECT @@FOREIGN_KEY_CHECKS[0m
+  [1m[35m (0.2ms)[0m  SET FOREIGN_KEY_CHECKS = 0
+  [1m[36m (0.2ms)[0m  [1mSET FOREIGN_KEY_CHECKS = 1[0m
+  [1m[35m (0.3ms)[0m  SELECT @@FOREIGN_KEY_CHECKS
+  [1m[36m (0.2ms)[0m  [1mSET FOREIGN_KEY_CHECKS = 0[0m
+  [1m[35m (0.3ms)[0m  SET FOREIGN_KEY_CHECKS = 1
+  [1m[36m (0.2ms)[0m  [1mSELECT @@FOREIGN_KEY_CHECKS[0m
+  [1m[35m (0.2ms)[0m  SET FOREIGN_KEY_CHECKS = 0
+  [1m[36m (0.2ms)[0m  [1mSET FOREIGN_KEY_CHECKS = 1[0m
+  [1m[35m (0.3ms)[0m  SELECT @@FOREIGN_KEY_CHECKS
+  [1m[36m (0.2ms)[0m  [1mSET FOREIGN_KEY_CHECKS = 0[0m
+  [1m[35m (0.2ms)[0m  SET FOREIGN_KEY_CHECKS = 1
+  [1m[36m (0.2ms)[0m  [1mSELECT @@FOREIGN_KEY_CHECKS[0m
+  [1m[35m (0.1ms)[0m  SET FOREIGN_KEY_CHECKS = 0
+  [1m[36m (0.2ms)[0m  [1mSET FOREIGN_KEY_CHECKS = 1[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+  [1m[35m (0.5ms)[0m  SELECT @@FOREIGN_KEY_CHECKS
+  [1m[36m (0.2ms)[0m  [1mSET FOREIGN_KEY_CHECKS = 0[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36mFixture Delete (71.7ms)[0m  [1mDELETE FROM `movies`[0m
+  [1m[35mFixture Insert (13.3ms)[0m  INSERT INTO `movies` (`id`, `title`, `producer_id`, `serial_number`, `produced_at`, `price`, `created_at`, `updated_at`) VALUES (1, 'Pro Rails E-Commerce', 1, '12345', '2018-04-26', 45.0, '2018-04-26 09:54:20', '2018-04-26 09:54:20')
+  [1m[36mFixture Insert (0.8ms)[0m  [1mINSERT INTO `movies` (`id`, `title`, `producer_id`, `serial_number`, `produced_at`, `price`, `created_at`, `updated_at`) VALUES (2, 'Pro Rails E-Commerce 2nd Edition', 1, '12341', '2018-04-26', 65.0, '2018-04-26 09:54:20', '2018-04-26 09:54:20')[0m
+  [1m[35mFixture Insert (0.4ms)[0m  INSERT INTO `movies` (`id`, `title`, `producer_id`, `serial_number`, `produced_at`, `price`, `created_at`, `updated_at`) VALUES (3, 'Pro Rails E-Commerce 3rd Edition', 1, '12322', '2018-04-26', 85.0, '2018-04-26 09:54:20', '2018-04-26 09:54:20')
+  [1m[36mFixture Insert (0.5ms)[0m  [1mINSERT INTO `movies` (`id`, `title`, `producer_id`, `serial_number`, `produced_at`, `price`, `created_at`, `updated_at`) VALUES (4, 'Pro Rails E-Commerce 4th Edition', 1, '12121', '2018-04-26', 105.0, '2018-04-26 09:54:20', '2018-04-26 09:54:20')[0m
+  [1m[35mFixture Insert (0.4ms)[0m  INSERT INTO `movies` (`id`, `title`, `producer_id`, `serial_number`, `produced_at`, `price`, `created_at`, `updated_at`) VALUES (5, 'Pro Rails E-Commerce 5th Edition', 1, '12127', '2018-04-26', 125.0, '2018-04-26 09:54:20', '2018-04-26 09:54:20')
+  [1m[36mFixture Insert (0.5ms)[0m  [1mINSERT INTO `movies` (`id`, `title`, `producer_id`, `serial_number`, `produced_at`, `price`, `created_at`, `updated_at`) VALUES (6, 'Pro Rails E-Commerce 6th Edition', 1, '12111', '2018-04-26', 145.0, '2018-04-26 09:54:20', '2018-04-26 09:54:20')[0m
+  [1m[35mFixture Insert (0.4ms)[0m  INSERT INTO `movies` (`id`, `title`, `producer_id`, `serial_number`, `produced_at`, `price`, `created_at`, `updated_at`) VALUES (7, 'Pro Rails E-Commerce 7th Edition', 2, '21127', '2018-04-26', 165.0, '2018-04-26 09:54:20', '2018-04-26 09:54:20')
+  [1m[36mFixture Insert (0.5ms)[0m  [1mINSERT INTO `movies` (`id`, `title`, `producer_id`, `serial_number`, `produced_at`, `price`, `created_at`, `updated_at`) VALUES (8, 'Ruby for Dummies', 1, '22127', '2018-04-26', 185.0, '2018-04-26 09:54:20', '2018-04-26 09:54:20')[0m
+  [1m[35mFixture Insert (0.4ms)[0m  INSERT INTO `movies` (`id`, `title`, `producer_id`, `serial_number`, `produced_at`, `price`, `created_at`, `updated_at`) VALUES (9, 'Pride and Prejudice', 2, '11128', '2018-04-26', 40.0, '2018-04-26 09:54:20', '2018-04-26 09:54:20')
+  [1m[36mFixture Insert (0.4ms)[0m  [1mINSERT INTO `movies` (`id`, `title`, `producer_id`, `serial_number`, `produced_at`, `price`, `created_at`, `updated_at`) VALUES (10, 'The Idiot', 2, '11128', '2018-04-26', 40.0, '2018-04-26 09:54:20', '2018-04-26 09:54:20')[0m
+  [1m[35mFixture Delete (0.6ms)[0m  DELETE FROM `producers`
+  [1m[36mFixture Insert (0.5ms)[0m  [1mINSERT INTO `producers` (`id`, `name`, `created_at`, `updated_at`) VALUES (1, 'Apress', '2018-04-26 09:54:20', '2018-04-26 09:54:20')[0m
+  [1m[35mFixture Insert (0.4ms)[0m  INSERT INTO `producers` (`id`, `name`, `created_at`, `updated_at`) VALUES (2, 'Emporium', '2018-04-26 09:54:20', '2018-04-26 09:54:20')
+  [1m[36mFixture Delete (0.6ms)[0m  [1mDELETE FROM `directors`[0m
+  [1m[35mFixture Insert (1.4ms)[0m  INSERT INTO `directors` (`id`, `first_name`, `last_name`, `created_at`, `updated_at`) VALUES (1, 'Joel', 'Spolsky', '2018-04-26 09:54:20', '2018-04-26 09:54:20')
+  [1m[36mFixture Insert (0.4ms)[0m  [1mINSERT INTO `directors` (`id`, `first_name`, `last_name`, `created_at`, `updated_at`) VALUES (2, 'Jeremy', 'Keith', '2018-04-26 09:54:20', '2018-04-26 09:54:20')[0m
+  [1m[35mFixture Insert (0.3ms)[0m  INSERT INTO `directors` (`id`, `first_name`, `last_name`, `created_at`, `updated_at`) VALUES (3, 'Jarkko', 'Laine', '2018-04-26 09:54:20', '2018-04-26 09:54:20')
+  [1m[36mFixture Insert (0.4ms)[0m  [1mINSERT INTO `directors` (`id`, `first_name`, `last_name`, `created_at`, `updated_at`) VALUES (4, 'Christian', 'Hellsten', '2018-04-26 09:54:20', '2018-04-26 09:54:20')[0m
+  [1m[35mFixture Insert (0.3ms)[0m  INSERT INTO `directors` (`id`, `first_name`, `last_name`, `created_at`, `updated_at`) VALUES (5, 'Leo', 'Tolstoy', '2018-04-26 09:54:20', '2018-04-26 09:54:20')
+  [1m[36mFixture Delete (94.9ms)[0m  [1mDELETE FROM `directors_movies`[0m
+  [1m[35mFixture Insert (0.4ms)[0m  INSERT INTO `directors_movies` (`created_at`, `updated_at`, `director_id`, `movie_id`) VALUES ('2018-04-26 11:54:20', '2018-04-26 11:54:20', 1, 1)
+  [1m[36mFixture Insert (1.1ms)[0m  [1mINSERT INTO `directors_movies` (`created_at`, `updated_at`, `director_id`, `movie_id`) VALUES ('2018-04-26 11:54:20', '2018-04-26 11:54:20', 2, 2)[0m
+  [1m[35mFixture Insert (0.3ms)[0m  INSERT INTO `directors_movies` (`created_at`, `updated_at`, `director_id`, `movie_id`) VALUES ('2018-04-26 11:54:20', '2018-04-26 11:54:20', 2, 3)
+  [1m[36mFixture Insert (0.3ms)[0m  [1mINSERT INTO `directors_movies` (`created_at`, `updated_at`, `director_id`, `movie_id`) VALUES ('2018-04-26 11:54:20', '2018-04-26 11:54:20', 2, 4)[0m
+  [1m[35mFixture Insert (0.3ms)[0m  INSERT INTO `directors_movies` (`created_at`, `updated_at`, `director_id`, `movie_id`) VALUES ('2018-04-26 11:54:20', '2018-04-26 11:54:20', 2, 5)
+  [1m[36mFixture Insert (0.3ms)[0m  [1mINSERT INTO `directors_movies` (`created_at`, `updated_at`, `director_id`, `movie_id`) VALUES ('2018-04-26 11:54:20', '2018-04-26 11:54:20', 2, 6)[0m
+  [1m[35mFixture Insert (0.3ms)[0m  INSERT INTO `directors_movies` (`created_at`, `updated_at`, `director_id`, `movie_id`) VALUES ('2018-04-26 11:54:20', '2018-04-26 11:54:20', 2, 7)
+  [1m[36mFixture Insert (0.3ms)[0m  [1mINSERT INTO `directors_movies` (`created_at`, `updated_at`, `director_id`, `movie_id`) VALUES ('2018-04-26 11:54:20', '2018-04-26 11:54:20', 3, 8)[0m
+  [1m[35mFixture Insert (0.2ms)[0m  INSERT INTO `directors_movies` (`created_at`, `updated_at`, `director_id`, `movie_id`) VALUES ('2018-04-26 11:54:20', '2018-04-26 11:54:20', 4, 9)
+  [1m[36mFixture Insert (0.2ms)[0m  [1mINSERT INTO `directors_movies` (`created_at`, `updated_at`, `director_id`, `movie_id`) VALUES ('2018-04-26 11:54:20', '2018-04-26 11:54:20', 5, 10)[0m
+  [1m[35m (57.2ms)[0m  COMMIT
+  [1m[36m (0.3ms)[0m  [1mSET FOREIGN_KEY_CHECKS = 1[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+------------------------------------------
+Admin::DirectorControllerTest: test_create
+------------------------------------------
+Processing by Admin::DirectorController#new as HTML
+  Rendered admin/director/_form.html.erb (16.7ms)
+  Rendered admin/director/new.html.erb within layouts/application (27.6ms)
+Completed 200 OK in 789ms (Views: 777.5ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.5ms)[0m  [1mSELECT COUNT(*) FROM `directors`[0m
+Processing by Admin::DirectorController#create as HTML
+  Parameters: {"director"=>{"first_name"=>"Joel", "last_name"=>"Spolsky"}}
+  [1m[35m (0.4ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.7ms)[0m  [1mINSERT INTO `directors` (`first_name`, `last_name`, `created_at`, `updated_at`) VALUES ('Joel', 'Spolsky', '2018-04-26 09:54:21', '2018-04-26 09:54:21')[0m
+  [1m[35m (0.2ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://test.host/admin/director
+Completed 302 Found in 8ms (Views: 777.5ms | ActiveRecord: 1.3ms)
+  [1m[36m (0.6ms)[0m  [1mSELECT COUNT(*) FROM `directors`[0m
+  [1m[35m (40.7ms)[0m  ROLLBACK
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+--------------------------------------------------
+Admin::DirectorControllerTest: test_failing_create
+--------------------------------------------------
+  [1m[35m (0.7ms)[0m  SELECT COUNT(*) FROM `directors`
+Processing by Admin::DirectorController#create as HTML
+  Parameters: {"director"=>{"first_name"=>"Joel"}}
+  [1m[36m (0.5ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35m (0.3ms)[0m  ROLLBACK TO SAVEPOINT active_record_1
+  Rendered admin/director/_form.html.erb (4.7ms)
+  Rendered admin/director/new.html.erb within layouts/application (6.5ms)
+Completed 200 OK in 36ms (Views: 9.3ms | ActiveRecord: 0.8ms)
+  [1m[36m (0.7ms)[0m  [1mSELECT COUNT(*) FROM `directors`[0m
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+------------------------------------------------
+Admin::DirectorControllerTest: test_test_destroy
+------------------------------------------------
+  [1m[35m (0.5ms)[0m  SELECT COUNT(*) FROM `directors`
+Processing by Admin::DirectorController#destroy as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mDirector Load (0.6ms)[0m  [1mSELECT  `directors`.* FROM `directors` WHERE `directors`.`id` = 1 LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.5ms)[0m  [1mDELETE FROM `directors_movies` WHERE `directors_movies`.`director_id` = 1[0m
+  [1m[35mSQL (0.7ms)[0m  DELETE FROM `directors` WHERE `directors`.`id` = 1
+  [1m[36m (0.2ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://test.host/admin/director
+Completed 302 Found in 56ms (ActiveRecord: 3.4ms)
+Processing by Admin::DirectorController#index as HTML
+  [1m[35mDirector Load (0.7ms)[0m  SELECT `directors`.* FROM `directors`
+  Rendered admin/director/_director.html.erb (8.2ms)
+  Rendered admin/director/index.html.erb within layouts/application (14.8ms)
+Completed 200 OK in 28ms (Views: 26.9ms | ActiveRecord: 0.7ms)
+  [1m[36m (0.5ms)[0m  [1mSELECT COUNT(*) FROM `directors`[0m
+  [1m[35m (42.7ms)[0m  ROLLBACK
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+----------------------------------------
+Admin::DirectorControllerTest: test_edit
+----------------------------------------
+Processing by Admin::DirectorController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mDirector Load (1.0ms)[0m  SELECT  `directors`.* FROM `directors` WHERE `directors`.`id` = 1 LIMIT 1
+  Rendered admin/director/_form.html.erb (0.6ms)
+  Rendered admin/director/edit.html.erb within layouts/application (3.8ms)
+Completed 200 OK in 12ms (Views: 9.2ms | ActiveRecord: 1.0ms)
+  [1m[36m (0.3ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+----------------------------------------
+Admin::DirectorControllerTest: test_show
+----------------------------------------
+Processing by Admin::DirectorController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mDirector Load (0.7ms)[0m  [1mSELECT  `directors`.* FROM `directors` WHERE `directors`.`id` = 1 LIMIT 1[0m
+  Rendered admin/director/show.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 9ms (Views: 6.2ms | ActiveRecord: 0.7ms)
+  [1m[35mDirector Load (0.6ms)[0m  SELECT  `directors`.* FROM `directors` WHERE `directors`.`id` = 1 LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+-----------------------------------------
+Admin::DirectorControllerTest: test_index
+-----------------------------------------
+Processing by Admin::DirectorController#index as HTML
+  [1m[36mDirector Load (0.6ms)[0m  [1mSELECT `directors`.* FROM `directors`[0m
+  Rendered admin/director/_director.html.erb (7.1ms)
+  Rendered admin/director/index.html.erb within layouts/application (9.7ms)
+Completed 200 OK in 13ms (Views: 11.9ms | ActiveRecord: 0.6ms)
+  [1m[35m (0.6ms)[0m  SELECT COUNT(*) FROM `directors`
+  [1m[36mDirector Load (0.6ms)[0m  [1mSELECT  `directors`.* FROM `directors`  ORDER BY `directors`.`id` ASC LIMIT 1000[0m
+  [1m[35m (0.3ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+---------------------------------------
+Admin::DirectorControllerTest: test_new
+---------------------------------------
+Processing by Admin::DirectorController#new as HTML
+  Rendered admin/director/_form.html.erb (0.6ms)
+  Rendered admin/director/new.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 5ms (Views: 4.7ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.3ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+------------------------------------------
+Admin::DirectorControllerTest: test_update
+------------------------------------------
+Processing by Admin::DirectorController#update as HTML
+  Parameters: {"id"=>"1", "director"=>{"first_name"=>"Joseph", "last_name"=>"Smith"}}
+  [1m[35mDirector Load (0.6ms)[0m  SELECT  `directors`.* FROM `directors` WHERE `directors`.`id` = 1 LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.6ms)[0m  UPDATE `directors` SET `first_name` = 'Joseph', `last_name` = 'Smith', `updated_at` = '2018-04-26 09:54:21' WHERE `directors`.`id` = 1
+  [1m[36m (0.3ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://test.host/admin/director/show?id=1
+Completed 302 Found in 10ms (ActiveRecord: 1.7ms)
+  [1m[35mDirector Load (0.6ms)[0m  SELECT  `directors`.* FROM `directors` WHERE `directors`.`id` = 1 LIMIT 1
+  [1m[36mDirector Load (0.4ms)[0m  [1mSELECT  `directors`.* FROM `directors` WHERE `directors`.`id` = 1 LIMIT 1[0m
+  [1m[35m (44.0ms)[0m  ROLLBACK
+  [1m[36m (0.4ms)[0m  [1mBEGIN[0m
+-------------------------------------------
+MovieControllerTest: test_should_get_create
+-------------------------------------------
+  [1m[35m (0.4ms)[0m  ROLLBACK
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+--------------------------------------------
+MovieControllerTest: test_should_get_destroy
+--------------------------------------------
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.4ms)[0m  [1mBEGIN[0m
+-----------------------------------------
+MovieControllerTest: test_should_get_show
+-----------------------------------------
+  [1m[35m (0.3ms)[0m  ROLLBACK
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+-------------------------------------------
+MovieControllerTest: test_should_get_update
+-------------------------------------------
+  [1m[35m (0.3ms)[0m  ROLLBACK
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+-----------------------------------------
+MovieControllerTest: test_should_get_edit
+-----------------------------------------
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+------------------------------------------
+MovieControllerTest: test_should_get_index
+------------------------------------------
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+----------------------------------------
+MovieControllerTest: test_should_get_new
+----------------------------------------
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+----------------------------------------
+Admin::ProducerControllerTest: test_show
+----------------------------------------
+Processing by Admin::ProducerController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mProducer Load (0.7ms)[0m  SELECT  `producers`.* FROM `producers` WHERE `producers`.`id` = 1 LIMIT 1
+  Rendered admin/producer/show.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 23ms (Views: 14.4ms | ActiveRecord: 0.7ms)
+  [1m[36mProducer Exists (0.8ms)[0m  [1mSELECT  1 AS one FROM `producers` WHERE (`producers`.`name` = BINARY 'Apress' AND `producers`.`id` != 1) LIMIT 1[0m
+  [1m[35mProducer Load (0.6ms)[0m  SELECT  `producers`.* FROM `producers` WHERE `producers`.`id` = 1 LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+---------------------------------------
+Admin::ProducerControllerTest: test_new
+---------------------------------------
+Processing by Admin::ProducerController#new as HTML
+  Rendered admin/producer/_form.html.erb (1.8ms)
+  Rendered admin/producer/new.html.erb within layouts/application (6.4ms)
+Completed 200 OK in 12ms (Views: 11.1ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.3ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+-------------------------------------------
+Admin::ProducerControllerTest: test_destroy
+-------------------------------------------
+  [1m[36m (0.6ms)[0m  [1mSELECT COUNT(*) FROM `producers`[0m
+Processing by Admin::ProducerController#destroy as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mProducer Load (0.5ms)[0m  SELECT  `producers`.* FROM `producers` WHERE `producers`.`id` = 1 LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (1.3ms)[0m  DELETE FROM `producers` WHERE `producers`.`id` = 1
+  [1m[36m (0.2ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://test.host/admin/producer
+Completed 302 Found in 6ms (ActiveRecord: 2.2ms)
+Processing by Admin::ProducerController#index as HTML
+  [1m[35mProducer Load (0.6ms)[0m  SELECT `producers`.* FROM `producers`
+  Rendered admin/producer/_producer.html.erb (4.0ms)
+  Rendered admin/producer/index.html.erb within layouts/application (9.0ms)
+Completed 200 OK in 14ms (Views: 13.4ms | ActiveRecord: 0.6ms)
+  [1m[36m (0.6ms)[0m  [1mSELECT COUNT(*) FROM `producers`[0m
+  [1m[35m (40.5ms)[0m  ROLLBACK
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+----------------------------------------
+Admin::ProducerControllerTest: test_edit
+----------------------------------------
+Processing by Admin::ProducerController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mProducer Load (0.8ms)[0m  SELECT  `producers`.* FROM `producers` WHERE `producers`.`id` = 1 LIMIT 1
+  Rendered admin/producer/_form.html.erb (0.5ms)
+  Rendered admin/producer/edit.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 12ms (Views: 9.1ms | ActiveRecord: 0.8ms)
+  [1m[36m (0.3ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+------------------------------------------
+Admin::ProducerControllerTest: test_create
+------------------------------------------
+  [1m[36m (0.6ms)[0m  [1mSELECT COUNT(*) FROM `producers`[0m
+Processing by Admin::ProducerController#create as HTML
+  Parameters: {"producer"=>{"name"=>"The Monopoly Publishing Company"}}
+  [1m[35m (0.3ms)[0m  SAVEPOINT active_record_1
+  [1m[36mProducer Exists (0.7ms)[0m  [1mSELECT  1 AS one FROM `producers` WHERE `producers`.`name` = BINARY 'The Monopoly Publishing Company' LIMIT 1[0m
+  [1m[35mSQL (0.6ms)[0m  INSERT INTO `producers` (`name`, `created_at`, `updated_at`) VALUES ('The Monopoly Publishing Company', '2018-04-26 09:54:22', '2018-04-26 09:54:22')
+  [1m[36m (0.3ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://test.host/admin/producer
+Completed 302 Found in 11ms (ActiveRecord: 1.9ms)
+  [1m[35m (0.6ms)[0m  SELECT COUNT(*) FROM `producers`
+  [1m[36m (121.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+------------------------------------------
+Admin::ProducerControllerTest: test_update
+------------------------------------------
+Processing by Admin::ProducerController#update as HTML
+  Parameters: {"id"=>"1", "producer"=>{"name"=>"Apress.com"}}
+  [1m[36mProducer Load (0.7ms)[0m  [1mSELECT  `producers`.* FROM `producers` WHERE `producers`.`id` = 1 LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  SAVEPOINT active_record_1
+  [1m[36mProducer Exists (0.8ms)[0m  [1mSELECT  1 AS one FROM `producers` WHERE (`producers`.`name` = BINARY 'Apress.com' AND `producers`.`id` != 1) LIMIT 1[0m
+  [1m[35mSQL (0.7ms)[0m  UPDATE `producers` SET `name` = 'Apress.com', `updated_at` = '2018-04-26 09:54:22' WHERE `producers`.`id` = 1
+  [1m[36m (0.2ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://test.host/admin/producer/show/1
+Completed 302 Found in 10ms (ActiveRecord: 2.5ms)
+  [1m[35mProducer Load (0.6ms)[0m  SELECT  `producers`.* FROM `producers` WHERE `producers`.`id` = 1 LIMIT 1
+  [1m[36m (45.9ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+-----------------------------------------
+Admin::ProducerControllerTest: test_index
+-----------------------------------------
+Processing by Admin::ProducerController#index as HTML
+  [1m[36mProducer Load (0.7ms)[0m  [1mSELECT `producers`.* FROM `producers`[0m
+  Rendered admin/producer/_producer.html.erb (4.9ms)
+  Rendered admin/producer/index.html.erb within layouts/application (8.1ms)
+Completed 200 OK in 12ms (Views: 10.7ms | ActiveRecord: 0.7ms)
+  [1m[35m (0.5ms)[0m  SELECT COUNT(*) FROM `producers`
+  [1m[36mProducer Load (0.5ms)[0m  [1mSELECT  `producers`.* FROM `producers`  ORDER BY `producers`.`id` ASC LIMIT 1000[0m
+  [1m[35m (0.3ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+-------------------------------
+AboutControllerTest: test_index
+-------------------------------
+Processing by AboutController#index as HTML
+  Rendered about/index.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 12ms (Views: 11.8ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.3ms)[0m  ROLLBACK
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+----------------------
+MovieTest: test_create
+----------------------
+  [1m[35mProducer Load (0.5ms)[0m  SELECT  `producers`.* FROM `producers` WHERE `producers`.`id` = 1 LIMIT 1
+  [1m[36mDirector Load (0.6ms)[0m  [1mSELECT `directors`.* FROM `directors`[0m
+  [1m[35m (0.3ms)[0m  SAVEPOINT active_record_1
+  [1m[36mProducer Load (0.6ms)[0m  [1mSELECT  `producers`.* FROM `producers` WHERE `producers`.`id` = 1 LIMIT 1[0m
+  [1m[35mMovie Exists (0.6ms)[0m  SELECT  1 AS one FROM `movies` WHERE `movies`.`serial_number` = BINARY '12425' LIMIT 1
+  [1m[36mSQL (0.7ms)[0m  [1mINSERT INTO `movies` (`title`, `producer_id`, `produced_at`, `serial_number`, `blurb`, `length`, `price`, `created_at`, `updated_at`) VALUES ('Ruby on Rails', 1, '2018-04-26 09:54:22', '12425', 'A great movie', 375, 45.5, '2018-04-26 09:54:22', '2018-04-26 09:54:22')[0m
+  [1m[35mSQL (0.7ms)[0m  INSERT INTO `directors_movies` (`director_id`, `movie_id`, `created_at`, `updated_at`) VALUES (1, 11, '2018-04-26 09:54:22', '2018-04-26 09:54:22')
+  [1m[36mSQL (0.7ms)[0m  [1mINSERT INTO `directors_movies` (`director_id`, `movie_id`, `created_at`, `updated_at`) VALUES (2, 11, '2018-04-26 09:54:22', '2018-04-26 09:54:22')[0m
+  [1m[35mSQL (0.7ms)[0m  INSERT INTO `directors_movies` (`director_id`, `movie_id`, `created_at`, `updated_at`) VALUES (3, 11, '2018-04-26 09:54:22', '2018-04-26 09:54:22')
+  [1m[36mSQL (0.7ms)[0m  [1mINSERT INTO `directors_movies` (`director_id`, `movie_id`, `created_at`, `updated_at`) VALUES (4, 11, '2018-04-26 09:54:22', '2018-04-26 09:54:22')[0m
+  [1m[35mSQL (0.7ms)[0m  INSERT INTO `directors_movies` (`director_id`, `movie_id`, `created_at`, `updated_at`) VALUES (5, 11, '2018-04-26 09:54:22', '2018-04-26 09:54:22')
+  [1m[36m (0.4ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (47.0ms)[0m  ROLLBACK
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+------------------------------
+MovieTest: test_failing_create
+------------------------------
+  [1m[35m (0.2ms)[0m  SAVEPOINT active_record_1
+  [1m[36mMovie Exists (0.6ms)[0m  [1mSELECT  1 AS one FROM `movies` WHERE `movies`.`serial_number` IS NULL LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  ROLLBACK TO SAVEPOINT active_record_1
+  [1m[36m (0.4ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+--------------------------------------------------------------
+MovieTest: test_has_many_and_belongs_to_many_directors_mapping
+--------------------------------------------------------------
+  [1m[36mDirector Load (0.7ms)[0m  [1mSELECT  `directors`.* FROM `directors` WHERE `directors`.`first_name` = 'Joel' AND `directors`.`last_name` = 'Spolsky' LIMIT 1[0m
+  [1m[35mDirector Load (0.9ms)[0m  SELECT  `directors`.* FROM `directors` WHERE `directors`.`first_name` = 'Jeremy' AND `directors`.`last_name` = 'Keith' LIMIT 1
+  [1m[36mProducer Load (0.9ms)[0m  [1mSELECT  `producers`.* FROM `producers` WHERE `producers`.`name` = 'Apress' LIMIT 1[0m
+  [1m[35m (0.9ms)[0m  SAVEPOINT active_record_1
+  [1m[36mProducer Load (0.6ms)[0m  [1mSELECT  `producers`.* FROM `producers` WHERE `producers`.`id` = 1 LIMIT 1[0m
+  [1m[35mMovie Exists (0.7ms)[0m  SELECT  1 AS one FROM `movies` WHERE `movies`.`serial_number` = BINARY '65321' LIMIT 1
+  [1m[36mSQL (0.6ms)[0m  [1mINSERT INTO `movies` (`title`, `producer_id`, `produced_at`, `serial_number`, `blurb`, `length`, `price`, `created_at`, `updated_at`) VALUES ('Pro Rails E-Commerce 8th Edition', 1, '2018-04-26 09:54:22', '65321', 'E-Commerce on Rails', 400, 55.5, '2018-04-26 09:54:22', '2018-04-26 09:54:22')[0m
+  [1m[35mSQL (0.7ms)[0m  INSERT INTO `directors_movies` (`director_id`, `movie_id`, `created_at`, `updated_at`) VALUES (1, 12, '2018-04-26 09:54:22', '2018-04-26 09:54:22')
+  [1m[36mSQL (0.9ms)[0m  [1mINSERT INTO `directors_movies` (`director_id`, `movie_id`, `created_at`, `updated_at`) VALUES (2, 12, '2018-04-26 09:54:22', '2018-04-26 09:54:22')[0m
+  [1m[35m (0.7ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36mMovie Load (1.0ms)[0m  [1mSELECT  `movies`.* FROM `movies` WHERE `movies`.`id` = 12 LIMIT 1[0m
+  [1m[35m (1.0ms)[0m  SELECT COUNT(*) FROM `directors` INNER JOIN `directors_movies` ON `directors`.`id` = `directors_movies`.`director_id` WHERE `directors_movies`.`movie_id` = 12
+  [1m[36mDirector Load (0.4ms)[0m  [1mSELECT  `directors`.* FROM `directors` WHERE `directors`.`first_name` = 'Joel' AND `directors`.`last_name` = 'Spolsky' LIMIT 1[0m
+  [1m[35m (1.0ms)[0m  SELECT COUNT(*) FROM `movies` INNER JOIN `directors_movies` ON `movies`.`id` = `directors_movies`.`movie_id` WHERE `directors_movies`.`director_id` = 1
+  [1m[36m (39.3ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+-----------------------------------------------
+MovieTest: test_has_many_and_belongs_to_mapping
+-----------------------------------------------
+  [1m[36mProducer Load (0.5ms)[0m  [1mSELECT  `producers`.* FROM `producers` WHERE `producers`.`name` = 'Apress' LIMIT 1[0m
+  [1m[35m (0.7ms)[0m  SELECT COUNT(*) FROM `movies` WHERE `movies`.`producer_id` = 1
+  [1m[36mDirector Load (0.6ms)[0m  [1mSELECT  `directors`.* FROM `directors` WHERE `directors`.`first_name` = 'Joel' AND `directors`.`last_name` = 'Spolsky' LIMIT 1[0m
+  [1m[35mDirector Load (0.4ms)[0m  SELECT  `directors`.* FROM `directors` WHERE `directors`.`first_name` = 'Jeremy' AND `directors`.`last_name` = 'Keith' LIMIT 1
+  [1m[36m (0.4ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mMovie Exists (0.8ms)[0m  SELECT  1 AS one FROM `movies` WHERE `movies`.`serial_number` = BINARY '12134' LIMIT 1
+  [1m[36mSQL (1.0ms)[0m  [1mINSERT INTO `movies` (`title`, `produced_at`, `serial_number`, `blurb`, `length`, `price`, `producer_id`, `created_at`, `updated_at`) VALUES ('Pro Rails E-Commerce 8th Edition', '2018-04-26 09:54:22', '12134', 'E-Commerce on Rails', 400, 55.5, 1, '2018-04-26 09:54:22', '2018-04-26 09:54:22')[0m
+  [1m[35mSQL (0.6ms)[0m  INSERT INTO `directors_movies` (`director_id`, `movie_id`, `created_at`, `updated_at`) VALUES (1, 13, '2018-04-26 09:54:22', '2018-04-26 09:54:22')
+  [1m[36mSQL (0.7ms)[0m  [1mINSERT INTO `directors_movies` (`director_id`, `movie_id`, `created_at`, `updated_at`) VALUES (2, 13, '2018-04-26 09:54:22', '2018-04-26 09:54:22')[0m
+  [1m[35m (0.3ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36mProducer Load (0.6ms)[0m  [1mSELECT  `producers`.* FROM `producers` WHERE `producers`.`id` = 1 LIMIT 1[0m
+  [1m[35mMovie Load (0.7ms)[0m  SELECT  `movies`.* FROM `movies` WHERE `movies`.`id` = 13 LIMIT 1
+  [1m[36m (0.8ms)[0m  [1mSELECT COUNT(*) FROM `movies` WHERE `movies`.`producer_id` = 1[0m
+  [1m[35mProducer Load (0.7ms)[0m  SELECT  `producers`.* FROM `producers` WHERE `producers`.`id` = 1 LIMIT 1
+  [1m[36m (49.7ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+----------------------------
+DirectorTest: test_test_name
+----------------------------
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO `directors` (`first_name`, `last_name`, `created_at`, `updated_at`) VALUES ('Joseph', 'Smith', '2018-04-26 09:54:22', '2018-04-26 09:54:22')
+  [1m[36m (0.2ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (46.3ms)[0m  ROLLBACK
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+  [1m[35m (0.6ms)[0m  SELECT @@FOREIGN_KEY_CHECKS
+  [1m[36m (0.2ms)[0m  [1mSET FOREIGN_KEY_CHECKS = 0[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36mFixture Delete (78.1ms)[0m  [1mDELETE FROM `movies`[0m
+  [1m[35mFixture Insert (0.8ms)[0m  INSERT INTO `movies` (`id`, `title`, `producer_id`, `serial_number`, `produced_at`, `price`, `created_at`, `updated_at`) VALUES (1, 'Pro Rails E-Commerce', 1, '12345', '2018-04-26', 45.0, '2018-04-26 09:54:54', '2018-04-26 09:54:54')
+  [1m[36mFixture Insert (0.5ms)[0m  [1mINSERT INTO `movies` (`id`, `title`, `producer_id`, `serial_number`, `produced_at`, `price`, `created_at`, `updated_at`) VALUES (2, 'Pro Rails E-Commerce 2nd Edition', 1, '12341', '2018-04-26', 65.0, '2018-04-26 09:54:54', '2018-04-26 09:54:54')[0m
+  [1m[35mFixture Insert (0.5ms)[0m  INSERT INTO `movies` (`id`, `title`, `producer_id`, `serial_number`, `produced_at`, `price`, `created_at`, `updated_at`) VALUES (3, 'Pro Rails E-Commerce 3rd Edition', 1, '12322', '2018-04-26', 85.0, '2018-04-26 09:54:54', '2018-04-26 09:54:54')
+  [1m[36mFixture Insert (0.6ms)[0m  [1mINSERT INTO `movies` (`id`, `title`, `producer_id`, `serial_number`, `produced_at`, `price`, `created_at`, `updated_at`) VALUES (4, 'Pro Rails E-Commerce 4th Edition', 1, '12121', '2018-04-26', 105.0, '2018-04-26 09:54:54', '2018-04-26 09:54:54')[0m
+  [1m[35mFixture Insert (0.5ms)[0m  INSERT INTO `movies` (`id`, `title`, `producer_id`, `serial_number`, `produced_at`, `price`, `created_at`, `updated_at`) VALUES (5, 'Pro Rails E-Commerce 5th Edition', 1, '12127', '2018-04-26', 125.0, '2018-04-26 09:54:54', '2018-04-26 09:54:54')
+  [1m[36mFixture Insert (0.4ms)[0m  [1mINSERT INTO `movies` (`id`, `title`, `producer_id`, `serial_number`, `produced_at`, `price`, `created_at`, `updated_at`) VALUES (6, 'Pro Rails E-Commerce 6th Edition', 1, '12111', '2018-04-26', 145.0, '2018-04-26 09:54:54', '2018-04-26 09:54:54')[0m
+  [1m[35mFixture Insert (0.4ms)[0m  INSERT INTO `movies` (`id`, `title`, `producer_id`, `serial_number`, `produced_at`, `price`, `created_at`, `updated_at`) VALUES (7, 'Pro Rails E-Commerce 7th Edition', 2, '21127', '2018-04-26', 165.0, '2018-04-26 09:54:54', '2018-04-26 09:54:54')
+  [1m[36mFixture Insert (0.4ms)[0m  [1mINSERT INTO `movies` (`id`, `title`, `producer_id`, `serial_number`, `produced_at`, `price`, `created_at`, `updated_at`) VALUES (8, 'Ruby for Dummies', 1, '22127', '2018-04-26', 185.0, '2018-04-26 09:54:54', '2018-04-26 09:54:54')[0m
+  [1m[35mFixture Insert (0.3ms)[0m  INSERT INTO `movies` (`id`, `title`, `producer_id`, `serial_number`, `produced_at`, `price`, `created_at`, `updated_at`) VALUES (9, 'Pride and Prejudice', 2, '11128', '2018-04-26', 40.0, '2018-04-26 09:54:54', '2018-04-26 09:54:54')
+  [1m[36mFixture Insert (0.4ms)[0m  [1mINSERT INTO `movies` (`id`, `title`, `producer_id`, `serial_number`, `produced_at`, `price`, `created_at`, `updated_at`) VALUES (10, 'The Idiot', 2, '11128', '2018-04-26', 40.0, '2018-04-26 09:54:54', '2018-04-26 09:54:54')[0m
+  [1m[35mFixture Delete (0.5ms)[0m  DELETE FROM `producers`
+  [1m[36mFixture Insert (0.4ms)[0m  [1mINSERT INTO `producers` (`id`, `name`, `created_at`, `updated_at`) VALUES (1, 'Apress', '2018-04-26 09:54:54', '2018-04-26 09:54:54')[0m
+  [1m[35mFixture Insert (0.2ms)[0m  INSERT INTO `producers` (`id`, `name`, `created_at`, `updated_at`) VALUES (2, 'Emporium', '2018-04-26 09:54:54', '2018-04-26 09:54:54')
+  [1m[36mFixture Delete (0.6ms)[0m  [1mDELETE FROM `directors`[0m
+  [1m[35mFixture Insert (0.4ms)[0m  INSERT INTO `directors` (`id`, `first_name`, `last_name`, `created_at`, `updated_at`) VALUES (1, 'Joel', 'Spolsky', '2018-04-26 09:54:54', '2018-04-26 09:54:54')
+  [1m[36mFixture Insert (0.3ms)[0m  [1mINSERT INTO `directors` (`id`, `first_name`, `last_name`, `created_at`, `updated_at`) VALUES (2, 'Jeremy', 'Keith', '2018-04-26 09:54:54', '2018-04-26 09:54:54')[0m
+  [1m[35mFixture Insert (0.3ms)[0m  INSERT INTO `directors` (`id`, `first_name`, `last_name`, `created_at`, `updated_at`) VALUES (3, 'Jarkko', 'Laine', '2018-04-26 09:54:54', '2018-04-26 09:54:54')
+  [1m[36mFixture Insert (0.3ms)[0m  [1mINSERT INTO `directors` (`id`, `first_name`, `last_name`, `created_at`, `updated_at`) VALUES (4, 'Christian', 'Hellsten', '2018-04-26 09:54:54', '2018-04-26 09:54:54')[0m
+  [1m[35mFixture Insert (0.3ms)[0m  INSERT INTO `directors` (`id`, `first_name`, `last_name`, `created_at`, `updated_at`) VALUES (5, 'Leo', 'Tolstoy', '2018-04-26 09:54:54', '2018-04-26 09:54:54')
+  [1m[36mFixture Delete (0.8ms)[0m  [1mDELETE FROM `directors_movies`[0m
+  [1m[35mFixture Insert (0.6ms)[0m  INSERT INTO `directors_movies` (`created_at`, `updated_at`, `director_id`, `movie_id`) VALUES ('2018-04-26 11:54:54', '2018-04-26 11:54:54', 1, 1)
+  [1m[36mFixture Insert (0.4ms)[0m  [1mINSERT INTO `directors_movies` (`created_at`, `updated_at`, `director_id`, `movie_id`) VALUES ('2018-04-26 11:54:54', '2018-04-26 11:54:54', 2, 2)[0m
+  [1m[35mFixture Insert (0.3ms)[0m  INSERT INTO `directors_movies` (`created_at`, `updated_at`, `director_id`, `movie_id`) VALUES ('2018-04-26 11:54:54', '2018-04-26 11:54:54', 2, 3)
+  [1m[36mFixture Insert (0.4ms)[0m  [1mINSERT INTO `directors_movies` (`created_at`, `updated_at`, `director_id`, `movie_id`) VALUES ('2018-04-26 11:54:54', '2018-04-26 11:54:54', 2, 4)[0m
+  [1m[35mFixture Insert (0.3ms)[0m  INSERT INTO `directors_movies` (`created_at`, `updated_at`, `director_id`, `movie_id`) VALUES ('2018-04-26 11:54:54', '2018-04-26 11:54:54', 2, 5)
+  [1m[36mFixture Insert (0.4ms)[0m  [1mINSERT INTO `directors_movies` (`created_at`, `updated_at`, `director_id`, `movie_id`) VALUES ('2018-04-26 11:54:54', '2018-04-26 11:54:54', 2, 6)[0m
+  [1m[35mFixture Insert (0.4ms)[0m  INSERT INTO `directors_movies` (`created_at`, `updated_at`, `director_id`, `movie_id`) VALUES ('2018-04-26 11:54:54', '2018-04-26 11:54:54', 2, 7)
+  [1m[36mFixture Insert (0.4ms)[0m  [1mINSERT INTO `directors_movies` (`created_at`, `updated_at`, `director_id`, `movie_id`) VALUES ('2018-04-26 11:54:54', '2018-04-26 11:54:54', 3, 8)[0m
+  [1m[35mFixture Insert (0.4ms)[0m  INSERT INTO `directors_movies` (`created_at`, `updated_at`, `director_id`, `movie_id`) VALUES ('2018-04-26 11:54:54', '2018-04-26 11:54:54', 4, 9)
+  [1m[36mFixture Insert (0.4ms)[0m  [1mINSERT INTO `directors_movies` (`created_at`, `updated_at`, `director_id`, `movie_id`) VALUES ('2018-04-26 11:54:54', '2018-04-26 11:54:54', 5, 10)[0m
+  [1m[35m (93.0ms)[0m  COMMIT
+  [1m[36m (0.4ms)[0m  [1mSET FOREIGN_KEY_CHECKS = 1[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+------------------------------------------------
+Admin::DirectorControllerTest: test_test_destroy
+------------------------------------------------
+  [1m[36m (0.6ms)[0m  [1mSELECT COUNT(*) FROM `directors`[0m
+Processing by Admin::DirectorController#destroy as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mDirector Load (0.8ms)[0m  SELECT  `directors`.* FROM `directors` WHERE `directors`.`id` = 1 LIMIT 1
+  [1m[36m (0.4ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.5ms)[0m  DELETE FROM `directors_movies` WHERE `directors_movies`.`director_id` = 1
+  [1m[36mSQL (0.9ms)[0m  [1mDELETE FROM `directors` WHERE `directors`.`id` = 1[0m
+  [1m[35m (0.3ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://test.host/admin/director
+Completed 302 Found in 68ms (ActiveRecord: 4.3ms)
+Processing by Admin::DirectorController#index as HTML
+  [1m[36mDirector Load (0.6ms)[0m  [1mSELECT `directors`.* FROM `directors`[0m
+  Rendered admin/director/_director.html.erb (7.3ms)
+  Rendered admin/director/index.html.erb within layouts/application (18.8ms)
+Completed 200 OK in 765ms (Views: 763.4ms | ActiveRecord: 0.6ms)
+  [1m[35m (0.8ms)[0m  SELECT COUNT(*) FROM `directors`
+  [1m[36m (41.9ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+------------------------------------------
+Admin::DirectorControllerTest: test_update
+------------------------------------------
+Processing by Admin::DirectorController#update as HTML
+  Parameters: {"id"=>"1", "director"=>{"first_name"=>"Joseph", "last_name"=>"Smith"}}
+  [1m[36mDirector Load (0.7ms)[0m  [1mSELECT  `directors`.* FROM `directors` WHERE `directors`.`id` = 1 LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.8ms)[0m  [1mUPDATE `directors` SET `first_name` = 'Joseph', `last_name` = 'Smith', `updated_at` = '2018-04-26 09:54:55' WHERE `directors`.`id` = 1[0m
+  [1m[35m (0.2ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://test.host/admin/director/show?id=1
+Completed 302 Found in 16ms (ActiveRecord: 1.9ms)
+  [1m[36mDirector Load (0.5ms)[0m  [1mSELECT  `directors`.* FROM `directors` WHERE `directors`.`id` = 1 LIMIT 1[0m
+  [1m[35mDirector Load (0.4ms)[0m  SELECT  `directors`.* FROM `directors` WHERE `directors`.`id` = 1 LIMIT 1
+  [1m[36m (41.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+--------------------------------------------------
+Admin::DirectorControllerTest: test_failing_create
+--------------------------------------------------
+  [1m[36m (0.7ms)[0m  [1mSELECT COUNT(*) FROM `directors`[0m
+Processing by Admin::DirectorController#create as HTML
+  Parameters: {"director"=>{"first_name"=>"Joel"}}
+  [1m[35m (0.3ms)[0m  SAVEPOINT active_record_1
+  [1m[36m (0.3ms)[0m  [1mROLLBACK TO SAVEPOINT active_record_1[0m
+  Rendered admin/director/_form.html.erb (17.9ms)
+  Rendered admin/director/new.html.erb within layouts/application (21.7ms)
+Completed 200 OK in 59ms (Views: 25.8ms | ActiveRecord: 0.6ms)
+  [1m[35m (0.5ms)[0m  SELECT COUNT(*) FROM `directors`
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+----------------------------------------
+Admin::DirectorControllerTest: test_edit
+----------------------------------------
+Processing by Admin::DirectorController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mDirector Load (0.7ms)[0m  [1mSELECT  `directors`.* FROM `directors` WHERE `directors`.`id` = 1 LIMIT 1[0m
+  Rendered admin/director/_form.html.erb (0.7ms)
+  Rendered admin/director/edit.html.erb within layouts/application (4.1ms)
+Completed 200 OK in 10ms (Views: 8.3ms | ActiveRecord: 0.7ms)
+  [1m[35m (0.3ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+---------------------------------------
+Admin::DirectorControllerTest: test_new
+---------------------------------------
+Processing by Admin::DirectorController#new as HTML
+  Rendered admin/director/_form.html.erb (0.7ms)
+  Rendered admin/director/new.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 6ms (Views: 5.6ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.3ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+-----------------------------------------
+Admin::DirectorControllerTest: test_index
+-----------------------------------------
+Processing by Admin::DirectorController#index as HTML
+  [1m[35mDirector Load (0.5ms)[0m  SELECT `directors`.* FROM `directors`
+  Rendered admin/director/_director.html.erb (7.2ms)
+  Rendered admin/director/index.html.erb within layouts/application (9.8ms)
+Completed 200 OK in 13ms (Views: 12.0ms | ActiveRecord: 0.5ms)
+  [1m[36m (0.5ms)[0m  [1mSELECT COUNT(*) FROM `directors`[0m
+  [1m[35mDirector Load (0.5ms)[0m  SELECT  `directors`.* FROM `directors`  ORDER BY `directors`.`id` ASC LIMIT 1000
+  [1m[36m (0.4ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+----------------------------------------
+Admin::DirectorControllerTest: test_show
+----------------------------------------
+Processing by Admin::DirectorController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mDirector Load (0.9ms)[0m  [1mSELECT  `directors`.* FROM `directors` WHERE `directors`.`id` = 1 LIMIT 1[0m
+  Rendered admin/director/show.html.erb within layouts/application (3.6ms)
+Completed 200 OK in 12ms (Views: 9.1ms | ActiveRecord: 0.9ms)
+  [1m[35mDirector Load (0.6ms)[0m  SELECT  `directors`.* FROM `directors` WHERE `directors`.`id` = 1 LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+------------------------------------------
+Admin::DirectorControllerTest: test_create
+------------------------------------------
+Processing by Admin::DirectorController#new as HTML
+  Rendered admin/director/_form.html.erb (0.6ms)
+  Rendered admin/director/new.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 5ms (Views: 4.9ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.6ms)[0m  [1mSELECT COUNT(*) FROM `directors`[0m
+Processing by Admin::DirectorController#create as HTML
+  Parameters: {"director"=>{"first_name"=>"Joel", "last_name"=>"Spolsky"}}
+  [1m[35m (0.3ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO `directors` (`first_name`, `last_name`, `created_at`, `updated_at`) VALUES ('Joel', 'Spolsky', '2018-04-26 09:54:56', '2018-04-26 09:54:56')[0m
+  [1m[35m (0.2ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://test.host/admin/director
+Completed 302 Found in 7ms (Views: 4.9ms | ActiveRecord: 0.9ms)
+  [1m[36m (0.5ms)[0m  [1mSELECT COUNT(*) FROM `directors`[0m
+  [1m[35m (41.5ms)[0m  ROLLBACK
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+-----------------------------------------
+Admin::ProducerControllerTest: test_index
+-----------------------------------------
+Processing by Admin::ProducerController#index as HTML
+  [1m[35mProducer Load (0.8ms)[0m  SELECT `producers`.* FROM `producers`
+  Rendered admin/producer/_producer.html.erb (4.8ms)
+  Rendered admin/producer/index.html.erb within layouts/application (15.9ms)
+Completed 200 OK in 28ms (Views: 26.1ms | ActiveRecord: 0.8ms)
+  [1m[36m (0.5ms)[0m  [1mSELECT COUNT(*) FROM `producers`[0m
+  [1m[35mProducer Load (0.5ms)[0m  SELECT  `producers`.* FROM `producers`  ORDER BY `producers`.`id` ASC LIMIT 1000
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+---------------------------------------
+Admin::ProducerControllerTest: test_new
+---------------------------------------
+Processing by Admin::ProducerController#new as HTML
+  Rendered admin/producer/_form.html.erb (1.8ms)
+  Rendered admin/producer/new.html.erb within layouts/application (5.5ms)
+Completed 200 OK in 11ms (Views: 9.9ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+------------------------------------------
+Admin::ProducerControllerTest: test_update
+------------------------------------------
+Processing by Admin::ProducerController#update as HTML
+  Parameters: {"id"=>"1", "producer"=>{"name"=>"Apress.com"}}
+  [1m[36mProducer Load (0.6ms)[0m  [1mSELECT  `producers`.* FROM `producers` WHERE `producers`.`id` = 1 LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  SAVEPOINT active_record_1
+  [1m[36mProducer Exists (0.8ms)[0m  [1mSELECT  1 AS one FROM `producers` WHERE (`producers`.`name` = BINARY 'Apress.com' AND `producers`.`id` != 1) LIMIT 1[0m
+  [1m[35mSQL (1.1ms)[0m  UPDATE `producers` SET `name` = 'Apress.com', `updated_at` = '2018-04-26 09:54:56' WHERE `producers`.`id` = 1
+  [1m[36m (0.3ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://test.host/admin/producer/show/1
+Completed 302 Found in 26ms (ActiveRecord: 2.9ms)
+  [1m[35mProducer Load (0.6ms)[0m  SELECT  `producers`.* FROM `producers` WHERE `producers`.`id` = 1 LIMIT 1
+  [1m[36m (46.6ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+------------------------------------------
+Admin::ProducerControllerTest: test_create
+------------------------------------------
+  [1m[36m (0.6ms)[0m  [1mSELECT COUNT(*) FROM `producers`[0m
+Processing by Admin::ProducerController#create as HTML
+  Parameters: {"producer"=>{"name"=>"The Monopoly Publishing Company"}}
+  [1m[35m (0.4ms)[0m  SAVEPOINT active_record_1
+  [1m[36mProducer Exists (0.8ms)[0m  [1mSELECT  1 AS one FROM `producers` WHERE `producers`.`name` = BINARY 'The Monopoly Publishing Company' LIMIT 1[0m
+  [1m[35mSQL (0.6ms)[0m  INSERT INTO `producers` (`name`, `created_at`, `updated_at`) VALUES ('The Monopoly Publishing Company', '2018-04-26 09:54:56', '2018-04-26 09:54:56')
+  [1m[36m (0.2ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://test.host/admin/producer
+Completed 302 Found in 10ms (ActiveRecord: 1.9ms)
+  [1m[35m (0.5ms)[0m  SELECT COUNT(*) FROM `producers`
+  [1m[36m (46.6ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+-------------------------------------------
+Admin::ProducerControllerTest: test_destroy
+-------------------------------------------
+  [1m[36m (0.6ms)[0m  [1mSELECT COUNT(*) FROM `producers`[0m
+Processing by Admin::ProducerController#destroy as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mProducer Load (0.8ms)[0m  SELECT  `producers`.* FROM `producers` WHERE `producers`.`id` = 1 LIMIT 1
+  [1m[36m (0.3ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (1.9ms)[0m  DELETE FROM `producers` WHERE `producers`.`id` = 1
+  [1m[36m (0.2ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://test.host/admin/producer
+Completed 302 Found in 8ms (ActiveRecord: 3.2ms)
+Processing by Admin::ProducerController#index as HTML
+  [1m[35mProducer Load (0.6ms)[0m  SELECT `producers`.* FROM `producers`
+  Rendered admin/producer/_producer.html.erb (2.2ms)
+  Rendered admin/producer/index.html.erb within layouts/application (4.8ms)
+Completed 200 OK in 9ms (Views: 7.7ms | ActiveRecord: 0.6ms)
+  [1m[36m (0.5ms)[0m  [1mSELECT COUNT(*) FROM `producers`[0m
+  [1m[35m (47.9ms)[0m  ROLLBACK
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+----------------------------------------
+Admin::ProducerControllerTest: test_show
+----------------------------------------
+Processing by Admin::ProducerController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mProducer Load (0.8ms)[0m  SELECT  `producers`.* FROM `producers` WHERE `producers`.`id` = 1 LIMIT 1
+  Rendered admin/producer/show.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 10ms (Views: 7.1ms | ActiveRecord: 0.8ms)
+  [1m[36mProducer Exists (0.8ms)[0m  [1mSELECT  1 AS one FROM `producers` WHERE (`producers`.`name` = BINARY 'Apress' AND `producers`.`id` != 1) LIMIT 1[0m
+  [1m[35mProducer Load (0.5ms)[0m  SELECT  `producers`.* FROM `producers` WHERE `producers`.`id` = 1 LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+----------------------------------------
+Admin::ProducerControllerTest: test_edit
+----------------------------------------
+Processing by Admin::ProducerController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mProducer Load (0.6ms)[0m  [1mSELECT  `producers`.* FROM `producers` WHERE `producers`.`id` = 1 LIMIT 1[0m
+  Rendered admin/producer/_form.html.erb (0.5ms)
+  Rendered admin/producer/edit.html.erb within layouts/application (4.4ms)
+Completed 200 OK in 12ms (Views: 10.6ms | ActiveRecord: 0.6ms)
+  [1m[35m (0.3ms)[0m  ROLLBACK
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+-----------------------------------------------
+MovieTest: test_has_many_and_belongs_to_mapping
+-----------------------------------------------
+  [1m[35mProducer Load (0.6ms)[0m  SELECT  `producers`.* FROM `producers` WHERE `producers`.`name` = 'Apress' LIMIT 1
+  [1m[36m (0.7ms)[0m  [1mSELECT COUNT(*) FROM `movies` WHERE `movies`.`producer_id` = 1[0m
+  [1m[35mDirector Load (0.6ms)[0m  SELECT  `directors`.* FROM `directors` WHERE `directors`.`first_name` = 'Joel' AND `directors`.`last_name` = 'Spolsky' LIMIT 1
+  [1m[36mDirector Load (0.4ms)[0m  [1mSELECT  `directors`.* FROM `directors` WHERE `directors`.`first_name` = 'Jeremy' AND `directors`.`last_name` = 'Keith' LIMIT 1[0m
+  [1m[35m (0.3ms)[0m  SAVEPOINT active_record_1
+  [1m[36mMovie Exists (0.6ms)[0m  [1mSELECT  1 AS one FROM `movies` WHERE `movies`.`serial_number` = BINARY '12134' LIMIT 1[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO `movies` (`title`, `produced_at`, `serial_number`, `blurb`, `length`, `price`, `producer_id`, `created_at`, `updated_at`) VALUES ('Pro Rails E-Commerce 8th Edition', '2018-04-26 09:54:56', '12134', 'E-Commerce on Rails', 400, 55.5, 1, '2018-04-26 09:54:56', '2018-04-26 09:54:56')
+  [1m[36mSQL (0.8ms)[0m  [1mINSERT INTO `directors_movies` (`director_id`, `movie_id`, `created_at`, `updated_at`) VALUES (1, 14, '2018-04-26 09:54:56', '2018-04-26 09:54:56')[0m
+  [1m[35mSQL (0.7ms)[0m  INSERT INTO `directors_movies` (`director_id`, `movie_id`, `created_at`, `updated_at`) VALUES (2, 14, '2018-04-26 09:54:56', '2018-04-26 09:54:56')
+  [1m[36m (0.4ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mProducer Load (0.6ms)[0m  SELECT  `producers`.* FROM `producers` WHERE `producers`.`id` = 1 LIMIT 1
+  [1m[36mMovie Load (0.7ms)[0m  [1mSELECT  `movies`.* FROM `movies` WHERE `movies`.`id` = 14 LIMIT 1[0m
+  [1m[35m (0.8ms)[0m  SELECT COUNT(*) FROM `movies` WHERE `movies`.`producer_id` = 1
+  [1m[36mProducer Load (0.7ms)[0m  [1mSELECT  `producers`.* FROM `producers` WHERE `producers`.`id` = 1 LIMIT 1[0m
+  [1m[35m (40.9ms)[0m  ROLLBACK
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+----------------------
+MovieTest: test_create
+----------------------
+  [1m[35mProducer Load (0.5ms)[0m  SELECT  `producers`.* FROM `producers` WHERE `producers`.`id` = 1 LIMIT 1
+  [1m[36mDirector Load (0.6ms)[0m  [1mSELECT `directors`.* FROM `directors`[0m
+  [1m[35m (0.3ms)[0m  SAVEPOINT active_record_1
+  [1m[36mProducer Load (0.6ms)[0m  [1mSELECT  `producers`.* FROM `producers` WHERE `producers`.`id` = 1 LIMIT 1[0m
+  [1m[35mMovie Exists (0.6ms)[0m  SELECT  1 AS one FROM `movies` WHERE `movies`.`serial_number` = BINARY '12425' LIMIT 1
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO `movies` (`title`, `producer_id`, `produced_at`, `serial_number`, `blurb`, `length`, `price`, `created_at`, `updated_at`) VALUES ('Ruby on Rails', 1, '2018-04-26 09:54:56', '12425', 'A great movie', 375, 45.5, '2018-04-26 09:54:56', '2018-04-26 09:54:56')[0m
+  [1m[35mSQL (0.9ms)[0m  INSERT INTO `directors_movies` (`director_id`, `movie_id`, `created_at`, `updated_at`) VALUES (1, 15, '2018-04-26 09:54:56', '2018-04-26 09:54:56')
+  [1m[36mSQL (1.3ms)[0m  [1mINSERT INTO `directors_movies` (`director_id`, `movie_id`, `created_at`, `updated_at`) VALUES (2, 15, '2018-04-26 09:54:56', '2018-04-26 09:54:56')[0m
+  [1m[35mSQL (0.8ms)[0m  INSERT INTO `directors_movies` (`director_id`, `movie_id`, `created_at`, `updated_at`) VALUES (3, 15, '2018-04-26 09:54:56', '2018-04-26 09:54:56')
+  [1m[36mSQL (0.7ms)[0m  [1mINSERT INTO `directors_movies` (`director_id`, `movie_id`, `created_at`, `updated_at`) VALUES (4, 15, '2018-04-26 09:54:56', '2018-04-26 09:54:56')[0m
+  [1m[35mSQL (0.7ms)[0m  INSERT INTO `directors_movies` (`director_id`, `movie_id`, `created_at`, `updated_at`) VALUES (5, 15, '2018-04-26 09:54:56', '2018-04-26 09:54:56')
+  [1m[36m (0.4ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (44.8ms)[0m  ROLLBACK
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+------------------------------
+MovieTest: test_failing_create
+------------------------------
+  [1m[35m (0.2ms)[0m  SAVEPOINT active_record_1
+  [1m[36mMovie Exists (0.6ms)[0m  [1mSELECT  1 AS one FROM `movies` WHERE `movies`.`serial_number` IS NULL LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  ROLLBACK TO SAVEPOINT active_record_1
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+--------------------------------------------------------------
+MovieTest: test_has_many_and_belongs_to_many_directors_mapping
+--------------------------------------------------------------
+  [1m[36mDirector Load (0.5ms)[0m  [1mSELECT  `directors`.* FROM `directors` WHERE `directors`.`first_name` = 'Joel' AND `directors`.`last_name` = 'Spolsky' LIMIT 1[0m
+  [1m[35mDirector Load (0.4ms)[0m  SELECT  `directors`.* FROM `directors` WHERE `directors`.`first_name` = 'Jeremy' AND `directors`.`last_name` = 'Keith' LIMIT 1
+  [1m[36mProducer Load (0.4ms)[0m  [1mSELECT  `producers`.* FROM `producers` WHERE `producers`.`name` = 'Apress' LIMIT 1[0m
+  [1m[35m (0.3ms)[0m  SAVEPOINT active_record_1
+  [1m[36mProducer Load (0.6ms)[0m  [1mSELECT  `producers`.* FROM `producers` WHERE `producers`.`id` = 1 LIMIT 1[0m
+  [1m[35mMovie Exists (0.6ms)[0m  SELECT  1 AS one FROM `movies` WHERE `movies`.`serial_number` = BINARY '65321' LIMIT 1
+  [1m[36mSQL (0.7ms)[0m  [1mINSERT INTO `movies` (`title`, `producer_id`, `produced_at`, `serial_number`, `blurb`, `length`, `price`, `created_at`, `updated_at`) VALUES ('Pro Rails E-Commerce 8th Edition', 1, '2018-04-26 09:54:56', '65321', 'E-Commerce on Rails', 400, 55.5, '2018-04-26 09:54:56', '2018-04-26 09:54:56')[0m
+  [1m[35mSQL (0.7ms)[0m  INSERT INTO `directors_movies` (`director_id`, `movie_id`, `created_at`, `updated_at`) VALUES (1, 16, '2018-04-26 09:54:56', '2018-04-26 09:54:56')
+  [1m[36mSQL (0.7ms)[0m  [1mINSERT INTO `directors_movies` (`director_id`, `movie_id`, `created_at`, `updated_at`) VALUES (2, 16, '2018-04-26 09:54:56', '2018-04-26 09:54:56')[0m
+  [1m[35m (0.4ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36mMovie Load (0.7ms)[0m  [1mSELECT  `movies`.* FROM `movies` WHERE `movies`.`id` = 16 LIMIT 1[0m
+  [1m[35m (1.2ms)[0m  SELECT COUNT(*) FROM `directors` INNER JOIN `directors_movies` ON `directors`.`id` = `directors_movies`.`director_id` WHERE `directors_movies`.`movie_id` = 16
+  [1m[36mDirector Load (0.7ms)[0m  [1mSELECT  `directors`.* FROM `directors` WHERE `directors`.`first_name` = 'Joel' AND `directors`.`last_name` = 'Spolsky' LIMIT 1[0m
+  [1m[35m (1.2ms)[0m  SELECT COUNT(*) FROM `movies` INNER JOIN `directors_movies` ON `movies`.`id` = `directors_movies`.`movie_id` WHERE `directors_movies`.`director_id` = 1
+  [1m[36m (48.7ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+----------------------------
+DirectorTest: test_test_name
+----------------------------
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.6ms)[0m  INSERT INTO `directors` (`first_name`, `last_name`, `created_at`, `updated_at`) VALUES ('Joseph', 'Smith', '2018-04-26 09:54:56', '2018-04-26 09:54:56')
+  [1m[36m (0.3ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (44.8ms)[0m  ROLLBACK
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+-------------------------------
+AboutControllerTest: test_index
+-------------------------------
+Processing by AboutController#index as HTML
+  Rendered about/index.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 12ms (Views: 12.0ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.3ms)[0m  ROLLBACK
