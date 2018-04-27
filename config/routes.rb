@@ -6,7 +6,9 @@ Rails.application.routes.draw do
   get 'admin/producer' => 'admin/producer#index'
   get 'admin/director' => 'admin/director#index'
   get 'admin/movie' => 'admin/movie#index'
- 
+
+
+
   get 'about/index'
 
   get 'admin/movie/new'
@@ -37,7 +39,11 @@ Rails.application.routes.draw do
   get 'admin/director/show/:id' => 'admin/producer#show'
   get 'admin/director/index'
 
-
+  get 'catalog/show'
+  get 'catalog/show/:id' => 'catalog#show'
+  get 'catalog/index'
+  get 'catalog/latest'
+  
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
