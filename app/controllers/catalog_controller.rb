@@ -1,3 +1,4 @@
+#encoding: utf-8
 class CatalogController < ApplicationController
   #before_filter :initialize_cart, :except => :show
   #before_filter :require_no_user
@@ -9,7 +10,7 @@ class CatalogController < ApplicationController
 
   def index
     @movies = Movie.order("movies.id desc").includes(:directors, :producer).paginate(:page => params[:page], :per_page => 5)
-    @page_title = 'Catalogo'
+    @page_title = 'Catálogo'
   end
 
   def latest

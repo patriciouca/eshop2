@@ -1,4 +1,4 @@
-<h2>by <%=@movie.director_names %></h2>
+<h2>de <%=@movie.director_names %></h2>
 <% if @movie.cover_image.exists? then %>
   <dd><%= image_tag @movie.cover_image.url %></dd>
 <% else %>
@@ -7,7 +7,7 @@
 <dl>
   <dt>Precio</dt>
   <dd><%= sprintf("%0.2f", @movie.price) %></dd>
-  <dt>Duración</dt>
+  <dt>Duracion</dt>
   <dd><%= @movie.length %></dd>
   <dt>Productor</dt>
   <dd><%= @movie.producer.name %></dd>
