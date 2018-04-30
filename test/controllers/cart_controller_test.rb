@@ -22,7 +22,8 @@ class CartControllerTest < ActionController::TestCase
 
   test "clear" do
     post :add, :id => 4
-    assert_equal [Movie.find(4)], Cart.find(@request.session[:cart_id]).movies
+    post :add, :id => 3
+    assert_equal [Movie.find(4),Movie.find(3)], Cart.find(@request.session[:cart_id]).movies
 
     post :clear
     assert_response :redirect
