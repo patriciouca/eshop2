@@ -2,8 +2,8 @@ class Movie < ActiveRecord::Base
  	has_and_belongs_to_many :directors
   belongs_to :producer
 
-  #has_many :cart_items
-  #has_many :carts, :through => :cart_items
+  has_many :cart_items
+  has_many :carts, :through => :cart_items
 
   has_attached_file :cover_image
   validates_attachment :cover_image,
