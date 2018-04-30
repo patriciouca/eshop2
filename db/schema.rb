@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180630150644) do
+ActiveRecord::Schema.define(version: 20190702175418) do
 
   create_table "cart_items", force: :cascade do |t|
     t.integer  "movie_id",   limit: 4
