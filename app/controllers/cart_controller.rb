@@ -3,7 +3,7 @@ class CartController < ApplicationController
 
   def add
     @movie = Movie.find params[:id]
-    @page_title = 'Add item'
+    @page_title = 'Añadir película'
     if request.post?
       @item = @cart.add params[:id]
       flash[:cart_notice] = "Añadido <em>#{@item.movie.title}</em>."
@@ -15,7 +15,7 @@ class CartController < ApplicationController
 
   def remove
     @movie = Movie.find params[:id]
-    @page_title = 'Borrar item'
+    @page_title = 'Borrar película'
     if request.post?
       @item = @cart.remove params[:id]
       flash[:cart_notice] = "Borrado 1 <em>#{@item.movie.title}</em>."
@@ -26,10 +26,10 @@ class CartController < ApplicationController
   end
 
   def clear
-    @page_title = 'Clear cart'
+    @page_title = 'Vaciar carrito'
     if request.post?
       @cart.cart_items.destroy_all
-      flash[:cart_notice] = "Vaciado del carro."
+      flash[:cart_notice] = "Vaciado del carrito."
       redirect_to :controller => 'catalog'
     else
       render :controller => 'cart', :action => 'clear'

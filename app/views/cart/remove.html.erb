@@ -1,9 +1,9 @@
-<strong>Please confirm removing one <em><%= @movie.title %></em> from your  cart.</strong>
+<strong>Confirma que va a <em><%= @movie.title %></em> de su carrito.</strong>
 <br><br>
 <div style="float: left; width: auto;">
-<%= button_to 'Cancel', { :controller => 'catalog', :action => 'index' }, :method => :get %>
+<%= button_to 'Cancelar', { :controller => 'catalog', :action => 'index' }, :method => :get %>
 </div>
 <div style="float: left; width: auto;">
-<%= button_to 'Confirm', :action => 'remove', :id => params[:id] %>
+<%= button_to 'Confirmar', :action => 'remove', :id => params[:id] %>
 </div>
 <br>
