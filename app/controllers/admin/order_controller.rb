@@ -19,6 +19,19 @@ class Admin::OrderController < ApplicationController
     else
       conditions = "status = '#{@status}'"
     end
+
+    case @status
+    when 'all'
+      @status = 'todo'
+    when "open"
+      @status = 'abierto'
+    when "processed"
+      @status = 'procesado'
+    when "closed"
+      @status = 'cerrado'
+    when "failure"
+      @status = 'fallado'
+    end
     @orders = Order.where(conditions).paginate(:page => params[:page], :per_page => 10)
     @page_title = "Pedidos #{@status}"
   end
