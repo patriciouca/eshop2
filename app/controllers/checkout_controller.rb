@@ -7,7 +7,7 @@ class CheckoutController < ApplicationController
     @page_title = 'Facturación'
     if @cart.movies.empty?
       flash[:notice] = 'Su carrito está vacio! ' +
-                       'Por favor añada alguna pelicula antes de check out.'
+                       'Por favor añada alguna pelicula antes de comprar.'
       redirect_to :controller => 'catalog'
     end
   end

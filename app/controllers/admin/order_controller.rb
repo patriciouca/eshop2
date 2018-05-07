@@ -1,14 +1,14 @@
-class Admin::OrderController < Admin::AuthenticatedController
+class Admin::OrderController < ApplicationController
   def close
     order = Order.find(params[:id])
     order.close
-    flash[:notice] = "Order ##{order.id} has been closed."
+    flash[:notice] = "El pedido ##{order.id} ha sido cerrado."
     redirect_to :action => 'index'
   end
 
   def show
     @order = Order.find(params[:id])
-    @page_title = "Displaying order ##{@order.id}"
+    @page_title = "Mostrando el pedido ##{@order.id}"
   end
 
   def index
@@ -20,6 +20,6 @@ class Admin::OrderController < Admin::AuthenticatedController
       conditions = "status = '#{@status}'"
     end
     @orders = Order.where(conditions).paginate(:page => params[:page], :per_page => 10)
-    @page_title = "Listing #{@status} orders"
+    @page_title = "Pedidos #{@status}"
   end
 end

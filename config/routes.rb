@@ -1,11 +1,11 @@
 Rails.application.routes.draw do
 
-
   root :to => 'catalog#index'
   get 'about' => 'about#index'
   get 'admin/producer' => 'admin/producer#index'
   get 'admin/director' => 'admin/director#index'
   get 'admin/movie' => 'admin/movie#index'
+  get 'admin/order' => 'admin/order#index'
 
   get 'about/index'
 
@@ -26,6 +26,13 @@ Rails.application.routes.draw do
   get 'admin/producer/show'
   get 'admin/producer/show/:id' => 'admin/producer#show'
   get 'admin/producer/index'
+
+    post 'admin/order/close'
+  post 'admin/order/destroy'
+  get 'admin/order/show'
+  get 'admin/order/show/:id' => 'admin/order#show'
+  get 'admin/order/index'
+
 
 
   get 'admin/director/new'
