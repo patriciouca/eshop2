@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20190702175418) do
+ActiveRecord::Schema.define(version: 20190702175420) do
 
   create_table "cart_items", force: :cascade do |t|
     t.integer  "movie_id",   limit: 4
@@ -62,6 +62,33 @@ ActiveRecord::Schema.define(version: 20190702175418) do
 
   add_index "movies", ["producer_id"], name: "fk_movies_producers", using: :btree
 
+  create_table "order_items", force: :cascade do |t|
+    t.integer  "movie_id",   limit: 4
+    t.integer  "order_id",   limit: 4
+    t.float    "price",      limit: 24
+    t.integer  "amount",     limit: 4
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "order_items", ["order_id"], name: "fk_order_items_orders", using: :btree
+
+  create_table "orders", force: :cascade do |t|
+    t.string   "email",                limit: 255
+    t.string   "phone_number",         limit: 255
+    t.string   "ship_to_first_name",   limit: 255
+    t.string   "ship_to_last_name",    limit: 255
+    t.string   "ship_to_address",      limit: 255
+    t.string   "ship_to_city",         limit: 255
+    t.string   "ship_to_postal_code",  limit: 255
+    t.string   "ship_to_country_code", limit: 255
+    t.string   "customer_ip",          limit: 255
+    t.string   "status",               limit: 255
+    t.string   "error_message",        limit: 255
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
   create_table "producers", force: :cascade do |t|
     t.string   "name",       limit: 255, null: false
     t.datetime "created_at",             null: false
@@ -71,4 +98,5 @@ ActiveRecord::Schema.define(version: 20190702175418) do
   add_foreign_key "directors_movies", "directors", name: "fk_directors_movies_directors", on_delete: :cascade
   add_foreign_key "directors_movies", "movies", name: "fk_directors_movies_movies", on_delete: :cascade
   add_foreign_key "movies", "producers", name: "fk_movies_producers", on_delete: :cascade
+  add_foreign_key "order_items", "orders", name: "fk_order_items_orders", on_delete: :cascade
 end
