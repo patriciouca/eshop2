@@ -37,7 +37,7 @@ class CheckoutController < ApplicationController
   end
 
   def thank_you
-    @page_title = 'Thank you.'
+    @page_title = 'Gracias.'
   end
 
   private
