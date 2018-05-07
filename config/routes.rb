@@ -48,6 +48,10 @@ Rails.application.routes.draw do
   post 'cart/remove'
   get 'cart/clear'
   post 'cart/clear'
+
+    get 'checkout/index'
+  post 'checkout/submit_order'
+  get 'checkout/thank_you'
   
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
