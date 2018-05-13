@@ -1,7 +1,5 @@
 source 'http://rubygems.org'
 
-gem 'activemerchant', '1.56.0'
-
 gem 'RedCloth', '4.2.9'
 
 gem 'paperclip', '4.3.2'
@@ -18,6 +16,13 @@ gem 'sass-rails', '~> 5.0'
 gem 'uglifier', '>= 1.3.0'
 # Use CoffeeScript for .coffee assets and views
 gem 'coffee-rails', '~> 4.1.0'
+
+
+gem 'countries', '0.9.3', :require => 'iso3166'
+
+gem 'country_select', '1.3.1'
+
+gem 'activemerchant', '1.56.0'
 # See https://github.com/rails/execjs#readme for more supported runtimes
 # gem 'therubyracer', platforms: :ruby
 
