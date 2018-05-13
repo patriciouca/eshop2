@@ -1,5 +1,7 @@
 source 'http://rubygems.org'
 
+gem 'activemerchant', '1.56.0'
+
 gem 'RedCloth', '4.2.9'
 
 gem 'paperclip', '4.3.2'
