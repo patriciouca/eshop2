@@ -34,7 +34,6 @@ Rails.application.routes.draw do
   get 'admin/order/show/:id' => 'admin/order#show'
   get 'admin/order/index'
 
-
   get 'admin/director/new'
   post 'admin/director/create'
   get 'admin/director/edit'
