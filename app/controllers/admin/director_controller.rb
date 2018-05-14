@@ -1,4 +1,4 @@
-class Admin::DirectorController < ApplicationController
+class Admin::DirectorController < Admin::AuthenticatedController
 def new
     @director = Director.new
     @page_title = 'Crear nuevo director'

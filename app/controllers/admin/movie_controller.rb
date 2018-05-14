@@ -1,5 +1,5 @@
  #encoding: utf-8
-class Admin::MovieController < ApplicationController
+class Admin::MovieController < Admin::AuthenticatedController
 def new
     load_data
     @movie = Movie.new
