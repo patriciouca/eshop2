@@ -9,7 +9,7 @@ class User < ActiveRecord::Base
     # a.crypto_provider = Authlogic::CryptoProviders::Sha512
   end
 
-  validates_presence_of :name, :login, :email, :password, :password_confirmation
-  validates_length_of :name, :in => 3..225
-  validates_uniqueness_of :name, :login, :email
+  validates_presence_of :name, :login, :email, :password, :password_confirmation,:message => 'Debe rellenar todos los campos'
+  validates_length_of :name, :in => 3..225,:message => 'El nombre debe estar entre 3 y 255 caracteres'
+  validates_uniqueness_of :name, :login, :email,:message => 'El nombre,email o login ya existe en la base de datos'
 end

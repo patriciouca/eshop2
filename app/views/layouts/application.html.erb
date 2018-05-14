@@ -15,17 +15,17 @@
     <h2 id="slogan">Films on Rails</h2>
     <% if current_user %>
       <p id="loginlogout">
-        Logged in as <%= current_user.login %>
-        (<%= link_to "Edit account", :controller => '/user', :action => :show %>)
+        Identificado como <%= current_user.login %>
+        (<%= link_to "Editar cuenta", :controller => '/user', :action => :show %>)
         <br/>
-        (<%= link_to "Logout", :controller => '/user_sessions', :action => :destroy %>)
+        (<%= link_to "Logout", :controller => '/user_session', :action => :destroy %>)
       </p>
     <% else %>
       <p id="loginlogout">
         <% if User.count == 0 %>
           (<%= link_to "Crear nueva cuenta", :controller => '/user', :action => :new %>)
         <% else %>
-          (<%= link_to "Identificarse", :controller => '/user_sessions', :action => :new %>)
+          (<%= link_to "Identificarse", :controller => '/user_session', :action => :new %>)
         <% end %>
       </p>
     <% end %>
