@@ -1,0 +1,18 @@
+Hola Patricio:
+
+Bien en general. Sólo algunas observaciones:
+
+Conviene que te dirijas al cliente en todo momento de usted. Fíjate, por ejemplo, en el mensaje del carrito de la compra vacío, porque le hablas de tú y de usted al mismo tiempo. Por ejemplo: "¡Su carrito está vacío! Por favor, añada al menos una película antes de proceder a la facturación.".
+No confundas "enviar pedido" con "procesar pedido". Primero se procesa el pedido (o sea, se paga mediante conexión con la pasarela de pago), y luego el comerciante lo envía y cierra el pedido mediante el botón de "cerrar". Por ejemplo, un mensaje correcto sería: "Error al procesar pedido 'Tarjeta de crédito no válida'".
+En la vista "index" del procesamiento de pedidos hay que sustituir "View page: " por "Ver página:". No tenéis aún suficientes pedidos como para que os aparezcan los enlaces de paginación (creo que tienen que ser más de diez), pero de todos modos, revisad la vista.
+En esa vista yo sustituiría "Montante total" por "Precio total", o simplemente "Total".
+Todos los enlaces del parcial "_navigation.HTML.erb" deberían ir en plural: "todos", "abiertos", "procesados", "cerrados" y "fallidos".
+En la acción "index" del controlador se podría asignar valores más adeucados a la variable "@page_title", para que aparezcan estos títulos (por ejemplo): "Pedidos (todos)", "Pedidos abiertos", "Pedidos procesados", "Pedidos cerrados" y "Pedidos fallidos".
+Para traducir el estado (columna "Estado") de cada pedido, habría que añadir código "Ruby" extra además de una variable "@estado" que a partir del valor de la variable "@status" guarde el estado en castellano (en la variable "@estado") y lo muestre en pantalla en el listado. Yo usaría una cadena de "if-else" para ello.
+El estado en la vista "show" también debería mostrarse en castellano. Yo volvería a utilizar una cadena de "if-else" que preguntara por el estado en inglés y quizás una variable adicional "@estado", que sea la que muestre en pantalla el estado en castellano. Para cuestiones como ésas precisamente - relacionadas con la presentación de datos - se puede añadir código "Ruby" a las vistas para hacerlas "inteligentes" y dinámicas.
+Para ser coherentes, ya que estás usando el término "pedido", creo que lo mejor sería usar "Cerrar pedido" como leyenda del botón correspondiente.
+Una vez realizadas las modificaciones anteriores, conviene ejecutar de nuevo los tests para verificar que éstos no presentan ni errores ni fallos.
+Un saludo.
+
+FERNÁNDEZ FLÓREZ, PATRICIO SANTIAGO escribió:
+<--------------------------------------------------
