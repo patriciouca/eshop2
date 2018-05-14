@@ -1,7 +1,7 @@
 require File.dirname(__FILE__) + '/../test_helper'
 
 class CheckoutTest < ActionDispatch::IntegrationTest
-  fixtures :publishers, :authors, :books
+  fixtures :producers, :directors, :movies
 
   test "empty_cart_shows_error_message" do
     get '/checkout'
