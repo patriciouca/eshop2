@@ -6,6 +6,7 @@ Rails.application.routes.draw do
   get 'admin/director' => 'admin/director#index'
   get 'admin/movie' => 'admin/movie#index'
   get 'admin/order' => 'admin/order#index'
+  get 'checkout' => 'checkout#index'
 
   get 'about/index'
 

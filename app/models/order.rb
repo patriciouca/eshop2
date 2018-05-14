@@ -10,24 +10,24 @@ class Order < ActiveRecord::Base
   validates_presence_of :order_items,
                         :message => 'Su carrito esta vacio! ' +
                                     'Por favor agregue al menos una pelicula movie antes de realizar la orden de pago.'
-  validates_format_of :email, :with => /\A([^@\s]+)@((?:[-a-z0-9]+\.)+[a-z]{2,})\Z/i
-  validates_length_of :phone_number, :in => 7..20
+  validates_format_of :email, :with => /\A([^@\s]+)@((?:[-a-z0-9]+\.)+[a-z]{2,})\Z/i,:message => 'Respete el formato del email'
+  validates_length_of :phone_number, :in => 7..20,:message => 'El numero de telefono debe estar entre 7 y 20 caracteres'
 
-  validates_length_of :ship_to_first_name, :in => 2..255
-  validates_length_of :ship_to_last_name, :in => 2..255
-  validates_length_of :ship_to_address, :in => 2..255
-  validates_length_of :ship_to_city, :in => 2..255
-  validates_length_of :ship_to_postal_code, :in => 2..255
-  validates_length_of :ship_to_country_code, :in => 2..255
+  validates_length_of :ship_to_first_name, :in => 2..255,:message => 'El nombre debe estar entre 2 y 255 caracteres'
+  validates_length_of :ship_to_last_name, :in => 2..255,:message => 'El apellido debe estar entre 2 y 255 caracteres'
+  validates_length_of :ship_to_address, :in => 2..255,:message => 'La direccion debe estar entre 2 y 255 caracteres'
+  validates_length_of :ship_to_city, :in => 2..255,:message => 'La ciudad debe estar entre 2 y 255 caracteres'
+  validates_length_of :ship_to_postal_code, :in => 2..255,:message => 'El código postal debe estar entre 2 y 255 caracteres'
+  validates_length_of :ship_to_country_code, :in => 2..255,:message => 'El código del pais debe estar entre 2 y 255 caracteres'
 
   validates_length_of :customer_ip, :in => 7..15
   validates_inclusion_of :status, :in => %w(open processed closed failed)
 
   validates_inclusion_of :card_type, :in => ['Visa', 'MasterCard', 'American Express', 'Discover'], :on => :create
-  validates_length_of :card_number, :in => 13..19, :on => :create
+  validates_length_of :card_number, :in => 13..19, :on => :create,:message => 'La tarjeta de crédito debe estar entre 13 y 19 caracteres'
   validates_inclusion_of :card_expiration_month, :in => %w(1 2 3 4 5 6 7 8 9 10 11 12), :on => :create
   validates_inclusion_of :card_expiration_year, :in => %w(2013 2014 2015 2016 2017 2018), :on => :create
-  validates_length_of :card_verification_value, :in => 3..4, :on => :create
+  validates_length_of :card_verification_value, :in => 3..4, :on => :create,:message => 'El código del de verificación de la tarjeta debe estar entre 3 y 4 caracteres'
 
   def total
     sum = 0
