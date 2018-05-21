@@ -16,3 +16,20 @@ Un saludo.
 
 FERNÁNDEZ FLÓREZ, PATRICIO SANTIAGO escribió:
 <--------------------------------------------------
+
+De acuerdo. Sólo algunas observaciones:
+
+Sustituir en la leyenda verde de la parte superior izquierda "Logout" por "Cerrar sesión", e "Identificarse" por "Iniciar sesión".
+En la pantalla de identificación convendría sustituir "Login" y "Password" por "Usuario" y "Contraseña", y la leyenda del botón "Login" por "Iniciar sesión".
+Asimismo, el título de la página (variable "@page_title") quedaría mejor como "Iniciar sesión" en lugar de "Login".
+Además, cuando se activan las validaciones (formulario de identifiación con errores), la variable "@page_title" tendría que tener un valor definido ("Iniciar sesión"). Posiblemente se me haya olvidado a mí incluir la sentencia de asignación correspondiente en el código del controlador: Justo antes de "render action new", en la clausula "else" de la acción "create". Por esa razón no os aparece leyenda en formato "h1", y el título de la página Web (ver título de la pestaña) queda como "BuyFilms", porque es el título de página Web por defecto (fichero "application.html.erb").
+A la hora de crear una nueva cuenta (y en consonancia con la observación anterior) convendría cambiar "Login" por "Usuario".
+Asimismo, quedaría mejor "Confirmar contraseña" en lugar de "Confirme contraseña".
+En la vista "show" habría que sustituir las siguientes leyendas: "Usuario" (en lugar de "Login"), "Número de sesiones", "Última petición",  "Último inicio de sesión", "Inicio de sesión actual", "IP de la última sesión", "IP de la sesión actual".
+Convendría ejecutar los tests de nuevo para asegurarse de que continúan funcionando tras haber cambiado algunos mensajes o leyendas de campos en la aplicación. 
+Yo cambiaría el mensaje "flash" "Cuenta Arantxa fue correctamente actualizada." por "Cuenta Arantxa actualizada correctamente."
+También el mensaje "flash": "Cuenta admin creada correctamente. Usuario identificado."
+El mensaje "flash" "Ha salido de la aplicación con éxito." se podría traducir por "Sesión finalizada.". Además, la aplicación continúa ejecutándose: Ha finalizado su sesión, pero no ha salido de la aplicación.
+No hace falta que me enviéis más capturas de pantalla. Simplemente, realizad los cambios que os he indicado y con eso es suficiente.
+
+Un saludo.
