@@ -33,7 +33,23 @@
 <h2>Estado del pedido</h2>
 <dl>
   <dt>Estado</dt>
-  <dd><%= @order.status[0].capitalize + @order.status[1..@order.status.length-1] %></dd>
+  <%
+
+  case @order.status
+    when 'all'
+      @status = 'todo'
+    when "open"
+      @status = 'abierto'
+    when "processed"
+      @status = 'procesado'
+    when "closed"
+      @status = 'cerrado'
+    when "failed"
+      @status = 'fallado'
+    end
+
+  %>
+  <dd><%= @status[0].capitalize + @status[1..@status.length-1] %></dd>
   <% if @order.failed? %>
     <dt>Error</dt>
     <dd><%= @order.error_message %></dd>
