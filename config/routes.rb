@@ -7,6 +7,7 @@ Rails.application.routes.draw do
   get 'admin/movie' => 'admin/movie#index'
   get 'admin/order' => 'admin/order#index'
   get 'checkout' => 'checkout#index'
+  get 'catalog' => 'catalog#index'
 
   get 'about/index'
 
@@ -47,6 +48,7 @@ Rails.application.routes.draw do
   get 'catalog/show/:id' => 'catalog#show'
   get 'catalog/index'
   get 'catalog/latest'
+  get 'catalog/rss'
 
   get 'cart/add'
   post 'cart/add'
