@@ -17,4 +17,10 @@ class CatalogController < ApplicationController
     @movies = Movie.latest 5 # invoques "latest" method to get the five latest movies
     @page_title = 'Últimas peliculas'
   end
+
+  def rss
+    latest
+    render :layout => false
+    response.headers["Content-Type"] = "application/xml; version=1.0; charset=utf-8"
+  end
 end

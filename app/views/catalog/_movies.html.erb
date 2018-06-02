@@ -2,7 +2,7 @@
   <% for movie in @movies %>
     <dt>
       <%= link_to movie.title, :action => 'show', :id => movie %>
-      <%= link_to '+', :controller => 'cart', :action => 'add', :id => movie %>
+      <%= link_to '+', :controller => 'cart', :action => 'add', :id => movie , :remote => true %>
     </dt>
     <% for director in movie.directors %>
       <dd><%= director.last_name %>, <%= director.first_name %></dd>

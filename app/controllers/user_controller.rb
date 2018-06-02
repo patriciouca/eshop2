@@ -7,8 +7,7 @@ class UserController < ApplicationController
     if current_user
       flash[:notice] = 'Solo se puede crear una cuenta.'
       redirect_to :controller => 'about', :action => 'index'
-    else
-      # only when there are no accounts it allows to create a new one, unique in the system
+    else # only when there are no accounts it allows to create a new one, unique in the system
       redirect_to :controller => 'user_sessions', :action => 'new' unless User.count == 0
     end
   end
