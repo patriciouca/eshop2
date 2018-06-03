@@ -72,6 +72,13 @@ Rails.application.routes.draw do
   get 'user/show/:id' => 'user#show'
   get 'user/edit'
   post 'user/update'
+
+  get 'forum/post'
+  post 'forum/create'
+  get 'forum/reply'
+  post 'forum/destroy'
+  get 'forum/show'
+  get 'forum/index'
   
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
