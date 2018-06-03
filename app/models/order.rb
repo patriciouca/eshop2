@@ -58,6 +58,23 @@ class Order < ActiveRecord::Base
     self.processed?
   end
 
+  def traducirOrden
+    traduccion=''
+    case self.status
+    when 'all'
+      traduccion = 'todo'
+    when "open"
+      traduccion = 'abierto'
+    when "processed"
+      traduccion = 'procesado'
+    when "closed"
+      traduccion = 'cerrado'
+    when "failed"
+      traduccion = 'fallado'
+    end
+    traduccion
+  end
+
   def active_merchant_payment
     ActiveMerchant::Billing::Base.mode = :test
     ActiveMerchant::Billing::AuthorizeNetGateway.default_currency = 'EUR'

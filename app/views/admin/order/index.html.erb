@@ -5,7 +5,7 @@
     <tr>
       <th>ID</th>
       <th>Estado</th>
-      <th>Montante total</th>
+      <th>Total</th>
       <th>Tamaño</th>
       <th>Creado</th>
       <th>Actualizado</th>
@@ -14,7 +14,7 @@
   <% for order in @orders %>
     <tr>
       <td align="center"><%= order.id %></td>
-      <td align="center"><%= order.status[0].capitalize + order.status[1..order.status.length-1] %></td>
+      <td align="center"><%= order.traducirOrden[0].capitalize + order.traducirOrden[1..order.traducirOrden.length-1] %></td>
       <td align="center"><%= order.total %></td>
       <td align="center"><%= order.amount %></td>
       <td align="center"><%= order.created_at.strftime("%d-%m-%Y %I:%M") %></td>

@@ -6,7 +6,7 @@ class CheckoutController < ApplicationController
     @order = Order.new
     @page_title = 'Facturación'
     if @cart.movies.empty?
-      flash[:notice] = 'Su carrito está vacio! ' +
+      flash[:notice] = 'Su carrito está vacío! ' +
                        'Por favor añada alguna pelicula antes de comprar.'
       redirect_to :controller => 'catalog'
     end
@@ -28,7 +28,7 @@ class CheckoutController < ApplicationController
         @cart.cart_items.destroy_all # empty shopping cart
         redirect_to :action => 'thank_you'
       else
-        flash[:notice] = "Error durante la compra '#{@order.error_message}'."
+        flash[:notice] = "Error al procesar el pedido '#{@order.error_message}'."
         render :action => 'index'
       end
     else

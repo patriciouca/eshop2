@@ -15,7 +15,7 @@ class UserController < ApplicationController
   def create
     @user = User.new(user_params)
     if @user.save # the new user has been logged in automatically
-      flash[:notice] = "Usuario #{@user.name} fue creado correctamente. Usuario identificado."
+      flash[:notice] = "Cuenta #{@user.name} creada correctamente. Usuario identificado."
       redirect_to :action => 'show'
     else
       @page_title = 'Crear nueva cuenta'
@@ -31,7 +31,7 @@ class UserController < ApplicationController
   def update
     @user = current_user
     if @user.update_attributes(user_params)
-      flash[:notice] = "Usuario #{@user.name} fue actualizado correctamente."
+      flash[:notice] = "Cuenta #{@user.name} actualizada correctamente."
       redirect_to :action => 'show'
     else
       @page_title = 'Editar cuenta'

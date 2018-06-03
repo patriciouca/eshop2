@@ -3,7 +3,7 @@ class UserSessionController < ApplicationController
 
   def new
     @user_session = UserSession.new
-    @page_title = 'Login'
+    @page_title = 'Iniciar sesión'
   end
 
   def create
@@ -20,7 +20,7 @@ class UserSessionController < ApplicationController
   def destroy
     if current_user_session # only for an authenticated user
       current_user_session.destroy
-      flash[:notice] = "Ha salido de la aplicación con éxito."
+      flash[:notice] = "Sesión finalizada."
     end  
     redirect_to :controller => :catalog, :action => :index # logout route
   end

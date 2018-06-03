@@ -11,6 +11,13 @@ class Admin::OrderController < Admin::AuthenticatedController
     @page_title = "Mostrando el pedido ##{@order.id}"
   end
 
+  def destroy
+    @order = Order.find(params[:id])
+    @order.destroy
+    flash[:notice] = "El pedido #{@order.id} fue borrado correctamente."
+    redirect_to :action => 'index'
+  end
+
   def index
     @status = params[:id]
     if @status.blank?
@@ -22,15 +29,15 @@ class Admin::OrderController < Admin::AuthenticatedController
 
     case @status
     when 'all'
-      @status = 'todo'
+      @status = 'todos'
     when "open"
-      @status = 'abierto'
+      @status = 'abiertos'
     when "processed"
-      @status = 'procesado'
+      @status = 'procesados'
     when "closed"
-      @status = 'cerrado'
-    when "failure"
-      @status = 'fallado'
+      @status = 'cerrados'
+    when "failed"
+      @status = 'fallidos'
     end
     @orders = Order.where(conditions).paginate(:page => params[:page], :per_page => 10)
     @page_title = "Pedidos #{@status}"

@@ -57,6 +57,9 @@
 </dl>
 
 <% if !@order.closed? %> <p></p> <% end %>
-<%= button_to 'Cerrar orden', {:action => 'close', :id => @order},
-    data: { confirm: "Está seguro que quiere borrar la orden #{@order.id}?" } if @order.processed? %>
+<%= button_to 'Cerrar pedido', {:action => 'close', :id => @order},
+    data: { confirm: "Está seguro que quiere cerrar el pedido #{@order.id}?" } if @order.processed? %>
+
+  <%= button_to 'Borrar pedido', {:action => 'destroy', :id => @order},
+    data: { confirm: "Está seguro que quiere borrar el pedido #{@order.id}?" } %>
 <%= render :partial => 'navigation' %>

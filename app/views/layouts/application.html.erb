@@ -18,14 +18,14 @@
         Identificado como <%= current_user.login %>
         (<%= link_to "Editar cuenta", :controller => '/user', :action => :show %>)
         <br/>
-        (<%= link_to "Logout", :controller => '/user_session', :action => :destroy %>)
+        (<%= link_to "Cerrar sesión", :controller => '/user_session', :action => :destroy %>)
       </p>
     <% else %>
       <p id="loginlogout">
         <% if User.count == 0 %>
           (<%= link_to "Crear nueva cuenta", :controller => '/user', :action => :new %>)
         <% else %>
-          (<%= link_to "Identificarse", :controller => '/user_session', :action => :new %>)
+          (<%= link_to "Iniciar sesión", :controller => '/user_session', :action => :new %>)
         <% end %>
       </p>
     <% end %>
